@@ -1,0 +1,10503 @@
+// 자동 생성된 통합 문제 은행
+// 생성일: 2026-02-16T23:58:33.837Z
+// 총 문제: 743개 (2026기출 + 기본문제) + 50개 (단톡방 1~27회 기출)
+
+import { additionalQuestions } from './additionalQuestions';
+
+export interface Question {
+  id: number;
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+  subject: string;
+  source?: string;
+}
+
+export const questionBank: Question[] = [
+  {
+    "id": 1,
+    "question": "리눅스 감사 데몬인 'auditd'를 이용하여 `/etc/passwd` 파일에 대한 쓰기(write) 및 속성 변경(attribute change) 행위를 감시하고, 그 룰의 키워드를 'password-change'로 지정하는 명령어로 올바른 것은?",
+    "options": [
+      "auditctl -w /etc/passwd -p wa -k password-change",
+      "auditctl -a /etc/passwd -p rw -k password-change",
+      "auditctl -w /etc/passwd -p rx -k password-change",
+      "auditctl -f /etc/passwd -S write -k password-change"
+    ],
+    "answer": 0,
+    "explanation": "해설 없음",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 2,
+    "question": "HTTP 상태 코드(Status Code) 중 클라이언트가 요청한 리소스를 서버에서 찾을 수 없을 때 발생하는 코드는?",
+    "options": [
+      "200 OK",
+      "403 Forbidden",
+      "404 Not Found",
+      "500 Internal Server Error"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 404 Not Found 404 코드는 'Not Found'로, 요청한 URL에 해당하는 파일이나 리소스가 존재하지 않음을 의미합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 3,
+    "question": "OECD 프라이버시 8원칙 중, '개인정보는 이용 목적에 필요한 범위 내에서 정확하고 완전하며 최신의 상태로 유지되어야 한다'는 원칙은?",
+    "options": [
+      "수집 제한의 원칙",
+      "데이터 품질의 원칙 (Data Quality Principle)",
+      "목적 명확화의 원칙",
+      "이용 제한의 원칙"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 데이터 품질의 원칙 (Data Quality Principle) 데이터 품질의 원칙은 수집된 데이터가 목적에 부합하도록 정확성, 완전성, 최신성을 유지해야 함을 강조합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 4,
+    "question": "SSL/TLS 프로토콜의 핸드셰이크 과정 중, 서버가 클라이언트에게 자신의 신원을 증명하기 위해 보내는 메시지는?",
+    "options": [
+      "Client Hello",
+      "Server Hello",
+      "Certificate",
+      "Server Key Exchange"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Certificate 서버는 'Certificate' 메시지를 통해 CA가 발급한 자신의 공개키 인증서를 클라이언트에게 전송하여 신원을 증명합니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 5,
+    "question": "스노트(Snort) 룰 헤더에서 설정할 수 있는 액션(Action)이 아닌 것은?",
+    "options": [
+      "alert",
+      "log",
+      "pass",
+      "trace"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ trace Snort의 주요 액션은 alert, log, pass, activate, dynamic, drop, reject, sdrop 등이며 'trace'는 존재하지 않습니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 6,
+    "question": "OSI 7계층 중 전송 계층(Transport Layer)에 해당하며, 신뢰성 있는 연결 지향형 통신을 제공하는 프로토콜은?",
+    "options": [
+      "IP",
+      "UDP",
+      "TCP",
+      "ICMP"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ TCP TCP(Transmission Control Protocol)는 4계층 프로토콜로 연결 지향성, 신뢰성, 흐름 제어를 제공합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 7,
+    "question": "개인정보 보호법상 '영상정보처리기기(CCTV)'를 공개된 장소에 설치할 수 있는 예외 사유가 아닌 것은?",
+    "options": [
+      "법령에서 구체적으로 허용하고 있는 경우",
+      "범죄의 예방 및 수사를 위하여 필요한 경우",
+      "시설안전 및 화재 예방을 위하여 필요한 경우",
+      "직원들의 업무 태도 감시 및 근태 관리를 위하여 필요한 경우"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 직원들의 업무 태도 감시 및 근태 관리를 위하여 필요한 경우 공개된 장소(불특정 다수가 이용하는 곳)에서는 법령, 범죄 예방, 시설 안전, 교통 단속 등의 목적으로만 CCTV 설치가 가능하며, 직원 감시는 정당한 설치 목적이 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 8,
+    "question": "개인정보 보호법에 따라 개인정보처리자가 개인정보를 국외로 이전(제공, 위탁, 보관)할 때 정보주체에게 알리고 동의를 받아야 하는 사항이 아닌 것은?",
+    "options": [
+      "이전되는 개인정보 항목",
+      "이전받는 자의 성명(법인명) 및 연락처",
+      "이전을 거부할 권리 및 거부 시 불이익",
+      "국외 이전 시 이용되는 통신망의 기술적 암호화 방식"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 국외 이전 시 이용되는 통신망의 기술적 암호화 방식 국외 이전을 위한 동의 시 이전 항목, 국가, 시기, 받는 자, 목적, 거부 권리 등을 알려야 하며, 통신망의 기술적 스펙(암호화 방식 등)은 필수 고지 사항이 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 9,
+    "question": "HTTP 요청 메소드(Method) 중, 서버에 있는 리소스를 삭제할 때 사용하는 메소드로, 보안상 비활성화해야 하는 경우가 많은 것은?",
+    "options": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DELETE DELETE 메소드는 서버의 파일을 삭제하는 기능을 하므로, REST API 등 특별히 허용한 경우가 아니라면 웹 서버 설정에서 차단해야 합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 10,
+    "question": "리눅스 파일 권한 설정에서 'SetUID'가 설정된 파일의 실행 권한 표기로 올바른 것은? (실행 권한이 있을 때)",
+    "options": [
+      "rwsr-xr-x",
+      "rwxr-sr-x",
+      "rwxr-xr-t",
+      "rwxr-xr-x"
+    ],
+    "answer": 0,
+    "explanation": "SetUID는 소유자 권한 부분의 실행 비트(x) 자리에 's'로 표시됩니다. (실행 권한이 없으면 대문자 'S')",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 11,
+    "question": "사용자가 알고 있는 지식(Type 1), 소유한 것(Type 2), 생체 정보(Type 3) 중 2가지 이상을 결합하여 인증하는 방식은?",
+    "options": [
+      "SSO (Single Sign On)",
+      "MFA (Multi-Factor Authentication)",
+      "EAM (Enterprise Access Management)",
+      "IAM (Identity and Access Management)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② MFA (Multi-Factor Authentication) 다중 요소 인증(MFA)은 지식, 소유, 생체 정보, 위치 등 서로 다른 범주의 인증 수단을 2개 이상 조합하여 보안성을 높이는 방식입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 12,
+    "question": "웹 애플리케이션에서 입력값 검증이 미흡하여 `../` 와 같은 문자를 통해 상위 디렉터리의 시스템 파일에 접근하는 공격은?",
+    "options": [
+      "Directory Listing",
+      "Path Traversal (Directory Traversal)",
+      "SQL Injection",
+      "Command Injection"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Path Traversal (Directory Traversal) 경로 탐색(Path Traversal) 공격은 `../` (Dot Dot Slash)를 이용하여 허용되지 않은 상위 디렉터리로 이동하는 공격입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 13,
+    "question": "다음 중 좀비 프로세스(Zombie Process)에 대한 설명으로 옳은 것은?",
+    "options": [
+      "실행이 종료되었으나 부모 프로세스가 종료 상태를 회수하지 않아 테이블에 남아있는 프로세스",
+      "메모리가 부족하여 강제로 종료된 프로세스",
+      "백그라운드에서 실행 중인 데몬 프로세스",
+      "사용자 입력을 기다리는 프로세스"
+    ],
+    "answer": 0,
+    "explanation": "좀비 프로세스는 작업은 끝났으나(defunct), 부모 프로세스가 `wait()` 시스템 콜을 호출해 주지 않아 리소스(PID 등)를 점유하고 있는 상태입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 14,
+    "question": "윈도우 시스템에서 실행 중인 프로세스, 레지스트리 조작 등 시스템 내부의 상태를 모니터링하기 위해 사용하는 Sysinternals 도구는?",
+    "options": [
+      "Wireshark",
+      "Process Explorer",
+      "Nmap",
+      "Nessus"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Process Explorer Process Explorer는 윈도우의 작업 관리자보다 훨씬 상세한 프로세스, DLL, 핸들 정보를 보여주는 도구입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 15,
+    "question": "RSA 암호화 알고리즘의 안전성은 '큰 수의 소인수분해'의 어려움에 기반한다. RSA 키 생성 과정에서 두 소수 p, q를 선정하여 n = p*q를 구한 후, 오일러 피 함수 φ(n)을 구하는 공식은?",
+    "options": [
+      "(p+1)(q+1)",
+      "(p-1)(q-1)",
+      "p*q - 1",
+      "p^2 + q^2"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② (p-1)(q-1) 오일러 피 함수 φ(n)은 n보다 작으면서 n과 서로소인 양의 정수의 개수로, n이 두 소수 p, q의 곱일 때 `(p-1)(q-1)`이 됩니다. 이는 개인키 생성의 핵심 값입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 16,
+    "question": "윈도우 이벤트 로그(Event Log)의 3가지 주요 카테고리에 해당하지 않는 것은?",
+    "options": [
+      "응용 프로그램 (Application)",
+      "보안 (Security)",
+      "시스템 (System)",
+      "네트워크 (Network)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 네트워크 (Network) 윈도우 기본 이벤트 로그는 '응용 프로그램', '보안', '시스템' 3가지가 핵심입니다. (Setup 등도 있으나 Network 로그라는 별도 카테고리는 기본 분류가 아님)",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 17,
+    "question": "개인정보 보호법에 따라 개인정보처리자가 개인정보를 국외로 이전(제공, 위탁, 보관)할 때 정보주체에게 알리고 동의를 받아야 하는 사항이 아닌 것은?",
+    "options": [
+      "이전되는 개인정보 항목",
+      "이전받는 자의 성명(법인명) 및 연락처",
+      "이전을 거부할 권리 및 거부 시 불이익",
+      "국외 이전 시 이용되는 통신망의 기술적 암호화 방식"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 국외 이전 시 이용되는 통신망의 기술적 암호화 방식 국외 이전을 위한 동의 시 이전 항목, 국가, 시기, 받는 자, 목적, 거부 권리 등을 알려야 하며, 통신망의 기술적 스펙(암호화 방식 등)은 필수 고지 사항이 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 18,
+    "question": "주요정보통신기반시설의 지정 권한을 가진 자는 누구인가? (정보통신기반 보호법 기준)",
+    "options": [
+      "한국인터넷진흥원장 (KISA 원장)",
+      "과학기술정보통신부장관",
+      "국가정보원장",
+      "관계 중앙행정기관의 장"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 관계 중앙행정기관의 장 주요정보통신기반시설은 해당 분야(금융, 통신, 에너지 등)를 관할하는 '관계 중앙행정기관의 장'이 지정합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 19,
+    "question": "무선 LAN 보안 표준인 WPA2에서 사용하며, AES 암호화 알고리즘을 기반으로 강력한 보안을 제공하는 프로토콜은?",
+    "options": [
+      "WEP",
+      "TKIP",
+      "CCMP",
+      "EAP-MD5"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ CCMP WPA2는 AES 기반의 CCMP(Counter Mode with Cipher Block Chaining Message Authentication Code Protocol)를 사용하여 WEP나 TKIP의 취약점을 해결했습니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 20,
+    "question": "리눅스 시스템에서 `/etc/sysctl.conf` 파일을 수정하여 `net.ipv4.ip_forward = 1`로 설정했을 때 활성화되는 기능은?",
+    "options": [
+      "IP 패킷 포워딩 (라우팅 기능)",
+      "ICMP Echo 응답 차단",
+      "SYN 쿠키 보호 기능",
+      "소스 라우팅 차단"
+    ],
+    "answer": 0,
+    "explanation": "`ip_forward` 값을 1로 설정하면 리눅스 시스템이 들어온 패킷을 다른 네트워크 인터페이스로 전달하는 라우터 역할을 수행하게 됩니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 21,
+    "question": "리눅스 로그 파일 중 시스템의 부팅 및 종료 기록, 로그인/로그아웃 기록을 이진(Binary) 형태로 저장하며, 'last' 명령어로 조회하는 파일은?",
+    "options": [
+      "/var/log/messages",
+      "/var/log/secure",
+      "/var/log/wtmp",
+      "/var/log/lastlog"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ /var/log/wtmp wtmp 파일은 전체 로그인/아웃 및 부팅 기록을 담고 있으며 last 명령어로 확인합니다. (lastlog는 '마지막' 접속 기록만 저장)",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 22,
+    "question": "리눅스 감사 데몬인 'auditd'를 이용하여 `/etc/passwd` 파일에 대한 쓰기(write) 및 속성 변경(attribute change) 행위를 감시하고, 그 룰의 키워드를 'password-change'로 지정하는 명령어로 올바른 것은?",
+    "options": [
+      "auditctl -w /etc/passwd -p wa -k password-change",
+      "auditctl -a /etc/passwd -p rw -k password-change",
+      "auditctl -w /etc/passwd -p rx -k password-change",
+      "auditctl -f /etc/passwd -S write -k password-change"
+    ],
+    "answer": 0,
+    "explanation": "해설 없음",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 23,
+    "question": "정보보안 거버넌스의 일환으로, 조직의 정보보호 활동이 비즈니스 목표와 연계되고 규정을 준수하며 위험을 적절히 관리하고 있는지 이사회나 경영진이 감독하고 통제하는 활동을 무엇이라 하는가?",
+    "options": [
+      "IT 거버넌스",
+      "정보보호 거버넌스",
+      "보안 감사",
+      "위험 관리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정보보호 거버넌스 정보보호 거버넌스(Information Security Governance)는 정보보호가 단순 실무가 아닌 경영의 일부로서 전략적으로 관리되고 통제되는 체계를 의미합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 24,
+    "question": "악성코드를 분석할 때, 실제 코드를 실행하지 않고 소스 코드나 바이너리의 구조를 분석하는 방법은?",
+    "options": [
+      "동적 분석 (Dynamic Analysis)",
+      "정적 분석 (Static Analysis)",
+      "행위 기반 분석",
+      "샌드박스 분석"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정적 분석 (Static Analysis) 정적 분석은 파일을 실행하지 않고 디스어셈블러 등을 이용해 내부 구조, 문자열, 헤더 등을 분석하는 기법입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 25,
+    "question": "공격자가 자신의 MAC 주소를 게이트웨이의 MAC 주소인 것처럼 속여, 피해자의 패킷을 가로채는 공격 기법은?",
+    "options": [
+      "DNS Spoofing",
+      "ARP Spoofing",
+      "IP Spoofing",
+      "DHCP Starvation"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ARP Spoofing ARP Spoofing은 2계층에서 MAC 주소를 속여 패킷의 흐름을 가로채는 공격(Sniffing)입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 26,
+    "question": "HTTP 프로토콜 자체의 취약점은 아니지만, HTTP 헤더의 'Host' 필드 값을 변조하여 캐시 서버(Cache Server)가 오염된 응답을 저장하게 만드는 공격은?",
+    "options": [
+      "HTTP Response Splitting",
+      "Web Cache Poisoning",
+      "HTTP Request Smuggling",
+      "Session Fixation"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Web Cache Poisoning 웹 캐시 포이즈닝은 공격자가 조작한 HTTP 요청(Host 헤더 등)을 통해 캐시 서버에 악성 응답을 저장시켜, 이후 접속하는 정상 사용자들에게 악성 콘텐츠가 전달되게 하는 공격입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 27,
+    "question": "HTTP 상태 코드(Status Code) 중 클라이언트가 요청한 리소스를 서버에서 찾을 수 없을 때 발생하는 코드는?",
+    "options": [
+      "200 OK",
+      "403 Forbidden",
+      "404 Not Found",
+      "500 Internal Server Error"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 404 Not Found 404 코드는 'Not Found'로, 요청한 URL에 해당하는 파일이나 리소스가 존재하지 않음을 의미합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 28,
+    "question": "다음 중 부인 방지(Non-repudiation) 기능을 제공하기 위해 반드시 필요한 암호 기술은?",
+    "options": [
+      "대칭키 암호화",
+      "전자서명",
+      "메시지 인증 코드 (MAC)",
+      "해시 함수"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 전자서명 MAC(메시지 인증 코드)은 대칭키를 공유하므로 송신자와 수신자를 구분할 수 없어 부인 방지가 불가능합니다. 전자서명은 개인키로 서명하므로 부인 방지가 가능합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 29,
+    "question": "정보보호 조직 구성 시 '제3의 선(The Third Line of Defense)'으로서, 현업 부서와 위험 관리 부서가 적절히 통제되고 있는지 독립적으로 점검하는 조직은?",
+    "options": [
+      "IT 운영팀",
+      "정보보호팀 (CISO)",
+      "내부 감사팀 (Internal Audit)",
+      "인사팀"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 내부 감사팀 (Internal Audit) 3선 방어 모델에서 1선은 현업, 2선은 리스크 관리/정보보호 조직, 3선은 이들을 독립적으로 감시·평가하는 '내부 감사' 조직입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 30,
+    "question": "리눅스 명령어 `chmod 4755 file.exe`를 실행했을 때 설정되는 권한의 의미로 올바른 것은?",
+    "options": [
+      "소유자에게 SetGID 권한이 부여된다.",
+      "소유자에게 SetUID 권한이 부여된다.",
+      "Sticky Bit가 설정된다.",
+      "그룹 사용자에게 쓰기 권한이 부여된다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 소유자에게 SetUID 권한이 부여된다. 맨 앞의 숫자 '4'는 SetUID를 의미합니다. (4=SetUID, 2=SetGID, 1=Sticky Bit). 따라서 소유자 권한으로 실행되는 SetUID가 설정됩니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 31,
+    "question": "X.509 인증서의 구조 중, 해당 인증서가 유효한 기간(시작일~종료일)을 나타내는 필드는?",
+    "options": [
+      "Version",
+      "Serial Number",
+      "Validity",
+      "Subject Public Key Info"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Validity X.509 표준 인증서의 'Validity(유효기간)' 필드에는 'Not Before(시작일)'와 'Not After(만료일)' 정보가 포함됩니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 32,
+    "question": "리눅스 명령어 `chmod 4755 file.exe`를 실행했을 때 설정되는 권한의 의미로 올바른 것은?",
+    "options": [
+      "소유자에게 SetGID 권한이 부여된다.",
+      "소유자에게 SetUID 권한이 부여된다.",
+      "Sticky Bit가 설정된다.",
+      "그룹 사용자에게 쓰기 권한이 부여된다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 소유자에게 SetUID 권한이 부여된다. 맨 앞의 숫자 '4'는 SetUID를 의미합니다. (4=SetUID, 2=SetGID, 1=Sticky Bit). 따라서 소유자 권한으로 실행되는 SetUID가 설정됩니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 33,
+    "question": "다음 중 SQL Injection 공격을 방어하기 위한 시큐어 코딩 기법인 'Prepared Statement'의 동작 원리로 가장 적절한 것은?",
+    "options": [
+      "사용자 입력값을 Base64로 인코딩하여 저장한다.",
+      "쿼리 구조를 미리 컴파일해 두고, 입력값은 나중에 데이터(바인딩 변수)로만 대입한다.",
+      "입력값에서 `SELECT`, `UNION` 같은 키워드를 삭제한다.",
+      "웹 방화벽이 SQL 패턴을 탐지하여 차단한다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 쿼리 구조를 미리 컴파일해 두고, 입력값은 나중에 데이터(바인딩 변수)로만 대입한다. Prepared Statement는 쿼리의 문법 분석과 컴파일을 먼저 수행한 후, 사용자 입력값을 단순 파라미터로 매핑하므로 입력값이 쿼리 구조를 변경할 수 없게 됩니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 34,
+    "question": "무선 랜 환경에서 공격자가 합법적인 AP(Access Point)와 동일한 SSID(서비스 식별자)를 가진 가짜 AP를 설치하여 사용자의 접속을 유도하는 공격은?",
+    "options": [
+      "Rogue AP (Evil Twin)",
+      "Jamming",
+      "WEP Cracking",
+      "BlueSnarfing"
+    ],
+    "answer": 0,
+    "explanation": "이블 트윈(Evil Twin) 공격은 정상 AP와 똑같은 이름(SSID)으로 위장한 불법 AP(Rogue AP)를 설치하여 사용자의 정보를 탈취합니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 35,
+    "question": "DevOps 환경에서 개발(Development)과 운영(Operations)의 전 과정에 보안(Security)을 내재화하여, 개발 초기 단계부터 보안을 고려하는 방법론은?",
+    "options": [
+      "Waterfall",
+      "Agile",
+      "DevSecOps",
+      "Secure Coding"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ DevSecOps DevSecOps는 개발과 운영의 통합 프로세스(DevOps) 사이사이에 보안 절차를 자동화하여 통합시킨 방법론입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 36,
+    "question": "블록체인 네트워크에서 악의적인 공격자가 전체 해시 연산 능력(컴퓨팅 파워)의 과반수 이상을 장악하여 거래 내역을 조작하거나 이중 지불을 시도하는 공격은?",
+    "options": [
+      "51% 공격",
+      "Sybil 공격",
+      "Replay 공격",
+      "Eclipse 공격"
+    ],
+    "answer": 0,
+    "explanation": "51% 공격은 작업 증명(PoW) 기반 블록체인에서 단일 주체가 50%를 초과하는 연산력을 확보하여 장부를 마음대로 수정할 수 있는 위협입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 37,
+    "question": "벨-라파듈라(BLP) 모델의 보안 규칙 중, '자신보다 높은 보안 등급의 객체에 데이터를 쓸 수 있다(Write Up)'는 규칙은?",
+    "options": [
+      "단순 보안 속성 (Simple Security Property)",
+      "스타(*) 보안 속성 (Star Property)",
+      "신뢰받는 주체 (Trusted Subject)",
+      "강한 스타 속성 (Strong Star Property)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 스타(*) 보안 속성 (Star Property) 스타(*) 보안 속성은 'No Write Down' 원칙입니다. 즉, 높은 등급으로만 쓸 수 있다는 것은 낮은 등급으로의 정보 유출을 방지하기 위함입니다. (일반적으로 Write Up은 허용됨)",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 38,
+    "question": "무선 랜 보안 기술 중, 기업 환경에서 사용자를 인증하기 위해 RADIUS 서버와 연동하여 IEEE 802.1X 포트 기반 인증을 수행하는 방식은?",
+    "options": [
+      "WPA2-Personal",
+      "WPA2-Enterprise",
+      "WEP",
+      "MAC Filtering"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② WPA2-Enterprise WPA2-Enterprise 모드는 별도의 인증 서버(RADIUS)를 통해 사용자별 ID/PW 또는 인증서로 개별 인증을 수행합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 39,
+    "question": "블록 암호 모드 중 암호화된 블록이 다음 블록의 암호화에 영향을 미치지 않아 병렬 처리가 가능하며, 카운터(Counter) 값을 1씩 증가시키며 암호화하는 방식은?",
+    "options": [
+      "ECB 모드",
+      "CBC 모드",
+      "CFB 모드",
+      "CTR (Counter) 모드"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ CTR (Counter) 모드 CTR(Counter) 모드는 1씩 증가하는 카운터 값을 암호화하여 평문과 XOR 하므로, 블록 간 의존성이 없어 병렬 처리가 가능하고 속도가 빠릅니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 40,
+    "question": "웹 페이지 내에 보이지 않는 투명한 레이어(Iframe 등)를 씌워, 사용자가 의도하지 않은 버튼(좋아요, 구독 등)을 클릭하게 만드는 공격은?",
+    "options": [
+      "Phishing",
+      "Pharming",
+      "Clickjacking",
+      "CSRF"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Clickjacking 클릭재킹(Clickjacking)은 UI 적인 속임수(투명 레이어)를 사용하여 사용자의 클릭을 가로채는 공격입니다. (X-Frame-Options 헤더로 방어)",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 41,
+    "question": "무선 랜 보안 기술 중, 기업 환경에서 사용자를 인증하기 위해 RADIUS 서버와 연동하여 IEEE 802.1X 포트 기반 인증을 수행하는 방식은?",
+    "options": [
+      "WPA2-Personal",
+      "WPA2-Enterprise",
+      "WEP",
+      "MAC Filtering"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② WPA2-Enterprise WPA2-Enterprise 모드는 별도의 인증 서버(RADIUS)를 통해 사용자별 ID/PW 또는 인증서로 개별 인증을 수행합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 42,
+    "question": "악성코드가 백신 탐지를 피하기 위해 자신의 코드를 그때그때 다르게 보이도록 변형하는 기법을 사용하는 바이러스는?",
+    "options": [
+      "부트 바이러스",
+      "매크로 바이러스",
+      "다형성 바이러스 (Polymorphic Virus)",
+      "웜 (Worm)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 다형성 바이러스 (Polymorphic Virus) 다형성 바이러스는 감염될 때마다 자체적인 암호화 루틴을 변경하여 시그니처 기반 탐지를 어렵게 만듭니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 43,
+    "question": "리눅스 시스템에서 특정 사용자의 접근을 IP 주소 기반으로 허용하거나 차단하기 위해 사용하는 TCP Wrapper의 설정 파일 두 가지는?",
+    "options": [
+      "/etc/hosts, /etc/networks",
+      "/etc/hosts.allow, /etc/hosts.deny",
+      "/etc/access.conf, /etc/deny.conf",
+      "/etc/iptables.allow, /etc/iptables.deny"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② /etc/hosts.allow, /etc/hosts.deny TCP Wrapper는 `/etc/hosts.allow` 파일과 `/etc/hosts.deny` 파일을 참조하여 서비스 접근을 제어합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 44,
+    "question": "다음 중 SQL Injection 공격을 방어하기 위한 시큐어 코딩 기법인 'Prepared Statement'의 동작 원리로 가장 적절한 것은?",
+    "options": [
+      "사용자 입력값을 Base64로 인코딩하여 저장한다.",
+      "쿼리 구조를 미리 컴파일해 두고, 입력값은 나중에 데이터(바인딩 변수)로만 대입한다.",
+      "입력값에서 `SELECT`, `UNION` 같은 키워드를 삭제한다.",
+      "웹 방화벽이 SQL 패턴을 탐지하여 차단한다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 쿼리 구조를 미리 컴파일해 두고, 입력값은 나중에 데이터(바인딩 변수)로만 대입한다. Prepared Statement는 쿼리의 문법 분석과 컴파일을 먼저 수행한 후, 사용자 입력값을 단순 파라미터로 매핑하므로 입력값이 쿼리 구조를 변경할 수 없게 됩니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 45,
+    "question": "다음 중 '다크 웹(Dark Web)'에 접속하기 위해 사용되는 대표적인 익명 네트워크 브라우저는?",
+    "options": [
+      "Chrome",
+      "Edge",
+      "Tor (The Onion Router)",
+      "Safari"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Tor (The Onion Router) Tor 브라우저는 트래픽을 전 세계의 여러 노드를 거쳐 암호화 전송함으로써 추적을 어렵게 만들며, .onion 도메인 기반의 다크 웹 접속에 사용됩니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 46,
+    "question": "개인정보의 안전성 확보조치 기준에 따라, 개인정보처리시스템에 접속한 기록(로그)을 최소 몇 년 이상 보관해야 하는가? (단, 5만 명 이상의 정보주체 또는 고유식별정보 처리 시)",
+    "options": [
+      "6개월",
+      "1년",
+      "2년",
+      "3년"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 2년 일반적인 경우 최소 1년 이상이지만, 5만 명 이상의 정보주체 정보를 처리하거나 고유식별정보/민감정보를 처리하는 경우에는 최소 2년 이상 보관해야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 47,
+    "question": "대칭키 암호화 알고리즘 중 대한민국에서 개발된 표준 알고리즘이 아닌 것은?",
+    "options": [
+      "SEED",
+      "ARIA",
+      "HIGHT",
+      "IDEA"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ IDEA IDEA(International Data Encryption Algorithm)는 스위스에서 개발된 알고리즘입니다. SEED, ARIA, HIGHT, LEA 등은 국산 암호 알고리즘입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 48,
+    "question": "접근 통제 모델 중 'Clark-Wilson' 모델의 핵심 요소로, 사용자가 임의로 데이터를 수정하는 것을 막고, 반드시 정해진 프로그램(TP)을 통해서만 데이터(CDI)를 수정하도록 강제하는 개념은?",
+    "options": [
+      "변환 절차 (Transformation Procedure)",
+      "무결성 검증 절차 (Integrity Verification Procedure)",
+      "제한된 인터페이스 (Constrained Interface)",
+      "내재된 일관성 (Internal Consistency)"
+    ],
+    "answer": 0,
+    "explanation": "Clark-Wilson 모델은 무결성을 위해 사용자가 직접 데이터(CDI)를 건드리지 못하게 하고, 반드시 검증된 프로그램인 '변환 절차(TP)'를 통해서만 접근하도록 강제합니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 49,
+    "question": "다음 중 '다크 웹(Dark Web)'에 접속하기 위해 사용되는 대표적인 익명 네트워크 브라우저는?",
+    "options": [
+      "Chrome",
+      "Edge",
+      "Tor (The Onion Router)",
+      "Safari"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Tor (The Onion Router) Tor 브라우저는 트래픽을 전 세계의 여러 노드를 거쳐 암호화 전송함으로써 추적을 어렵게 만들며, .onion 도메인 기반의 다크 웹 접속에 사용됩니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 50,
+    "question": "공격자가 시스템에 침입한 후 재침입을 용이하게 하기 위해 만들어 놓은 뒷문(Backdoor)을 탐지하거나, 무결성이 훼손된 시스템 파일을 탐지하기 위해 사용하는 도구는?",
+    "options": [
+      "Tripwire",
+      "Snort",
+      "Nessus",
+      "Nmap"
+    ],
+    "answer": 0,
+    "explanation": "Tripwire는 파일의 해시값을 생성하여 주기적으로 비교함으로써 파일의 위변조 여부(무결성)를 감시하는 대표적인 호스트 기반 침입 탐지 도구(HIDS)입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 51,
+    "question": "클라우드 보안 형상 관리(CSPM) 솔루션의 주요 기능으로 가장 적절한 것은?",
+    "options": [
+      "클라우드 인프라(IaaS)의 설정 오류 및 컴플라이언스 위반 사항 탐지",
+      "클라우드 내부의 악성코드 실시간 차단",
+      "사용자 계정 통합 관리 (SSO)",
+      "온프레미스 방화벽 정책 관리"
+    ],
+    "answer": 0,
+    "explanation": "CSPM(Cloud Security Posture Management)은 AWS, Azure 등 클라우드 인프라의 설정 미흡(스토리지 공개 설정 등)이나 법규 위반을 지속적으로 모니터링합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 52,
+    "question": "리눅스 시스템에서 umask 값이 022일 때, 사용자가 새로 생성한 '파일'과 '디렉터리'의 권한으로 올바른 것은?",
+    "options": [
+      "파일: 644, 디렉터리: 755",
+      "파일: 666, 디렉터리: 777",
+      "파일: 640, 디렉터리: 750",
+      "파일: 600, 디렉터리: 700"
+    ],
+    "answer": 0,
+    "explanation": "파일의 기본 권한은 666, 디렉터리는 777입니다. 여기서 umask 022를 빼면 파일은 644(rw-r--r--), 디렉터리는 755(rwxr-xr-x)가 됩니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 53,
+    "question": "데이터베이스의 동시성 제어(Concurrency Control) 문제 중, 두 개의 트랜잭션이 서로가 점유한 자원의 락(Lock)이 해제되기를 무한히 기다리며 멈춰 있는 상태는?",
+    "options": [
+      "Deadlock (교착 상태)",
+      "Livelock",
+      "Starvation",
+      "Race Condition"
+    ],
+    "answer": 0,
+    "explanation": "교착 상태(Deadlock)는 트랜잭션 A가 자원 1을 잡고 자원 2를 기다리는데, 트랜잭션 B는 자원 2를 잡고 자원 1을 기다려 서로 진행하지 못하는 상태입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 54,
+    "question": "해시 함수가 갖추어야 할 성질 중 '어떤 다이제스트(해시값) y가 주어졌을 때, H(x)=y가 되는 입력값 x를 찾는 것이 계산적으로 어려워야 한다'는 성질은?",
+    "options": [
+      "역상 저항성 (Pre-image Resistance)",
+      "제2 역상 저항성 (Second Pre-image Resistance)",
+      "충돌 저항성 (Collision Resistance)",
+      "압축성 (Compression)"
+    ],
+    "answer": 0,
+    "explanation": "주어진 해시값으로부터 원본을 찾기 어려워야 하는 성질은 제1 역상 저항성(Pre-image Resistance)입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 55,
+    "question": "정보보안 거버넌스의 일환으로, 조직의 정보보호 활동이 비즈니스 목표와 연계되고 규정을 준수하며 위험을 적절히 관리하고 있는지 이사회나 경영진이 감독하고 통제하는 활동을 무엇이라 하는가?",
+    "options": [
+      "IT 거버넌스",
+      "정보보호 거버넌스",
+      "보안 감사",
+      "위험 관리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정보보호 거버넌스 정보보호 거버넌스(Information Security Governance)는 정보보호가 단순 실무가 아닌 경영의 일부로서 전략적으로 관리되고 통제되는 체계를 의미합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 56,
+    "question": "버퍼 오버플로우(Buffer Overflow) 공격 대응 기술 중, 함수 진입 시 스택(Stack)의 복귀 주소(Return Address) 앞에 특정한 값(Canary)을 삽입하고, 함수 종료 시 이 값이 변조되었는지 확인하는 기법은?",
+    "options": [
+      "ASLR",
+      "DEP",
+      "Stack Guard",
+      "Code Signing"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Stack Guard 스택 가드(Stack Guard)는 복귀 주소 앞에 카나리(Canary) 값을 심어두고, 이 값이 변조되면 오버플로우가 발생한 것으로 간주하여 프로그램을 종료시킵니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 57,
+    "question": "개인정보 보호법상 정보주체가 자신의 개인정보에 대한 열람을 요구했을 때, 개인정보처리자가 열람을 제한하거나 거절할 수 있는 사유가 아닌 것은?",
+    "options": [
+      "법률에 따라 열람이 금지되거나 제한되는 경우",
+      "다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우",
+      "개인정보처리자의 영업 비밀이 포함되어 있는 경우",
+      "공공기관이 조세 부과·징수 또는 환급 업무를 수행하는 데 중대한 지장을 초래하는 경우"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 개인정보처리자의 영업 비밀이 포함되어 있는 경우 단순히 기업의 영업 비밀이 포함되었다는 이유만으로는 정보주체의 헌법적 권리인 열람권을 제한할 수 없습니다. 법령상 명시된 거절 사유에 해당해야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 58,
+    "question": "스위치 환경에서 공격자가 자신의 PC를 네트워크의 트래픽을 모두 볼 수 있는 '모니터링 포트'처럼 만들기 위해 사용하는 공격 기법은?",
+    "options": [
+      "ARP Redirect",
+      "ARP Spoofing",
+      "ICMP Redirect",
+      "Switch Jamming"
+    ],
+    "answer": 0,
+    "explanation": "ARP Redirect 공격은 호스트들에게 '나를 라우터로 이용하라'고 속여(MAC 변조), 스위치 환경에서도 트래픽이 공격자를 경유하게 만듭니다. (ARP Spoofing의 일종이나 라우팅 경로 변경에 초점)",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 59,
+    "question": "사이버 공격의 전체 과정을 정찰, 무기화, 배달, 취약점 악용, 설치, 명령 제어, 행동의 7단계로 나누어 분석하고 각 단계별 방어 전략을 수립하는 모델은?",
+    "options": [
+      "Diamond Model",
+      "MITRE ATT&CK",
+      "Cyber Kill Chain (사이버 킬 체인)",
+      "Pyramid of Pain"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Cyber Kill Chain (사이버 킬 체인) 록히드 마틴이 제안한 사이버 킬 체인(Cyber Kill Chain)은 APT 공격의 절차를 7단계로 도식화하여 선제적 방어를 돕는 모델입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 60,
+    "question": "다음 중 정보통신망법상 '임시조치' 제도에 대한 설명으로 옳은 것은?",
+    "options": [
+      "권리가 침해된 정보의 삭제 요청이 있을 때, 정보통신서비스 제공자가 판단하기 어렵거나 다툼이 예상되는 경우 30일 이내로 접근을 차단하는 조치다.",
+      "법원의 판결이 있을 때까지 영구적으로 게시물을 차단하는 조치다.",
+      "방송통신위원회가 직권으로 게시물을 삭제하는 행정 명령이다.",
+      "게시물 작성자의 동의가 있어야만 취할 수 있는 조치다."
+    ],
+    "answer": 0,
+    "explanation": "임시조치는 명예훼손 등 권리 침해 주장이 있을 때, 사업자가 판단 곤란 시 최대 30일간 해당 정보의 접근을 임시로 차단(블라인드)하는 제도입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 61,
+    "question": "윈도우 레지스트리 하이브(Hive) 파일 중, 사용자별 설정 정보(바탕화면, 환경변수 등)가 저장되며 `HKEY_CURRENT_USER` 키에 매핑되는 파일은?",
+    "options": [
+      "NTUSER.DAT",
+      "SAM",
+      "SYSTEM",
+      "SOFTWARE"
+    ],
+    "answer": 0,
+    "explanation": "사용자 프로필 디렉터리에 위치한 `NTUSER.DAT` 파일은 해당 사용자의 개인별 레지스트리 설정 정보를 담고 있습니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 62,
+    "question": "다음 중 네트워크 트래픽 분석 도구인 'Wireshark'에서 '출발지 IP가 192.168.0.1이거나 목적지 IP가 192.168.0.1인 패킷'을 검색하기 위한 필터 표현식은?",
+    "options": [
+      "ip.addr == 192.168.0.1",
+      "ip.src == 192.168.0.1 && ip.dst == 192.168.0.1",
+      "net 192.168.0.1",
+      "host 192.168.0.1"
+    ],
+    "answer": 0,
+    "explanation": "와이어샤크 디스플레이 필터에서 `ip.addr`는 출발지(src) 또는 목적지(dst) 중 하나라도 일치하면 보여줍니다. (`host` 등은 캡처 필터 문법입니다.)",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 63,
+    "question": "파일 업로드 취약점 대응을 위해 이미지 파일만 업로드하도록 검증 로직을 짰다. `getimagesize()` 함수를 사용하여 이미지 헤더를 검증할 때, 공격자가 이를 우회하고 악성 코드를 실행하기 위해 이미지 파일 내 주석(Comment) 영역 등에 PHP 코드를 삽입하는 기법은?",
+    "options": [
+      "Null Byte Injection",
+      "Polyglot (폴리글랏) 파일 공격",
+      "Double Extension 공격",
+      "Race Condition Upload"
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 64,
+    "question": "SQL Injection 공격 유형 중, 데이터베이스의 에러 메시지를 출력하지 않고, 참/거짓 질의에 대한 반응(응답 차이)만을 이용하여 데이터를 한 글자씩 알아내는 기법은?",
+    "options": [
+      "Error-based SQL Injection",
+      "Union-based SQL Injection",
+      "Blind SQL Injection (Boolean-based)",
+      "Time-based SQL Injection"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Blind SQL Injection (Boolean-based) Boolean-based Blind SQL Injection은 화면에 에러나 데이터가 출력되지 않을 때, 쿼리의 참/거짓 조건에 따라 페이지 내용이 미세하게 달라지는 것을 이용해 데이터를 추출합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 65,
+    "question": "다음 중 DRM(Digital Rights Management) 기술의 구성 요소가 아닌 것은?",
+    "options": [
+      "콘텐츠 제공자 (Contents Provider)",
+      "콘텐츠 분배자 (Contents Distributor)",
+      "클리어링 하우스 (Clearing House)",
+      "워터마킹 검출기 (Watermark Detector)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 워터마킹 검출기 (Watermark Detector) DRM의 핵심 구성 요소는 콘텐츠 제공자, 분배자, 소비자와 라이선스 발급 및 정산을 담당하는 '클리어링 하우스'입니다. 워터마킹은 기술 요소 중 하나일 뿐 구성 주체는 아닙니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 66,
+    "question": "다음 중 '랜섬웨어' 공격자가 파일을 암호화한 후, 피해자에게 복호화 키를 주는 대가로 주로 요구하는 금전 수단은?",
+    "options": [
+      "신용카드 결제",
+      "계좌 이체",
+      "암호화폐 (비트코인 등)",
+      "문화상품권"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 암호화폐 (비트코인 등) 공격자들은 추적이 어려운 비트코인, 모네로 등의 암호화폐를 몸값(Ransom)으로 요구합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 67,
+    "question": "사이버 공격의 전체 과정을 정찰, 무기화, 배달, 취약점 악용, 설치, 명령 제어, 행동의 7단계로 나누어 분석하고 각 단계별 방어 전략을 수립하는 모델은?",
+    "options": [
+      "Diamond Model",
+      "MITRE ATT&CK",
+      "Cyber Kill Chain (사이버 킬 체인)",
+      "Pyramid of Pain"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Cyber Kill Chain (사이버 킬 체인) 록히드 마틴이 제안한 사이버 킬 체인(Cyber Kill Chain)은 APT 공격의 절차를 7단계로 도식화하여 선제적 방어를 돕는 모델입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 68,
+    "question": "리눅스 `iptables` 설정에서 '상태 추적(Connection Tracking)' 모듈을 사용하여, 이전에 연결된 세션과 연관성이 있는 패킷(예: FTP 데이터 채널, ICMP 에러 등)을 허용하는 룰은?",
+    "options": [
+      "iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT",
+      "iptables -A INPUT -m state --state NEW,INVALID -j ACCEPT",
+      "iptables -A FORWARD -p tcp --syn -j ACCEPT",
+      "iptables -t nat -A PREROUTING -j MASQUERADE"
+    ],
+    "answer": 0,
+    "explanation": "해설 없음",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 69,
+    "question": "다음 중 TCP/IP 프로토콜의 4계층(전송 계층) 프로토콜인 TCP 헤더에 포함되지 않는 필드는?",
+    "options": [
+      "Source Port",
+      "Sequence Number",
+      "Window Size",
+      "Total Length"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Total Length Total Length 필드는 IP 헤더(3계층)에 포함되어 패킷의 전체 길이를 나타냅니다. TCP 헤더에는 헤더 길이(Data Offset) 필드가 있습니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 70,
+    "question": "개인정보 보호법 제28조의4(가명정보에 대한 안전조치 등)에 따라 가명정보를 처리할 때 준수해야 할 사항으로 틀린 것은?",
+    "options": [
+      "가명정보와 추가정보(매핑 테이블 등)는 분리하여 보관해야 한다.",
+      "가명정보 처리 기록은 파기 후 1년까지 보관해야 한다.",
+      "가명정보의 처리 목적 등을 기록한 관리 대장을 작성·보관해야 한다.",
+      "가명정보를 제3자에게 제공하는 경우, 특정 개인을 알아볼 수 없도록 처리해야 한다."
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 71,
+    "question": "개인정보 보호법 제28조의4(가명정보에 대한 안전조치 등)에 따라 가명정보를 처리할 때 준수해야 할 사항으로 틀린 것은?",
+    "options": [
+      "가명정보와 추가정보(매핑 테이블 등)는 분리하여 보관해야 한다.",
+      "가명정보 처리 기록은 파기 후 1년까지 보관해야 한다.",
+      "가명정보의 처리 목적 등을 기록한 관리 대장을 작성·보관해야 한다.",
+      "가명정보를 제3자에게 제공하는 경우, 특정 개인을 알아볼 수 없도록 처리해야 한다."
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 72,
+    "question": "파일 업로드 취약점 대응을 위해 이미지 파일만 업로드하도록 검증 로직을 짰다. `getimagesize()` 함수를 사용하여 이미지 헤더를 검증할 때, 공격자가 이를 우회하고 악성 코드를 실행하기 위해 이미지 파일 내 주석(Comment) 영역 등에 PHP 코드를 삽입하는 기법은?",
+    "options": [
+      "Null Byte Injection",
+      "Polyglot (폴리글랏) 파일 공격",
+      "Double Extension 공격",
+      "Race Condition Upload"
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 73,
+    "question": "다음 중 SQL Injection 공격을 방어하기 위한 시큐어 코딩 기법인 'Prepared Statement'의 동작 원리로 가장 적절한 것은?",
+    "options": [
+      "사용자 입력값을 Base64로 인코딩하여 저장한다.",
+      "쿼리 구조를 미리 컴파일해 두고, 입력값은 나중에 데이터(바인딩 변수)로만 대입한다.",
+      "입력값에서 `SELECT`, `UNION` 같은 키워드를 삭제한다.",
+      "웹 방화벽이 SQL 패턴을 탐지하여 차단한다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 쿼리 구조를 미리 컴파일해 두고, 입력값은 나중에 데이터(바인딩 변수)로만 대입한다. Prepared Statement는 쿼리의 문법 분석과 컴파일을 먼저 수행한 후, 사용자 입력값을 단순 파라미터로 매핑하므로 입력값이 쿼리 구조를 변경할 수 없게 됩니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 74,
+    "question": "OECD 프라이버시 8원칙 중, '개인정보는 이용 목적에 필요한 범위 내에서 정확하고 완전하며 최신의 상태로 유지되어야 한다'는 원칙은?",
+    "options": [
+      "수집 제한의 원칙",
+      "데이터 품질의 원칙 (Data Quality Principle)",
+      "목적 명확화의 원칙",
+      "이용 제한의 원칙"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 데이터 품질의 원칙 (Data Quality Principle) 데이터 품질의 원칙은 수집된 데이터가 목적에 부합하도록 정확성, 완전성, 최신성을 유지해야 함을 강조합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 75,
+    "question": "파일 업로드 취약점 대응 방안으로 가장 적절하지 않은 것은?",
+    "options": [
+      "업로드 파일의 확장자를 화이트리스트 방식으로 제한한다.",
+      "업로드된 파일의 실행 권한을 제거한다.",
+      "파일명을 날짜나 난수 등으로 변경하여 저장한다.",
+      "클라이언트 측 자바스크립트로만 파일 종류를 검증한다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 클라이언트 측 자바스크립트로만 파일 종류를 검증한다. 클라이언트 측 검증(JavaScript)은 프록시 도구 등으로 쉽게 우회 가능하므로, 반드시 서버 측 검증이 병행되어야 합니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 76,
+    "question": "개인정보 보호법상 정보통신서비스 제공자가 만 14세 미만 아동의 개인정보를 수집할 때 준수해야 할 사항은?",
+    "options": [
+      "아동 본인의 동의만 받으면 된다.",
+      "법정대리인의 동의를 받아야 하며, 법정대리인이 동의했음을 확인해야 한다.",
+      "학교 담임 교사의 동의를 받아야 한다.",
+      "수집 자체가 불가능하다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 법정대리인의 동의를 받아야 하며, 법정대리인이 동의했음을 확인해야 한다. 만 14세 미만 아동의 개인정보 수집 시에는 반드시 법정대리인(부모 등)의 동의를 얻어야 하며, 그 동의 사실을 확인해야 할 의무가 있습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 77,
+    "question": "암호화폐 지갑(Wallet)의 개인키(Private Key)를 분실했을 때를 대비하여, 12개 또는 24개의 단어 목록으로 구성된 복구용 코드를 무엇이라 하는가?",
+    "options": [
+      "Mnemonic Code (니모닉 코드)",
+      "Hash Key",
+      "Public Address",
+      "Multi-Sig"
+    ],
+    "answer": 0,
+    "explanation": "니모닉(Mnemonic)은 복잡한 난수 형태의 개인키를 사용자가 기억하기 쉬운 단어 나열로 변환하여 백업 및 복구를 돕는 표준 방식(BIP-39)입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 78,
+    "question": "대칭키 암호화 알고리즘 중 대한민국에서 개발된 표준 알고리즘이 아닌 것은?",
+    "options": [
+      "SEED",
+      "ARIA",
+      "HIGHT",
+      "IDEA"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ IDEA IDEA(International Data Encryption Algorithm)는 스위스에서 개발된 알고리즘입니다. SEED, ARIA, HIGHT, LEA 등은 국산 암호 알고리즘입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 79,
+    "question": "윈도우 NTFS 파일 시스템의 특징이 아닌 것은?",
+    "options": [
+      "파일 및 폴더별로 상세한 접근 제어(ACL)가 가능하다.",
+      "EFS(Encrypting File System)를 통해 파일 암호화를 지원한다.",
+      "FAT32보다 보안성과 안정성이 뛰어나다.",
+      "리눅스 시스템과 완벽하게 호환되어 별도 드라이버 없이 권한까지 인식한다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 리눅스 시스템과 완벽하게 호환되어 별도 드라이버 없이 권한까지 인식한다. NTFS는 윈도우 전용 파일 시스템으로, 리눅스에서 기본적으로 마운트는 가능하나 윈도우의 ACL(접근 제어 목록) 권한 체계를 리눅스 권한과 완벽하게 1:1로 매핑하여 인식하지는 않습니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 80,
+    "question": "블록체인의 합의 알고리즘 중 'PBFT(Practical Byzantine Fault Tolerance)'에 대한 설명으로 옳은 것은?",
+    "options": [
+      "작업 증명(PoW)보다 처리 속도가 느리고 포크(Fork)가 자주 발생한다.",
+      "전체 노드의 51% 이상이 악의적이어야 합의가 깨진다.",
+      "전체 노드 수 N에 대하여 (N-1)/3 개 미만의 악의적 노드가 있어도 합의를 보장한다(f < N/3).",
+      "누구나 참여 가능한 퍼블릭 블록체인(Public Blockchain)에 가장 적합하다."
+    ],
+    "answer": 2,
+    "explanation": "해설 없음",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 81,
+    "question": "개인정보 보호법에 따라 과징금 부과 시, 위반 행위와 관련이 없는 매출액을 제외하기 곤란하거나 매출액 산정이 곤란한 경우 정액 과징금의 상한액은?",
+    "options": [
+      "5억 원",
+      "10억 원",
+      "20억 원",
+      "50억 원"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 20억 원 2023년 개정법(2025년 적용 등) 및 시행령에 따라 매출액 산정이 곤란한 경우의 정액 과징금 상한은 20억 원 이하입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 82,
+    "question": "HTTP 요청 메소드(Method) 중, 서버에 있는 리소스를 삭제할 때 사용하는 메소드로, 보안상 비활성화해야 하는 경우가 많은 것은?",
+    "options": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DELETE DELETE 메소드는 서버의 파일을 삭제하는 기능을 하므로, REST API 등 특별히 허용한 경우가 아니라면 웹 서버 설정에서 차단해야 합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 83,
+    "question": "다음 중 패킷의 단편화(Fragmentation) 취약점을 이용한 DoS 공격으로, IP 헤더의 'Offset' 값을 조작하여 패킷 재조립 시 시스템의 과부하를 유발하거나 충돌을 일으키는 공격은?",
+    "options": [
+      "Smurf Attack",
+      "Teardrop Attack",
+      "Land Attack",
+      "Ping of Death"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Teardrop Attack Teardrop 공격은 IP 패킷의 오프셋(Offset)을 중첩되게 조작하여, 수신 측에서 재조립 시 오류를 일으켜 시스템을 마비시키는 공격입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 84,
+    "question": "OECD 프라이버시 8원칙 중, '개인정보는 이용 목적에 필요한 범위 내에서 정확하고 완전하며 최신의 상태로 유지되어야 한다'는 원칙은?",
+    "options": [
+      "수집 제한의 원칙",
+      "데이터 품질의 원칙 (Data Quality Principle)",
+      "목적 명확화의 원칙",
+      "이용 제한의 원칙"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 데이터 품질의 원칙 (Data Quality Principle) 데이터 품질의 원칙은 수집된 데이터가 목적에 부합하도록 정확성, 완전성, 최신성을 유지해야 함을 강조합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 85,
+    "question": "다음 중 리눅스 명령어 `ls -l` 실행 결과가 `-rwsr-xr-x` 일 때, 이 파일에 설정된 특수 권한은?",
+    "options": [
+      "Sticky Bit",
+      "SetGID",
+      "SetUID",
+      "Read-Only"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ SetUID 소유자 권한 부분(첫 번째 세트)의 실행 자리에 `s`가 표시되어 있으므로 SetUID(4000)가 설정된 파일입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 86,
+    "question": "클라우드 네이티브 보안에서 '컨테이너(Container)'의 라이프사이클 보안 중, 이미지 빌드 단계에서 악성코드나 취약점이 포함되지 않도록 검사하는 과정을 뜻하는 용어는?",
+    "options": [
+      "Runtime Security",
+      "Container Scanning (Image Scanning)",
+      "Network Segmentation",
+      "Secrets Management"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Container Scanning (Image Scanning) 이미지 스캐닝(Image Scanning)은 컨테이너 이미지가 레지스트리에 저장되거나 배포되기 전에 CVE 취약점, 악성코드, 하드코딩된 키 등을 정적 분석하는 단계입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 87,
+    "question": "ISMS-P 인증 기준에서 '정보보호 최고책임자(CISO)'의 자격 요건 및 지정 의무를 규정하고 있는 상위 법령은?",
+    "options": [
+      "개인정보 보호법",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 (정보통신망법)",
+      "전자서명법",
+      "통신비밀보호법"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정보통신망 이용촉진 및 정보보호 등에 관한 법률 (정보통신망법) CISO의 지정 의무, 자격 요건, 겸직 금지 등은 '정보통신망법' 및 동법 시행령에서 규정하고 있습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 88,
+    "question": "자바(Java) 시큐어 코딩에서 'Deserialization of Untrusted Data' (신뢰할 수 없는 데이터의 역직렬화) 취약점을 방어하기 위한 방법으로 가장 적절하지 않은 것은?",
+    "options": [
+      "역직렬화 전에 입력 스트림의 데이터 타입을 검증하는 'Look-ahead' 방식을 사용한다.",
+      "`ObjectInputStream`을 상속받아 `resolveClass` 메소드를 오버라이딩하여 허용된 클래스만 로딩한다.",
+      "역직렬화 대신 JSON이나 XML 포맷을 사용하되, 안전한 파서 설정을 적용한다.",
+      "`Serializable` 인터페이스를 구현한 모든 클래스에 `transient` 키워드를 붙여 역직렬화를 원천 차단한다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ `Serializable` 인터페이스를 구현한 모든 클래스에 `transient` 키워드를 붙여 역직렬화를 원천 차단한다. `transient` 키워드는 직렬화 대상에서 제외할 필드에 붙이는 것이지, 클래스 전체의 역직렬화를 막는 용도가 아니며, 모든 필드에 붙이면 데이터 전달 자체가 불가능해집니다. 역직렬화 자체를 통제(화이트리스트 클래스 검증)하는 것이 핵심입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 89,
+    "question": "다음 중 '다크 웹(Dark Web)'에 접속하기 위해 사용되는 대표적인 익명 네트워크 브라우저는?",
+    "options": [
+      "Chrome",
+      "Edge",
+      "Tor (The Onion Router)",
+      "Safari"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Tor (The Onion Router) Tor 브라우저는 트래픽을 전 세계의 여러 노드를 거쳐 암호화 전송함으로써 추적을 어렵게 만들며, .onion 도메인 기반의 다크 웹 접속에 사용됩니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 90,
+    "question": "HTTP 프로토콜 자체의 취약점은 아니지만, HTTP 헤더의 'Host' 필드 값을 변조하여 캐시 서버(Cache Server)가 오염된 응답을 저장하게 만드는 공격은?",
+    "options": [
+      "HTTP Response Splitting",
+      "Web Cache Poisoning",
+      "HTTP Request Smuggling",
+      "Session Fixation"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Web Cache Poisoning 웹 캐시 포이즈닝은 공격자가 조작한 HTTP 요청(Host 헤더 등)을 통해 캐시 서버에 악성 응답을 저장시켜, 이후 접속하는 정상 사용자들에게 악성 콘텐츠가 전달되게 하는 공격입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 91,
+    "question": "클라우드 보안 인증(CSAP) 제도에서, 클라우드 시스템의 중요도에 따라 3등급으로 구분하여 차등화된 보안 기준을 적용한다. 이 3등급 분류에 해당하지 않는 것은?",
+    "options": [
+      "상(High)",
+      "중(Medium)",
+      "하(Low)",
+      "최상(Critical)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 최상(Critical) CSAP 등급제는 시스템 중요도에 따라 '상', '중', '하' 3등급으로 분류합니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 92,
+    "question": "웹 애플리케이션에서 사용자의 입력값을 검증하지 않고 HTTP 응답 헤더(Set-Cookie 등)에 포함시킬 때, 개행 문자(CRLF)를 이용하여 헤더를 분리하고 악성 코드를 삽입하는 공격은?",
+    "options": [
+      "HTTP Response Splitting",
+      "HTTP Request Smuggling",
+      "Buffer Overflow",
+      "Format String Bug"
+    ],
+    "answer": 0,
+    "explanation": "HTTP 응답 분할(Response Splitting) 공격은 `\\r\\n`을 삽입하여 응답을 두 개로 쪼개고, 두 번째 응답에 악성 스크립트나 위조된 페이지를 심는 공격입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 93,
+    "question": "리눅스에서 `/etc/syslog.conf` 설정 파일의 내용이 `authpriv.* /var/log/secure` 일 때 의미하는 바는?",
+    "options": [
+      "인증과 관련된 모든 로그를 /var/log/secure 파일에 기록한다.",
+      "메일과 관련된 모든 로그를 /var/log/secure 파일에 기록한다.",
+      "커널과 관련된 치명적인 로그만 /var/log/secure 파일에 기록한다.",
+      "예약된 작업(cron) 로그를 /var/log/secure 파일에 기록한다."
+    ],
+    "answer": 0,
+    "explanation": "`authpriv`는 인증 관련 시설(Facility)을 의미하며, `*`는 모든 심각도(Level)를 의미합니다. 즉, 인증 관련 모든 로그를 저장하라는 뜻입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 94,
+    "question": "리눅스 시스템에서 특정 사용자의 접근을 IP 주소 기반으로 허용하거나 차단하기 위해 사용하는 TCP Wrapper의 설정 파일 두 가지는?",
+    "options": [
+      "/etc/hosts, /etc/networks",
+      "/etc/hosts.allow, /etc/hosts.deny",
+      "/etc/access.conf, /etc/deny.conf",
+      "/etc/iptables.allow, /etc/iptables.deny"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② /etc/hosts.allow, /etc/hosts.deny TCP Wrapper는 `/etc/hosts.allow` 파일과 `/etc/hosts.deny` 파일을 참조하여 서비스 접근을 제어합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 95,
+    "question": "다음 중 악성코드가 분석가의 분석을 방해하기 위해 사용하는 '안티 디버깅(Anti-Debugging)' 기법이 아닌 것은?",
+    "options": [
+      "`IsDebuggerPresent()` API 호출",
+      "`CheckRemoteDebuggerPresent()` API 호출",
+      "코드 난독화 (Obfuscation)",
+      "`OutputDebugString()` 에러 코드 확인"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 코드 난독화 (Obfuscation) 코드 난독화는 코드를 읽기 어렵게 만드는 보호 기법이지, 디버거의 존재 자체를 탐지하거나 디버깅 프로세스를 강제 종료시키는 안티 디버깅 API 호출과는 구분됩니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 96,
+    "question": "리눅스에서 파일의 접근 권한(Permission) 외에 추가적인 속성(Append only 등)을 확인하기 위해 사용하는 명령어는?",
+    "options": [
+      "`lsattr`",
+      "`chattr`",
+      "`getattr`",
+      "`setattr`"
+    ],
+    "answer": 0,
+    "explanation": "`lsattr` 명령어는 `chattr`로 설정된 파일의 확장 속성(Attribute)을 조회하는 명령어입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 97,
+    "question": "다음 중 업무 연속성 계획(BCP) 수립 단계에서, 재해 발생 시 업무가 중단되었을 때 조직에 미치는 재무적/비재무적 손실 영향을 분석하는 과정은?",
+    "options": [
+      "위험 평가 (Risk Assessment)",
+      "업무 영향 분석 (BIA, Business Impact Analysis)",
+      "복구 전략 수립",
+      "모의 훈련"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 업무 영향 분석 (BIA, Business Impact Analysis) BIA(업무 영향 분석)는 업무 중단 시 시간의 흐름에 따른 손실(영향)을 분석하여 핵심 업무와 우선순위, 복구 목표 시간(RTO) 등을 도출하는 핵심 과정입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 98,
+    "question": "리눅스 시스템에서 전체 파일 시스템 중 'SetUID' 비트가 설정된 파일(권한 4000)을 찾기 위한 명령어로 올바른 것은?",
+    "options": [
+      "find / -perm -4000",
+      "find / -name setuid",
+      "ls -l | grep setuid",
+      "chmod -s /"
+    ],
+    "answer": 0,
+    "explanation": "`find` 명령어의 `-perm` 옵션을 사용하여 권한 비트를 검색할 수 있습니다. `-4000`은 SetUID 비트(4)가 포함된 파일을 찾습니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 99,
+    "question": "개인정보 보호법상 고유식별정보에 해당하지 않는 것은?",
+    "options": [
+      "주민등록번호",
+      "여권번호",
+      "운전면허번호",
+      "휴대전화번호"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 휴대전화번호 고유식별정보는 법령에 따라 개인을 고유하게 구별하기 위해 부여된 번호로 주민등록번호, 여권번호, 운전면허번호, 외국인등록번호 4가지만 해당합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 100,
+    "question": "다음 중 DRM(Digital Rights Management) 기술의 구성 요소가 아닌 것은?",
+    "options": [
+      "콘텐츠 제공자 (Contents Provider)",
+      "콘텐츠 분배자 (Contents Distributor)",
+      "클리어링 하우스 (Clearing House)",
+      "워터마킹 검출기 (Watermark Detector)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 워터마킹 검출기 (Watermark Detector) DRM의 핵심 구성 요소는 콘텐츠 제공자, 분배자, 소비자와 라이선스 발급 및 정산을 담당하는 '클리어링 하우스'입니다. 워터마킹은 기술 요소 중 하나일 뿐 구성 주체는 아닙니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 101,
+    "question": "접근 통제 행렬(Access Control Matrix)을 구현할 때, 객체(Object)를 중심으로 해당 객체에 접근 권한이 있는 주체들의 목록을 저장하는 방식은?",
+    "options": [
+      "Capability List (능력 목록)",
+      "ACL (Access Control List)",
+      "Role Hierarchy (역할 계층)",
+      "Ticket (티켓)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ACL (Access Control List) ACL은 객체(파일 등)에 붙어서 '누가 나에게 접근 가능한지'를 명시하는 목록입니다. 반대로 주체가 '내가 접근 가능한 객체 목록'을 가진 것은 Capability List입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 102,
+    "question": "SSL/TLS 공격 기법 중 'POODLE(Padding Oracle On Downgraded Legacy Encryption)' 공격의 핵심 원리와 대응 방안으로 올바른 것은?",
+    "options": [
+      "원리: Heartbeat 확장의 경계 검사 미흡, 대응: OpenSSL 업데이트",
+      "원리: SSL v3.0의 CBC 모드 패딩 검증 취약점, 대응: SSL v3.0 비활성화",
+      "원리: RSA 키 교환 시 선택 암호문 공격, 대응: RSA 대신 DH 사용",
+      "원리: 압축(Compression) 기능 사용 시 평문 정보 유출, 대응: 압축 비활성화"
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 103,
+    "question": "메모리 보호 기법 중 하나로, 프로그램 실행 시마다 스택, 힙, 라이브러리 등의 메모리 주소를 무작위로 배치하여 버퍼 오버플로우 공격을 어렵게 만드는 기술은?",
+    "options": [
+      "Stack Guard",
+      "ASLR (Address Space Layout Randomization)",
+      "DEP (Data Execution Prevention)",
+      "Canary"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ASLR (Address Space Layout Randomization) ASLR은 메모리 주소 공간의 레이아웃을 난수화(Randomization)하여 공격자가 특정 주소를 예측하기 어렵게 만듭니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 104,
+    "question": "리눅스 `/etc/shadow` 파일의 두 번째 필드에 저장되는 패스워드 정보의 구성 요소가 아닌 것은?",
+    "options": [
+      "해시 알고리즘 식별자 (ID)",
+      "솔트 (Salt) 값",
+      "암호화된 해시 값 (Encrypted Hash)",
+      "사용자 UID (User ID)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 사용자 UID (User ID) 두 번째 필드는 암호화된 패스워드로 '$id$salt$hash' 형식을 따릅니다. 사용자 UID는 /etc/passwd 파일의 세 번째 필드에 저장됩니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 105,
+    "question": "개인정보 안전성 확보조치 기준 상 비밀번호 작성 규칙으로 올바른 최소 자릿수는? (영문, 숫자, 특수문자 중 2종류 이상 조합 시)",
+    "options": [
+      "6자리 이상",
+      "8자리 이상",
+      "9자리 이상",
+      "10자리 이상"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 10자리 이상 비밀번호 작성 규칙에 따르면 2종류(영문/숫자/특수문자) 조합 시 최소 10자리 이상, 3종류 조합 시 최소 8자리 이상이어야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 106,
+    "question": "리눅스에서 파일의 소유자(Owner)를 변경할 때 사용하는 명령어는?",
+    "options": [
+      "chmod",
+      "chown",
+      "chgrp",
+      "umask"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② chown chown(change owner)은 파일이나 디렉터리의 소유자와 소유 그룹을 변경하는 명령어입니다. (chmod는 권한 변경)",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 107,
+    "question": "암호학적 해시 함수 `SHA-256`을 사용하여 전자서명을 생성할 때, 'Length Extension Attack(길이 연장 공격)'에 취약하지 않은 구조를 가진 해시 구성 방식은?",
+    "options": [
+      "`H(Key || Message)` 방식의 단순 접두어 MAC",
+      "`H(Message || Key)` 방식의 단순 접미어 MAC",
+      "Merkle-Damgard 구조",
+      "HMAC (Hash-based Message Authentication Code)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ HMAC (Hash-based Message Authentication Code) 단순히 키와 메시지를 이어 붙여 해시하는 방식은 Merkle-Damgard 구조의 특성상 길이 연장 공격에 취약합니다. 이를 보완하기 위해 내부/외부 두 번의 해싱 과정을 거치는 `HMAC` 구조를 사용해야 합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 108,
+    "question": "다음 중 IP 주소를 MAC 주소로 변환해주는 프로토콜은?",
+    "options": [
+      "ARP",
+      "RARP",
+      "ICMP",
+      "IGMP"
+    ],
+    "answer": 0,
+    "explanation": "ARP(Address Resolution Protocol)는 논리적인 IP 주소를 물리적인 MAC 주소로 매핑합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 109,
+    "question": "사용자 인증 기술 중, 한 번의 로그인으로 연동된 다양한 시스템이나 서비스를 별도의 재인증 없이 이용할 수 있게 해주는 기술은?",
+    "options": [
+      "SSO (Single Sign On)",
+      "OTP (One Time Password)",
+      "Biometrics",
+      "PKI"
+    ],
+    "answer": 0,
+    "explanation": "SSO(Single Sign On)는 하나의 아이디와 패스워드로 여러 시스템에 접근할 수 있게 해주는 통합 인증 솔루션입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 110,
+    "question": "위험 분석(Risk Analysis) 기법 중, 전문가 집단을 구성하여 설문을 통해 의견을 수렴하고, 이를 반복하여 합의된 결과를 도출하는 정성적 분석 방법은?",
+    "options": [
+      "델파이법 (Delphi Method)",
+      "시나리오법",
+      "순위결정법",
+      "과거자료 분석법"
+    ],
+    "answer": 0,
+    "explanation": "델파이법은 전문가들의 경험과 지식을 바탕으로 설문과 피드백을 반복하여 익명성을 보장하면서 합의점을 찾는 방법입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 111,
+    "question": "개인정보 보호법 개정(2023 공포, 2024~2025 시행)에 따라 '개인정보 유출'에 대한 과징금 부과 기준이 기존 '위반 행위와 관련된 매출액의 3%'에서 어떻게 변경되었는가?",
+    "options": [
+      "전체 매출액의 1% 이하 (위반행위와 관련 없는 매출액 제외)",
+      "전체 매출액의 3% 이하 (위반행위와 관련 없는 매출액 제외)",
+      "위반 행위 관련 매출액의 5% 이하",
+      "정액 과징금 최대 50억 원"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 전체 매출액의 3% 이하 (위반행위와 관련 없는 매출액 제외) 개정법은 과징금 상한액 기준을 '전체 매출액의 3% 이하'로 상향 조정하되, 위반 행위와 관련이 없는 매출액을 입증할 경우 이를 제외하도록 변경하여 처벌 수위를 대폭 강화했습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 112,
+    "question": "다음 중 방화벽이 차단할 수 없는 공격 유형은? (패킷 필터링 방화벽 기준)",
+    "options": [
+      "특정 IP에서의 접근 시도",
+      "특정 포트(TCP 23)로의 접근 시도",
+      "허용된 포트(HTTP 80)를 통한 웹 해킹(SQL Injection)",
+      "외부에서 내부로 들어오는 SYN 패킷"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 허용된 포트(HTTP 80)를 통한 웹 해킹(SQL Injection) 패킷 필터링 방화벽은 IP/Port 정보만 봅니다. 80번 포트가 허용되어 있다면, 그 안 데이터에 포함된 SQL Injection 공격 코드는 내용을 검사하지 못해 통과시킵니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 113,
+    "question": "OECD 프라이버시 8원칙 중, '개인정보는 이용 목적에 필요한 범위 내에서 정확하고 완전하며 최신의 상태로 유지되어야 한다'는 원칙은?",
+    "options": [
+      "수집 제한의 원칙",
+      "데이터 품질의 원칙 (Data Quality Principle)",
+      "목적 명확화의 원칙",
+      "이용 제한의 원칙"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 데이터 품질의 원칙 (Data Quality Principle) 데이터 품질의 원칙은 수집된 데이터가 목적에 부합하도록 정확성, 완전성, 최신성을 유지해야 함을 강조합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 114,
+    "question": "다음 중 소프트웨어 취약점 데이터베이스인 CVE(Common Vulnerabilities and Exposures)를 운영하고 관리하는 기관은?",
+    "options": [
+      "NIST",
+      "MITRE",
+      "ISO",
+      "IEEE"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② MITRE CVE 목록은 미국의 비영리 연구 개발 단체인 MITRE Corporation에서 관리하고 운영합니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 115,
+    "question": "무선 랜 보안에서 AP(Access Point)와 단말이 서로 인증을 수행하지 않고, 미리 설정된 비밀번호(PSK)만 알면 접속 가능한 방식은?",
+    "options": [
+      "WPA2-Enterprise",
+      "WPA2-Personal",
+      "802.1X",
+      "EAP-TLS"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② WPA2-Personal WPA2-Personal(PSK 모드)은 별도의 인증 서버 없이 공유된 비밀번호(Pre-Shared Key)를 입력하여 접속하는 가정용 방식입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 116,
+    "question": "리눅스 시스템에서 'Race Condition' 취약점을 근본적으로 차단하기 어렵지만, 심볼릭 링크 공격을 방어하기 위해 커널 레벨에서 제공하는 보안 파라미터 설정으로 가장 적절한 것은?",
+    "options": [
+      "sysctl -w fs.protected_symlinks=1",
+      "sysctl -w net.ipv4.conf.all.rp_filter=1",
+      "sysctl -w kernel.randomize_va_space=2",
+      "sysctl -w kernel.exec-shield=1"
+    ],
+    "answer": 0,
+    "explanation": "해설 없음",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 117,
+    "question": "OSI 7계층 중 전송 계층(Transport Layer)에 해당하며, 신뢰성 있는 연결 지향형 통신을 제공하는 프로토콜은?",
+    "options": [
+      "IP",
+      "UDP",
+      "TCP",
+      "ICMP"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ TCP TCP(Transmission Control Protocol)는 4계층 프로토콜로 연결 지향성, 신뢰성, 흐름 제어를 제공합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 118,
+    "question": "윈도우 시스템에서 실행 중인 프로세스, 레지스트리 조작 등 시스템 내부의 상태를 모니터링하기 위해 사용하는 Sysinternals 도구는?",
+    "options": [
+      "Wireshark",
+      "Process Explorer",
+      "Nmap",
+      "Nessus"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Process Explorer Process Explorer는 윈도우의 작업 관리자보다 훨씬 상세한 프로세스, DLL, 핸들 정보를 보여주는 도구입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 119,
+    "question": "다음 중 무결성(Integrity)을 보장하기 위해 사용되는 해시 알고리즘이 아닌 것은?",
+    "options": [
+      "MD5",
+      "SHA-256",
+      "HAS-160",
+      "RSA"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ RSA RSA는 공개키 암호화 알고리즘입니다. 나머지는 메시지 다이제스트를 생성하는 해시 함수입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 120,
+    "question": "공격자가 시스템에 침입한 후 재침입을 용이하게 하기 위해 만들어 놓은 뒷문(Backdoor)을 탐지하거나, 무결성이 훼손된 시스템 파일을 탐지하기 위해 사용하는 도구는?",
+    "options": [
+      "Tripwire",
+      "Snort",
+      "Nessus",
+      "Nmap"
+    ],
+    "answer": 0,
+    "explanation": "Tripwire는 파일의 해시값을 생성하여 주기적으로 비교함으로써 파일의 위변조 여부(무결성)를 감시하는 대표적인 호스트 기반 침입 탐지 도구(HIDS)입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 121,
+    "question": "정보통신기반 보호법상 주요정보통신기반시설을 관리하는 기관의 장은 취약점 분석·평가를 매년 정기적으로 실시해야 한다. 이때 취약점 분석·평가의 범위에 반드시 포함되어야 할 사항이 아닌 것은?",
+    "options": [
+      "정보통신기반시설의 자산 식별 및 중요도 평가",
+      "정보통신기반시설의 물리적·기술적·관리적 취약점 파악",
+      "발생 가능한 위협의 종류 및 빈도 분석",
+      "침해사고 발생 시 공격자의 신원 추적 및 역공격 방안"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 침해사고 발생 시 공격자의 신원 추적 및 역공격 방안 취약점 분석·평가는 예방적 활동입니다. 공격자 신원 추적이나 역공격(Hack-back)은 수사 기관의 영역이거나 법적으로 금지된 행위이므로 평가 범위에 포함되지 않습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 122,
+    "question": "다음 중 암호화 알고리즘의 안전성을 평가할 때, '키(Key)를 제외한 알고리즘의 모든 세부 사항이 공개되어도 안전해야 한다'는 원칙은?",
+    "options": [
+      "케르크호프스 원칙 (Kerckhoffs's Principle)",
+      "무어의 법칙 (Moore's Law)",
+      "최소 권한의 원칙 (Principle of Least Privilege)",
+      "섀논의 원칙 (Shannon's Maxim)"
+    ],
+    "answer": 0,
+    "explanation": "케르크호프스 원칙은 암호 시스템의 안전성은 알고리즘의 비밀성이 아니라 키의 비밀성에 의존해야 한다는 현대 암호학의 기본 원칙입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 123,
+    "question": "전자서명법상 '전자서명인증사업자'가 발급하는 인증서가 갖추어야 할 요건이 아닌 것은?",
+    "options": [
+      "가입자의 전자서명검증정보(공개키)",
+      "가입자와 이용자를 식별할 수 있는 정보",
+      "전자서명의 생성 시각",
+      "인증서의 유효기간"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 전자서명의 생성 시각 전자서명의 생성 시각은 전자서명 자체에 포함될 수 있는 정보(타임스탬프)이지, 인증서 자체의 필수 기재 사항은 아닙니다. (인증서에는 발급자의 서명 등이 들어갑니다.)",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 124,
+    "question": "정보통신망법상 영리 목적의 광고성 정보를 전송할 때 지켜야 할 원칙으로 올바른 것은?",
+    "options": [
+      "Opt-out (선 전송 후 거부)",
+      "Opt-in (사전 동의 후 전송)",
+      "Double Opt-in",
+      "No-action"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Opt-in (사전 동의 후 전송) 우리나라는 스팸 방지를 위해 영리 목적의 광고성 정보 전송 시 원칙적으로 수신자의 사전 동의(Opt-in)를 받아야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 125,
+    "question": "스노트(Snort) 룰 헤더에서 설정할 수 있는 액션(Action)이 아닌 것은?",
+    "options": [
+      "alert",
+      "log",
+      "pass",
+      "trace"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ trace Snort의 주요 액션은 alert, log, pass, activate, dynamic, drop, reject, sdrop 등이며 'trace'는 존재하지 않습니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 126,
+    "question": "다음 중 정보통신망법상 '정보보호 관리체계(ISMS)' 인증을 받지 않아도 되는 예외 대상은? (의무 대상 기준 미충족 시)",
+    "options": [
+      "연간 매출액 또는 세입이 1,500억 원 이상인 자",
+      "정보통신서비스 부문 전년도 매출액이 100억 원 이상인 자",
+      "전년도 말 기준 직전 3개월간의 일일평균 이용자 수가 100만 명 이상인 자",
+      "단순 홍보용 홈페이지를 운영하며 연 매출 1억 원 미만인 소상공인"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 단순 홍보용 홈페이지를 운영하며 연 매출 1억 원 미만인 소상공인 매출액이나 이용자 수 기준에 미달하는 소규모 사업자는 ISMS 인증 의무 대상자가 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 127,
+    "question": "HTTP 헤더 중 보안 헤더에 대한 설정이다. 다음 중 'Clickjacking' 공격을 방어하기 위해 브라우저가 해당 페이지를 `<frame>`, `<iframe>`, `<object>` 내부에서 렌더링하는 것을 허용하지 않도록 설정하는 헤더 값은?",
+    "options": [
+      "`X-Content-Type-Options: nosniff`",
+      "`Strict-Transport-Security: max-age=31536000`",
+      "`X-Frame-Options: DENY`",
+      "`Content-Security-Policy: default-src 'self'`"
+    ],
+    "answer": 2,
+    "explanation": "해설 없음",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 128,
+    "question": "개인정보 보호법 제28조의4(가명정보에 대한 안전조치 등)에 따라 가명정보를 처리할 때 준수해야 할 사항으로 틀린 것은?",
+    "options": [
+      "가명정보와 추가정보(매핑 테이블 등)는 분리하여 보관해야 한다.",
+      "가명정보 처리 기록은 파기 후 1년까지 보관해야 한다.",
+      "가명정보의 처리 목적 등을 기록한 관리 대장을 작성·보관해야 한다.",
+      "가명정보를 제3자에게 제공하는 경우, 특정 개인을 알아볼 수 없도록 처리해야 한다."
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 129,
+    "question": "다음 중 IP 주소를 MAC 주소로 변환해주는 프로토콜은?",
+    "options": [
+      "ARP",
+      "RARP",
+      "ICMP",
+      "IGMP"
+    ],
+    "answer": 0,
+    "explanation": "ARP(Address Resolution Protocol)는 논리적인 IP 주소를 물리적인 MAC 주소로 매핑합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 130,
+    "question": "다음 중 네트워크 접근 제어(NAC) 시스템의 주요 기능으로 가장 거리가 먼 것은?",
+    "options": [
+      "단말의 백신 설치 여부 및 최신 패치 상태 무결성 점검",
+      "비인가 단말의 네트워크 접근 차단",
+      "사용자 인증 및 권한 부여",
+      "데이터베이스 내부의 중요 데이터 암호화"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 데이터베이스 내부의 중요 데이터 암호화 DB 내부 데이터 암호화는 DB 보안 솔루션의 기능입니다. NAC는 단말(Endpoint)의 무결성을 점검하고 네트워크 접근을 제어하는 솔루션입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 131,
+    "question": "다음 중 '양자 내성 암호(PQC, Post-Quantum Cryptography)'의 주요 알고리즘 기반 문제 중, 현재 NIST 표준화 과정에서 가장 많이 채택되고 있으며 암호화와 전자서명 모두에 효율적인 방식은?",
+    "options": [
+      "다변수 다항식 문제 기반 (Multivariate)",
+      "코드 기반 (Code-based)",
+      "격자 기반 (Lattice-based)",
+      "해시 기반 (Hash-based)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 격자 기반 (Lattice-based) NIST PQC 표준 공모전에서 CRYSTALS-Kyber(암호화), CRYSTALS-Dilithium(전자서명) 등 주요 선정 알고리즘들이 대부분 '격자(Lattice)' 문제를 기반으로 하고 있습니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 132,
+    "question": "정보보안 거버넌스의 일환으로, 조직의 정보보호 활동이 비즈니스 목표와 연계되고 규정을 준수하며 위험을 적절히 관리하고 있는지 이사회나 경영진이 감독하고 통제하는 활동을 무엇이라 하는가?",
+    "options": [
+      "IT 거버넌스",
+      "정보보호 거버넌스",
+      "보안 감사",
+      "위험 관리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정보보호 거버넌스 정보보호 거버넌스(Information Security Governance)는 정보보호가 단순 실무가 아닌 경영의 일부로서 전략적으로 관리되고 통제되는 체계를 의미합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 133,
+    "question": "다음 중 정보통신기반 보호법에 따라 주요정보통신기반시설의 취약점 분석·평가를 수행할 수 있는 기관으로 지정되지 않은 곳은?",
+    "options": [
+      "한국인터넷진흥원 (KISA)",
+      "한국전자통신연구원 (ETRI)",
+      "금융보안원 (금융 분야)",
+      "민간 정보보호 컨설팅 전문업체 (지정 업체)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 한국전자통신연구원 (ETRI) ETRI는 연구기관으로 취약점 분석·평가 전담 기관에 포함되지 않습니다. 법령상 KISA, 국방과학연구소(국방), 금융보안원(금융), 그리고 과기정통부 장관이 지정한 정보보호 전문서비스 기업 등이 수행 가능합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 134,
+    "question": "웹 애플리케이션에서 세션 ID(Session ID)가 로그인 전과 후에 변하지 않고 그대로 유지될 때 발생하는 취약점은?",
+    "options": [
+      "Session Timeout",
+      "Session Fixation",
+      "Session Prediction",
+      "Brute Force"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Session Fixation 세션 고정(Session Fixation) 공격은 공격자가 미리 발급받은 세션 ID를 피해자에게 강제로 사용하게 하여, 피해자가 로그인하면 공격자도 해당 세션으로 로그인 상태를 획득하는 공격입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 135,
+    "question": "리눅스 시스템에서 `/etc/sysctl.conf` 파일을 수정하여 `net.ipv4.ip_forward = 1`로 설정했을 때 활성화되는 기능은?",
+    "options": [
+      "IP 패킷 포워딩 (라우팅 기능)",
+      "ICMP Echo 응답 차단",
+      "SYN 쿠키 보호 기능",
+      "소스 라우팅 차단"
+    ],
+    "answer": 0,
+    "explanation": "`ip_forward` 값을 1로 설정하면 리눅스 시스템이 들어온 패킷을 다른 네트워크 인터페이스로 전달하는 라우터 역할을 수행하게 됩니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 136,
+    "question": "다음 중 무선 네트워크에서 'WPA2' 보안 프로토콜을 크랙하기 위해, 4-Way Handshake 과정을 캡처하여 오프라인 사전 공격(Dictionary Attack)을 수행하는 툴은?",
+    "options": [
+      "Aircrack-ng",
+      "Wireshark",
+      "Nmap",
+      "Nessus"
+    ],
+    "answer": 0,
+    "explanation": "Aircrack-ng는 무선 패킷 캡처, WEP/WPA 키 크랙 등을 수행하는 대표적인 무선 해킹 도구 모음입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 137,
+    "question": "위험 분석(Risk Analysis) 기법 중, 전문가 집단을 구성하여 설문을 통해 의견을 수렴하고, 이를 반복하여 합의된 결과를 도출하는 정성적 분석 방법은?",
+    "options": [
+      "델파이법 (Delphi Method)",
+      "시나리오법",
+      "순위결정법",
+      "과거자료 분석법"
+    ],
+    "answer": 0,
+    "explanation": "델파이법은 전문가들의 경험과 지식을 바탕으로 설문과 피드백을 반복하여 익명성을 보장하면서 합의점을 찾는 방법입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 138,
+    "question": "정보통신망법 제45조에 따른 '정보보호 사전점검'의 대상이 되는 정보통신서비스 제공자의 구체적인 기준으로, 법령(고시)에서 정한 사항이 아닌 것은?",
+    "options": [
+      "정보보호시스템에 중대한 보안 취약점이 발견된 경우",
+      "새로운 정보통신서비스를 개발하여 일반에게 공개하려는 경우",
+      "기존 서비스를 클라우드 환경으로 전면 전환하는 등 시스템 구조를 변경하는 경우",
+      "개인정보를 수집하지 않는 단순 홍보용 웹사이트를 개설하는 경우"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 개인정보를 수집하지 않는 단순 홍보용 웹사이트를 개설하는 경우 정보보호 사전점검 지침에 따르면 단순 홍보용 홈페이지 등 이용자 보호 필요성이 현저히 낮은 경우는 사전점검 대상에서 제외되거나 권고 대상이 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 139,
+    "question": "자산 가치가 1억 원인 서버실이 있다. 화재가 발생할 경우 자산의 50%가 손실될 것으로 예상되며, 이러한 화재는 5년에 1번 발생할 것으로 통계가 잡혀있다. 이때 연간 손실 예상액(ALE)은 얼마인가?",
+    "options": [
+      "500만 원",
+      "1,000만 원",
+      "2,500만 원",
+      "5,000만 원"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 1,000만 원 ALE = 자산가치(1억) × 노출계수(0.5) × 연간발생률(0.2) = 1,000만 원입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 140,
+    "question": "리눅스 로그 파일 중 시스템의 부팅 및 종료 기록, 로그인/로그아웃 기록을 이진(Binary) 형태로 저장하며, 'last' 명령어로 조회하는 파일은?",
+    "options": [
+      "/var/log/messages",
+      "/var/log/secure",
+      "/var/log/wtmp",
+      "/var/log/lastlog"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ /var/log/wtmp wtmp 파일은 전체 로그인/아웃 및 부팅 기록을 담고 있으며 last 명령어로 확인합니다. (lastlog는 '마지막' 접속 기록만 저장)",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 141,
+    "question": "개인정보 보호법상 가명정보를 처리할 때, 특정 개인을 알아보기 위한 목적으로 정보를 처리(재식별 시도)한 경우 부과되는 과징금의 기준은?",
+    "options": [
+      "전체 매출액의 100분의 3 이하",
+      "위반 관련 매출액의 100분의 3 이하",
+      "정액 10억 원 이하",
+      "정액 5억 원 이하"
+    ],
+    "answer": 0,
+    "explanation": "재식별 금지 의무 위반 시, '전체 매출액의 3% 이하'에 해당하는 과징금이 부과될 수 있는 매우 중대한 위반 사항입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 142,
+    "question": "소프트웨어 공급망 공격(Supply Chain Attack)을 방지하기 위한 대책 중 하나로, 소프트웨어 구성 요소, 라이브러리, 버전 정보 등을 명세한 '소프트웨어 자재 명세서'를 뜻하는 용어는?",
+    "options": [
+      "SLA (Service Level Agreement)",
+      "SBOM (Software Bill of Materials)",
+      "SDLC (Software Development Life Cycle)",
+      "POC (Proof of Concept)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SBOM (Software Bill of Materials) SBOM(Software Bill of Materials)은 소프트웨어 패키지를 구성하는 모든 컴포넌트의 목록을 명세화하여 취약점 관리와 라이선스 관리를 용이하게 하는 문서입니다.",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 143,
+    "question": "Snort 탐지 룰(Rule)에서 'tcp, udp, icmp' 등 프로토콜을 지정하는 헤더 부분 바로 다음에 위치하며, 패킷의 송신지 IP 주소를 지정하는 필드는?",
+    "options": [
+      "Source IP",
+      "Source Port",
+      "Direction Operator",
+      "Destination IP"
+    ],
+    "answer": 0,
+    "explanation": "Snort 룰 헤더 구조는 `[Action] [Protocol] [Src IP] [Src Port] [Direction] [Dst IP] [Dst Port]` 순서입니다. 프로토콜 다음은 송신지 IP입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 144,
+    "question": "IoT(사물인터넷) 기기의 펌웨어를 분석하거나 디버깅 포트(JTAG, UART 등)를 통해 기기 내부 정보를 탈취하는 하드웨어 해킹 기법이 아닌 것은?",
+    "options": [
+      "덤프스터 다이빙 (Dumpster Diving)",
+      "사이드 채널 공격 (Side Channel Attack)",
+      "글리칭 (Glitching)",
+      "버스 스니핑 (Bus Sniffing)"
+    ],
+    "answer": 0,
+    "explanation": "덤프스터 다이빙은 쓰레기통을 뒤져 정보를 얻는 물리적/사회공학적 기법입니다. 나머지는 IoT/하드웨어 해킹 기술입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 145,
+    "question": "HTTP/3 프로토콜은 UDP 기반의 QUIC을 사용한다. 기존 TCP 기반 HTTP/2와 비교했을 때, 패킷 손실(Packet Loss)이 발생했을 때 전체 스트림이 지연되는 문제(HOL Blocking)를 어떻게 해결했는가?",
+    "options": [
+      "TCP 재전송 타이머를 단축시켰다.",
+      "각 스트림이 독립된 패킷 시퀀스 번호를 사용하여 손실된 스트림만 재전송 대기하고 나머지는 먼저 처리한다.",
+      "패킷 손실 시 FEC(Forward Error Correction)를 통해 복구한다.",
+      "윈도우 사이즈를 동적으로 조절한다."
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 146,
+    "question": "다음 중 암호화 알고리즘의 안전성을 평가할 때, '키(Key)를 제외한 알고리즘의 모든 세부 사항이 공개되어도 안전해야 한다'는 원칙은?",
+    "options": [
+      "케르크호프스 원칙 (Kerckhoffs's Principle)",
+      "무어의 법칙 (Moore's Law)",
+      "최소 권한의 원칙 (Principle of Least Privilege)",
+      "섀논의 원칙 (Shannon's Maxim)"
+    ],
+    "answer": 0,
+    "explanation": "케르크호프스 원칙은 암호 시스템의 안전성은 알고리즘의 비밀성이 아니라 키의 비밀성에 의존해야 한다는 현대 암호학의 기본 원칙입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 147,
+    "question": "WPA3(Wi-Fi Protected Access 3)에서 도입된 새로운 키 교환 방식으로, 사전(Dictionary) 공격을 방어하고 전방 향성 보안(Forward Secrecy)을 제공하는 기술은?",
+    "options": [
+      "4-Way Handshake",
+      "SAE (Simultaneous Authentication of Equals)",
+      "PSK (Pre-Shared Key)",
+      "TKIP"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SAE (Simultaneous Authentication of Equals) WPA3는 기존 PSK 방식의 취약점을 보완하기 위해 SAE(Simultaneous Authentication of Equals) 핸드셰이크 방식을 도입하여 오프라인 사전 공격을 차단합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "2026기출"
+  },
+  {
+    "id": 148,
+    "question": "개인정보 보호법상 정보주체가 자신의 개인정보에 대한 열람을 요구했을 때, 개인정보처리자가 열람을 제한하거나 거절할 수 있는 사유가 아닌 것은?",
+    "options": [
+      "법률에 따라 열람이 금지되거나 제한되는 경우",
+      "다른 사람의 생명·신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우",
+      "개인정보처리자의 영업 비밀이 포함되어 있는 경우",
+      "공공기관이 조세 부과·징수 또는 환급 업무를 수행하는 데 중대한 지장을 초래하는 경우"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 개인정보처리자의 영업 비밀이 포함되어 있는 경우 단순히 기업의 영업 비밀이 포함되었다는 이유만으로는 정보주체의 헌법적 권리인 열람권을 제한할 수 없습니다. 법령상 명시된 거절 사유에 해당해야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 149,
+    "question": "파일 업로드 취약점 대응을 위해 이미지 파일만 업로드하도록 검증 로직을 짰다. `getimagesize()` 함수를 사용하여 이미지 헤더를 검증할 때, 공격자가 이를 우회하고 악성 코드를 실행하기 위해 이미지 파일 내 주석(Comment) 영역 등에 PHP 코드를 삽입하는 기법은?",
+    "options": [
+      "Null Byte Injection",
+      "Polyglot (폴리글랏) 파일 공격",
+      "Double Extension 공격",
+      "Race Condition Upload"
+    ],
+    "answer": 1,
+    "explanation": "해설 없음",
+    "subject": "기타",
+    "source": "2026기출"
+  },
+  {
+    "id": 150,
+    "question": "TCP 세션 하이재킹(Session Hijacking) 공격 시, 공격자가 통신 중인 두 대상 사이에서 시퀀스 넘버(Sequence Number)를 맞추지 못해 발생하는 비정상적인 패킷 급증 현상은?",
+    "options": [
+      "Traffic Jam",
+      "ACK Storm",
+      "SYN Flood",
+      "Routing Loop"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ACK Storm 세션 하이재킹 시도 중 클라이언트와 서버, 그리고 공격자 간에 시퀀스 번호 불일치로 인해 서로 ACK 패킷을 무한히 주고받는 'ACK Storm' 현상이 발생합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 151,
+    "question": "다음 중 허니팟(Honeypot)의 구축 목적으로 가장 적절한 것은?",
+    "options": [
+      "대용량 트래픽을 처리하여 DDoS 공격을 분산시킨다.",
+      "침입자를 유인하여 공격 기법을 분석하고 제로데이 공격을 탐지한다.",
+      "내부 사용자의 인터넷 접속 로그를 기록한다.",
+      "중요 데이터를 백업하여 랜섬웨어 피해를 복구한다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 침입자를 유인하여 공격 기법을 분석하고 제로데이 공격을 탐지한다. 허니팟은 의도적으로 취약하게 만든 미끼 시스템으로, 해커를 유인하여 그들의 행동과 새로운 공격 기법을 수집/분석하는 기만 시스템입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 152,
+    "question": "리눅스에서 특수 권한 'Sticky Bit'가 설정된 디렉터리(/tmp 등)의 특징은?",
+    "options": [
+      "누구나 파일을 읽고 쓸 수 있지만, 삭제는 파일 소유자만 가능하다.",
+      "해당 디렉터리 내의 파일은 실행 시 root 권한을 갖는다.",
+      "해당 디렉터리에는 그룹 멤버만 접근 가능하다.",
+      "파일을 생성하면 자동으로 숨김 속성이 부여된다."
+    ],
+    "answer": 0,
+    "explanation": "Sticky Bit가 설정된 디렉터리(권한 t)는 모든 사용자에게 쓰기 권한이 있어도, 파일 삭제는 파일의 소유자와 관리자만 가능합니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 153,
+    "question": "리눅스 파일 시스템에서 파일의 실제 데이터가 저장된 블록의 위치, 파일 크기, 소유자, 권한, 수정 시간 등 메타데이터를 저장하고 있는 자료구조는?",
+    "options": [
+      "Super Block",
+      "Inode",
+      "Boot Block",
+      "Data Block"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Inode Inode(Index Node)는 파일에 대한 모든 속성 정보(메타데이터)를 담고 있는 핵심 자료구조입니다. (단, 파일명은 디렉터리 엔트리에 저장됨)",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 154,
+    "question": "네트워크 프로토콜 중 멀티캐스트(Multicast) 그룹을 관리하는 프로토콜로, 라우터와 호스트 간에 그룹 멤버십 정보를 교환하는 데 사용되는 것은?",
+    "options": [
+      "ICMP",
+      "IGMP (Internet Group Management Protocol)",
+      "SNMP",
+      "BGP"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② IGMP (Internet Group Management Protocol) IGMP는 호스트가 특정 멀티캐스트 그룹에 가입하거나 탈퇴할 때 라우터에 알리는 용도로 사용됩니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 155,
+    "question": "개인정보 유출로 인한 피해 입증이 어려울 때, 정보주체가 법원에 청구할 수 있는 '법정손해배상'의 최고 한도액은?",
+    "options": [
+      "100만 원",
+      "300만 원",
+      "500만 원",
+      "1,000만 원"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 300만 원 개인정보 보호법 제39조의2에 따라, 피해자가 구체적인 손해액을 입증하지 않더라도 최대 300만 원 이하의 범위에서 배상액을 청구할 수 있습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 156,
+    "question": "윈도우 시스템에서 파일이나 디렉터리의 접근 제어 목록(ACL)을 확인하거나 수정할 때 사용하는 명령어는?",
+    "options": [
+      "`chmod`",
+      "`cacls` (또는 `icacls`)",
+      "`attrib`",
+      "`chown`"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② `cacls` (또는 `icacls`) `cacls` 또는 최신 버전인 `icacls` 명령어는 윈도우 NTFS 파일 시스템의 ACL(접근 권한)을 표시하고 수정하는 데 사용됩니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 157,
+    "question": "개인정보 분쟁조정위원회의 '집단분쟁조정'을 신청할 수 있는 피해 정보주체의 최소 인원 기준은?",
+    "options": [
+      "10명 이상",
+      "30명 이상",
+      "50명 이상",
+      "100명 이상"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 50명 이상 국가나 지자체, 개인정보보호단체, 또는 50명 이상의 정보주체는 피해가 같거나 비슷한 유형인 경우 집단분쟁조정을 신청할 수 있습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "2026기출"
+  },
+  {
+    "id": 158,
+    "question": "IDS(침입 탐지 시스템)의 탐지 기법 중, 미리 정의된 공격 패턴(Signature)과 일치하는지 비교하여 탐지하는 방식은?",
+    "options": [
+      "오용 탐지 (Misuse Detection)",
+      "이상 탐지 (Anomaly Detection)",
+      "행위 기반 탐지 (Behavior Based)",
+      "통계적 탐지 (Statistical Detection)"
+    ],
+    "answer": 0,
+    "explanation": "오용 탐지(Misuse Detection)는 이미 알려진 공격 패턴(시그니처)을 DB화하여 매칭하는 방식입니다. (오탐률이 낮음)",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 159,
+    "question": "리눅스 시스템에서 특정 사용자의 접근을 IP 주소 기반으로 허용하거나 차단하기 위해 사용하는 TCP Wrapper의 설정 파일 두 가지는?",
+    "options": [
+      "/etc/hosts, /etc/networks",
+      "/etc/hosts.allow, /etc/hosts.deny",
+      "/etc/access.conf, /etc/deny.conf",
+      "/etc/iptables.allow, /etc/iptables.deny"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② /etc/hosts.allow, /etc/hosts.deny TCP Wrapper는 `/etc/hosts.allow` 파일과 `/etc/hosts.deny` 파일을 참조하여 서비스 접근을 제어합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 160,
+    "question": "메모리 보호 기법 중 하나로, 프로그램 실행 시마다 스택, 힙, 라이브러리 등의 메모리 주소를 무작위로 배치하여 버퍼 오버플로우 공격을 어렵게 만드는 기술은?",
+    "options": [
+      "Stack Guard",
+      "ASLR (Address Space Layout Randomization)",
+      "DEP (Data Execution Prevention)",
+      "Canary"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ASLR (Address Space Layout Randomization) ASLR은 메모리 주소 공간의 레이아웃을 난수화(Randomization)하여 공격자가 특정 주소를 예측하기 어렵게 만듭니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "2026기출"
+  },
+  {
+    "id": 161,
+    "question": "TCP 헤더의 플래그(Flag) 중, 연결 종료를 요청할 때 사용하는 것은?",
+    "options": [
+      "PSH",
+      "FIN",
+      "RST",
+      "SYN"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② FIN FIN(Finish) 플래그는 데이터 전송을 마치고 연결을 끊겠다는 신호임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 162,
+    "question": "다음 중 HIDS(Host-based IDS)의 특징은?",
+    "options": [
+      "네트워크 트래픽 분석",
+      "개별 호스트의 시스템 로그 및 활동 모니터링",
+      "라우터 설정",
+      "이메일 필터링"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 개별 호스트의 시스템 로그 및 활동 모니터링 HIDS는 특정 호스트 시스템의 로그, 파일 무결성, 프로세스 등을 모니터링하여 침입을 탐지합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 163,
+    "question": "다음 중 개인정보 침해 예방을 위한 관리적 조치는?",
+    "options": [
+      "내부자 교육",
+      "데이터 공개",
+      "압축 백업",
+      "자동 삭제"
+    ],
+    "answer": 0,
+    "explanation": "교육 등 관리적 조치가 가장 기본입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 164,
+    "question": "다음 중 Intrusion Prevention System(IPS)과 IDS의 차이점은?",
+    "options": [
+      "IPS는 탐지만, IDS는 차단",
+      "IPS는 탐지 및 차단, IDS는 탐지만",
+      "동일한 시스템",
+      "IPS는 방화벽, IDS는 라우터"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② IPS는 탐지 및 차단, IDS는 탐지만 IPS는 침입을 탐지하고 즉시 차단하는 능동적 시스템이며, IDS는 탐지만 수행하는 수동적 시스템입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 165,
+    "question": "다음 중 Secure Shell(SSH)의 기본 포트 번호는?",
+    "options": [
+      "21",
+      "22",
+      "23",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 22 SSH의 기본 포트는 22번이며, 암호화된 원격 접속을 제공합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 166,
+    "question": "다음 중 개인정보 수집 시 최소화 원칙에 부합하는 것은?",
+    "options": [
+      "필요한 정보만 수집",
+      "모든 정보 일괄 수집",
+      "강제 입력",
+      "자료 공개"
+    ],
+    "answer": 0,
+    "explanation": "최소화 원칙은 필요한 정보만 수집해야 함을 의미합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 167,
+    "question": "리눅스 'ssh' 접속 시, 패스워드 입력 없이 키 기반 인증을 하려 한다. 클라이언트의 공개키를 서버의 어느 파일에 저장해야 하는가?",
+    "options": [
+      "~/.ssh/id_rsa.pub",
+      "/etc/ssh/sshd_config",
+      "~/.ssh/known_hosts",
+      "~/.ssh/authorized_keys"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ~/.ssh/authorized_keys 서버의 authorized_keys 파일에 클라이언트 공개키가 등록되어 있어야 함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 168,
+    "question": "다음 중 CVE(Common Vulnerabilities and Exposures)의 역할은?",
+    "options": [
+      "취약점 패치 제공",
+      "취약점 표준 식별 번호 부여",
+      "보안 제품 개발",
+      "악성코드 분석"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 취약점 표준 식별 번호 부여 CVE는 공개적으로 알려진 보안 취약점에 대해 표준화된 식별 번호를 부여하는 시스템입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 169,
+    "question": "ISMS-P 심사 종류 중, 인증 취득 후 매년 유지 여부를 확인하기 위해 실시하는 심사는?",
+    "options": [
+      "예비 심사",
+      "갱신 심사",
+      "사후 심사",
+      "최초 심사"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 사후 심사 연 1회 이상 사후 심사를 통해 관리체계가 지속적으로 운영되는지 점검함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 170,
+    "question": "다음 중 Security Information Sharing의 주요 목적은?",
+    "options": [
+      "경쟁사 정보 탈취",
+      "위협 정보 공유를 통한 공동 방어",
+      "제품 마케팅",
+      "인력 채용"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 위협 정보 공유를 통한 공동 방어 보안 정보 공유는 조직 간 위협 정보를 공유하여 더 효과적으로 사이버 위협에 대응하는 것이 목적입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 171,
+    "question": "ISMS-P 통제항목 중 '암호화 적용' 대상이 아닌 것은?",
+    "options": [
+      "바이오 정보",
+      "주민등록번호",
+      "공개된 웹 사이트의 일반 게시글 내용",
+      "비밀번호 (일방향)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 공개된 웹 사이트의 일반 게시글 내용 공개용 데이터는 암호화 의무 대상이 아님. 민감/고유식별 정보가 대상임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 172,
+    "question": "다음 중 'BitLocker' 기능의 주된 목적은?",
+    "options": [
+      "디스크 볼륨 전체 암호화",
+      "네트워크 암호화",
+      "메일 암호화",
+      "파일 단위 암호화"
+    ],
+    "answer": 0,
+    "explanation": "디스크를 분실하거나 도난당했을 때 데이터 유출을 막기 위해 드라이브 전체를 암호화함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 173,
+    "question": "ISMS-P 인증 유효기간은 몇 년인가?",
+    "options": [
+      "2년",
+      "1년",
+      "3년",
+      "5년"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 3년 유효기간은 3년이며, 매년 사후 심사를 받아야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 174,
+    "question": "동형 암호(Homomorphic Encryption)의 핵심 특징은?",
+    "options": [
+      "암호화된 상태에서 데이터를 복호화하지 않고도 연산(검색, 통계 등)이 가능함",
+      "키가 필요 없음",
+      "복호화가 불가능함",
+      "속도가 가장 빠름"
+    ],
+    "answer": 0,
+    "explanation": "클라우드 환경의 프라이버시 보호 기술로 주목받음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 175,
+    "question": "무선 네트워크 보안에서 기업용 'WPA2-Enterprise' 인증 시 주로 사용되는 인증 프로토콜(EAP) 중, 클라이언트 인증서가 필요 없는 방식은?",
+    "options": [
+      "EAP-SIM",
+      "EAP-TLS",
+      "PEAP (Protected EAP)",
+      "EAP-MD5"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ PEAP (Protected EAP) PEAP는 서버 인증서만 있으면 되고, 클라이언트는 ID/PW로 인증하여 구축이 용이함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 176,
+    "question": "다음 중 'TearDrop' 공격이 악용하는 IP 패킷의 취약점은?",
+    "options": [
+      "체크섬 오류",
+      "IP Fragment Offset의 중첩(Overlap) 오류",
+      "TTL 값의 조작",
+      "Source Routing 옵션"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② IP Fragment Offset의 중첩(Overlap) 오류 패킷 재조합 시 오프셋을 겹치게 조작하여 시스템 충돌을 유발함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 177,
+    "question": "다음 중 Hardware Security Module(HSM)의 주요 용도는?",
+    "options": [
+      "파일 저장",
+      "암호화 키의 안전한 생성 및 저장",
+      "네트워크 라우팅",
+      "웹 호스팅"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 암호화 키의 안전한 생성 및 저장 HSM은 암호화 키를 안전하게 생성, 저장, 관리하는 전용 하드웨어 장치입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 178,
+    "question": "리눅스 명령어 'chmod o-w file'의 의미는?",
+    "options": [
+      "소유자(owner)의 쓰기 권한 제거",
+      "다른 사용자(others)의 쓰기 권한 제거",
+      "모든 사용자의 쓰기 권한 제거",
+      "다른 사용자의 쓰기 권한 추가"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 다른 사용자(others)의 쓰기 권한 제거 o(others) -(remove) w(write)를 의미함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 179,
+    "question": "다음 중 S/MIME 전자우편 보안 프로토콜에서 사용하는 암호화 기술이 아닌 것은?",
+    "options": [
+      "DES/AES",
+      "PGP",
+      "RSA",
+      "X.509 인증서"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② PGP S/MIME은 X.509 인증서와 PKI 구조를 기반으로 함. PGP는 'Web of Trust' 모델을 사용하는 별도의 이메일 보안 도구임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 180,
+    "question": "개인정보보호법상 영상정보처리기기(CCTV) 안내판에 기재해야 할 사항이 아닌 것은?",
+    "options": [
+      "관리책임자 성명 및 연락처",
+      "설치 목적 및 장소",
+      "촬영 범위 및 시간",
+      "CCTV 설치 예산"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ CCTV 설치 예산 예산은 필수 기재 사항 아님. 권리 침해 구제를 위한 연락처 등이 중요.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 181,
+    "question": "다음 중 네트워크 접근 제어(NAC)의 주요 기능과 거리가 먼 것은?",
+    "options": [
+      "사용자 인증",
+      "비인가 단말의 네트워크 차단",
+      "단말의 무결성 검증 (백신 설치 여부 등)",
+      "DDoS 공격 트래픽 정화"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DDoS 공격 트래픽 정화 DDoS 방어는 주로 Anti-DDoS 장비(Scrubber)가 수행. NAC는 단말의 무결성 및 접근 통제가 주 목적.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 182,
+    "question": "Bell-LaPadula 모델의 보안 규칙 중 '높은 등급의 주체는 낮은 등급의 객체에 데이터를 쓸 수 없다'는 규칙은?",
+    "options": [
+      "No Write Up",
+      "No Write Down (*-Property)",
+      "No Read Down",
+      "No Read Up (Simple Security Property)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② No Write Down (*-Property) 기밀성 보장을 위해 상위 등급자가 하위 등급으로 정보를 유출하는 것을 방지하는 규칙(스타 속성).",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 183,
+    "question": "Clickjacking 공격을 방어하기 위해 사용하는 HTTP 헤더는?",
+    "options": [
+      "X-Content-Type-Options",
+      "X-Frame-Options",
+      "Cache-Control",
+      "Set-Cookie"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② X-Frame-Options DENY 또는 SAMEORIGIN 설정을 통해 iframe 내에서 페이지가 로드되는 것을 통제함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 184,
+    "question": "망 분리 환경에서 내부망과 외부망 간의 자료 전송을 위해 사용하는 시스템은?",
+    "options": [
+      "망 연계 시스템 (Secure Gate)",
+      "라우터",
+      "스위치",
+      "허브"
+    ],
+    "answer": 0,
+    "explanation": "보안 정책에 따라 승인된 자료만 전송함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 185,
+    "question": "다음 중 전자금융거래법상 금융회사가 준수해야 할 안전성 확보 의무가 아닌 것은?",
+    "options": [
+      "재해복구센터 구축",
+      "전산실 출입 통제",
+      "모든 직원의 연봉 공개",
+      "정보처리시스템 보호대책"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 모든 직원의 연봉 공개 연봉 공개는 보안과 무관함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 186,
+    "question": "정보보호 거버넌스의 5가지 원칙에 해당하지 않는 것은?",
+    "options": [
+      "위험 관리 (Risk Management)",
+      "전략적 연계 (Strategic Alignment)",
+      "비용 최소화 (Cost Minimization)",
+      "가치 전달 (Value Delivery)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 비용 최소화 (Cost Minimization) 거버넌스 원칙은 전략 연계, 가치 전달, 위험 관리, 자원 관리, 성과 측정임. 단순 비용 최소화는 아님.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 187,
+    "question": "접근 통제 유형 중, 이미 발생한 침해 사고를 발견하고 보고하는 통제는?",
+    "options": [
+      "탐지 통제 (Detective Control)",
+      "교정 통제",
+      "예방 통제",
+      "억제 통제"
+    ],
+    "answer": 0,
+    "explanation": "로그 감사, IDS, CCTV 녹화 등이 해당됨.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 188,
+    "question": "개인정보보호법 위반에 대한 '징벌적 손해배상' 제도는 피해액의 최대 몇 배까지 배상하도록 규정하는가?",
+    "options": [
+      "3배",
+      "10배",
+      "5배",
+      "2배"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 5배 고의 또는 중대한 과실로 개인정보가 유출된 경우 손해액의 5배 이내 배상 판결 가능.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 189,
+    "question": "정보통신서비스 제공자가 이용자의 동의 없이 영리 목적의 광고성 정보를 전송할 때 필요한 조치는?",
+    "options": [
+      "수신 거부(Opt-out)만 제공하면 됨",
+      "야간에만 보내면 됨",
+      "아무 조치 필요 없음",
+      "수신 동의(Opt-in)를 먼저 받아야 함"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 수신 동의(Opt-in)를 먼저 받아야 함 스팸 방지를 위해 원칙적으로 사전 동의(Opt-in)가 필요함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 190,
+    "question": "다음 중 개인정보 침해사고가 발생했을 때의 통지 주체는?",
+    "options": [
+      "당사자",
+      "사업자/처리자",
+      "정부 기관",
+      "외부 감사인"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 사업자/처리자 사업자 또는 개인정보 처리자가 침해 사실을 통지해야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 191,
+    "question": "리눅스 시스템에서 하드웨어 인터럽트 횟수 등 CPU 관련 상세 통계를 실시간으로 확인하는 명령어는?",
+    "options": [
+      "free",
+      "mpstat",
+      "df",
+      "du"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② mpstat mpstat (Multi-Processor Statistics)은 CPU별 인터럽트, 사용률 등을 상세히 보여줌.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 192,
+    "question": "CSRF(Cross-Site Request Forgery) 공격을 방어하기 위한 방법은?",
+    "options": [
+      "HTTPS 사용",
+      "CSRF Token 사용",
+      "방화벽 설치",
+      "안티바이러스 업데이트"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② CSRF Token 사용 CSRF Token을 사용하여 정상적인 요청인지 검증하는 것이 CSRF 공격 방어의 핵심입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 193,
+    "question": "다음 중 윈도우 이벤트 로그 파일의 기본 확장자는?",
+    "options": [
+      ".evt",
+      ".log",
+      ".evtx",
+      ".txt"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ .evtx Vista 이후 윈도우 이벤트 로그는 XML 기반의 .evtx 형식을 사용함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 194,
+    "question": "다음 중 블록체인의 '스마트 컨트랙트' 보안 취약점으로, 재진입(Re-entrancy) 공격의 대표적 사례는?",
+    "options": [
+      "WannaCry 랜섬웨어",
+      "Heartbleed",
+      "The DAO 해킹 사건",
+      "Log4Shell"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ The DAO 해킹 사건 이더리움 스마트 컨트랙트의 재진입 취약점을 악용하여 거액이 탈취된 사건.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 195,
+    "question": "리눅스에서 파일의 내용을 화면 단위로 나누어 보여주는 명령어는?",
+    "options": [
+      "tail",
+      "more (또는 less)",
+      "cat",
+      "head"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② more (또는 less) more나 less는 긴 내용을 페이지 단위로 끊어서 보여줌. cat은 한 번에 출력.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 196,
+    "question": "다음 중 ISMS-P 인증 기관은?",
+    "options": [
+      "KBS",
+      "KT",
+      "NSR",
+      "KISA (한국인터넷진흥원)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ KISA (한국인터넷진흥원) KISA가 대표적인 인증 기관임. (금융보안원 등도 가능)",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 197,
+    "question": "다음 중 FTP 서비스의 'Bounce Attack'은 무엇을 이용하는가?",
+    "options": [
+      "DoS",
+      "FTP 서버가 클라이언트가 요청한 임의의 IP/Port로 데이터를 전송하는 기능(PORT 명령)",
+      "패스워드 크랙",
+      "버퍼 오버플로우"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② FTP 서버가 클라이언트가 요청한 임의의 IP/Port로 데이터를 전송하는 기능(PORT 명령) 공격자가 FTP 서버를 거쳐 다른 시스템을 포트 스캔하거나 공격하는 데 사용함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 198,
+    "question": "반대로, 'Biba' 모델이 강조하는 보안 속성은?",
+    "options": [
+      "가용성",
+      "인증",
+      "무결성 (Integrity)",
+      "기밀성"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 무결성 (Integrity) 비인가된 데이터 변조 방지를 위해 No Read Down, No Write Up 규칙을 가짐.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 199,
+    "question": "데이터베이스 보안에서 'Listener' 설정 시 보안 권고 사항이 아닌 것은?",
+    "options": [
+      "접근 통제(IP 제한) 설정",
+      "기본 포트(1521, 1433 등)를 그대로 사용",
+      "관리자 권한 분리",
+      "비밀번호 설정"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 기본 포트(1521, 1433 등)를 그대로 사용 기본 포트는 공격의 표적이 되기 쉬우므로 변경하는 것이 좋음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 200,
+    "question": "다음 중 소스 코드 난독화(Obfuscation)의 주요 목적으로 가장 적절한 것은?",
+    "options": [
+      "버그 수정",
+      "역공학(Reverse Engineering) 방지",
+      "메모리 사용량 감소",
+      "실행 속도 향상"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 역공학(Reverse Engineering) 방지 난독화는 코드를 알아보기 힘들게 변환하여 리버스 엔지니어링을 어렵게 만드는 기법임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 201,
+    "question": "다음 중 'Birthday Attack (생일 공격)'은 해시 함수의 어떤 성질을 깨기 위한 공격인가?",
+    "options": [
+      "역상 저항성",
+      "기밀성",
+      "충돌 회피성 (Collision Resistance)",
+      "가용성"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 충돌 회피성 (Collision Resistance) 해시 충돌(서로 다른 입력값이 같은 해시값을 갖는 것)을 찾을 확률이 생각보다 높다는 역설을 이용함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 202,
+    "question": "다음 중 '랜덤 포레스트(Random Forest)'나 'SVM' 같은 머신러닝 기법을 정보보안에 활용하는 사례는?",
+    "options": [
+      "암호 키 생성",
+      "방화벽 정책 수립",
+      "물리 보안",
+      "악성코드 탐지 및 스팸 메일 필터링 (특징 학습)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 악성코드 탐지 및 스팸 메일 필터링 (특징 학습) 데이터의 특징을 학습하여 정상/악성을 분류하는 데 AI가 쓰임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 203,
+    "question": "다음 중 'CSRF' 토큰(Token)의 특징은?",
+    "options": [
+      "공개된 값임",
+      "사용자 비밀번호와 동일함",
+      "쿠키에만 저장됨",
+      "예측 불가능한 난수 값으로, 매 세션 또는 요청마다 갱신되어야 함"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 예측 불가능한 난수 값으로, 매 세션 또는 요청마다 갱신되어야 함 공격자가 알 수 없는 토큰을 요청에 포함시켜 정상 요청임을 검증함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 204,
+    "question": "JSON Web Token (JWT)의 구조인 'Header.Payload.Signature' 중 Signature의 역할은?",
+    "options": [
+      "토큰 만료 시간 설정",
+      "토큰의 무결성 검증 및 위변조 방지",
+      "사용자 개인정보 암호화",
+      "알고리즘 지정"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 토큰의 무결성 검증 및 위변조 방지 서명(Signature) 부분은 비밀키로 생성되어 토큰 값이 변조되지 않았음을 보장함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 205,
+    "question": "다음 중 '기명(Named) 파이프'를 이용한 윈도우 IPC(Inter-Process Communication)의 보안 취약점과 관련된 공격은?",
+    "options": [
+      "ARP Spoofing",
+      "DNS Spoofing",
+      "Phishing",
+      "Null Session 등을 통한 정보 수집 및 파이프 연결 공격"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Null Session 등을 통한 정보 수집 및 파이프 연결 공격 인증되지 않은 사용자가 파이프에 접근하여 정보를 빼내거나 명령을 실행할 수 있었음 (과거 SMB 취약점 등).",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 206,
+    "question": "다음 중 Digital Certificate에 포함되지 않는 정보는?",
+    "options": [
+      "공개키",
+      "개인키",
+      "발급자 정보",
+      "유효기간"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 개인키 디지털 인증서는 공개키를 포함하지만, 개인키는 소유자만 보관하며 인증서에 포함되지 않습니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 207,
+    "question": "다음 중 'Directory Traversal' 공격이 성공했을 때 볼 수 있는 결과는?",
+    "options": [
+      "../../etc/passwd 와 같이 시스템 파일 내용 노출",
+      "관리자 계정 생성",
+      "DB 테이블 삭제",
+      "웹 사이트 메인 화면 변조"
+    ],
+    "answer": 0,
+    "explanation": "경로 조작을 통해 웹 루트 밖의 파일에 접근함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 208,
+    "question": "윈도우에서 파일이나 폴더의 변경 이력을 기록하는 감사(Audit) 기능을 활성화하려면 무엇을 설정해야 하는가?",
+    "options": [
+      "권한 사용 감사",
+      "객체 액세스 감사 (Audit Object Access)",
+      "계정 로그인 감사",
+      "정책 변경 감사"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 객체 액세스 감사 (Audit Object Access) 파일/폴더 접근 기록을 남기려면 '객체 액세스 감사' 정책을 켜고 해당 파일에 감사(SACL)를 설정해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 209,
+    "question": "개인정보 비식별 조치 중 '범주화(Categorization)'의 예시는?",
+    "options": [
+      "홍길동 -> 홍**",
+      "평균값 대체",
+      "010-1234-5678 -> 삭제",
+      "35세 -> 30대"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 35세 -> 30대 구체적인 값을 범주(구간)로 묶어서 식별성을 낮추는 기법.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 210,
+    "question": "다음 중 '책임 추적성(Accountability)'을 보장하기 위한 가장 기본적인 수단은?",
+    "options": [
+      "로그(Log) 기록 및 감사(Audit)",
+      "암호화",
+      "방화벽",
+      "백신"
+    ],
+    "answer": 0,
+    "explanation": "누가 언제 무엇을 했는지 기록해야 책임을 물을 수 있음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 211,
+    "question": "디지털 포렌식에서 삭제된 파일을 복구하는 기술인 '파일 카빙(File Carving)'의 원리는?",
+    "options": [
+      "로그 파일을 분석",
+      "파일 시스템 메타데이터 없이 파일의 고유한 헤더/푸터 시그니처를 이용해 데이터를 추출",
+      "백업 서버에서 다운로드",
+      "휴지통에서 파일 복원"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 파일 시스템 메타데이터 없이 파일의 고유한 헤더/푸터 시그니처를 이용해 데이터를 추출 메타데이터가 손상되었을 때 파일 내용(Content) 자체를 보고 복구함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 212,
+    "question": "다음 중 Well-known 포트 번호 연결이 잘못된 것은?",
+    "options": [
+      "Telnet: 23",
+      "SSH: 22",
+      "FTP: 21",
+      "DNS: 80"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DNS: 80 DNS는 53번(UDP/TCP), HTTP가 80번임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 213,
+    "question": "리눅스에서 현재 열려있는 포트와 연결 상태를 확인하는 명령어는?",
+    "options": [
+      "ifconfig",
+      "traceroute",
+      "netstat",
+      "ping"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ netstat netstat(또는 ss) 명령어로 네트워크 연결 상태 및 포트 확인 가능.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 214,
+    "question": "SMTP 프로토콜의 기본 포트 번호는?",
+    "options": [
+      "110",
+      "143",
+      "25",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 25 SMTP: 25, POP3: 110, IMAP: 143.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 215,
+    "question": "다음 중 소스 코드 보안 약점인 'Race Condition(경쟁 조건)'을 방어하기 위한 코딩 기법은?",
+    "options": [
+      "세션 타임아웃 설정",
+      "입력값 길이 체크",
+      "특수문자 필터링",
+      "동기화(Synchronized) 구문 또는 Mutex 사용"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 동기화(Synchronized) 구문 또는 Mutex 사용 공유 자원에 접근할 때 락(Lock)을 걸어 한 번에 하나의 프로세스/스레드만 접근하게 함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 216,
+    "question": "개인정보 처리방침을 변경할 경우 정보주체가 쉽게 알 수 있도록 해야 하는 조치는?",
+    "options": [
+      "홈페이지 공지 및 변경 전후 비교 내용 표시",
+      "몰래 변경",
+      "직원에게만 공지",
+      "사장님 결재"
+    ],
+    "answer": 0,
+    "explanation": "이용자가 변경 사항을 쉽게 인지할 수 있어야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 217,
+    "question": "다음 중 Man-in-the-Middle(MITM) 공격의 특징은?",
+    "options": [
+      "서버를 직접 공격",
+      "통신 중간에서 데이터 가로채기",
+      "파일 시스템 손상",
+      "메모리 오버플로우"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 통신 중간에서 데이터 가로채기 MITM 공격은 두 통신 주체 사이에서 데이터를 가로채거나 조작하는 공격입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 218,
+    "question": "정보통신망법에 따라 정보보호 최고책임자(CISO)를 지정하고 과기정통부장관에게 신고해야 하는 대상은?",
+    "options": [
+      "비영리 동호회",
+      "아르바이트생",
+      "모든 개인사업자",
+      "정보통신서비스 제공자로서 자산총액, 매출액 등이 일정 기준 이상인 자"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 정보통신서비스 제공자로서 자산총액, 매출액 등이 일정 기준 이상인 자 일정 규모 이상의 ISP는 임원급의 CISO를 지정/신고해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 219,
+    "question": "생체 인식 기술 중, 지문이나 홍채 같은 신체적 특징이 아닌 서명, 걸음걸이 등 행동적 특징을 이용하는 것은?",
+    "options": [
+      "생리적 생체 인식",
+      "행위 기반 (Behavioral) 생체 인식",
+      "화학적 생체 인식",
+      "유전적 생체 인식"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 행위 기반 (Behavioral) 생체 인식 움직임이나 습관 등 행동 패턴을 분석함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 220,
+    "question": "다음 중 리눅스에서 'Sticky Bit'가 설정된 디렉터리를 나타내는 권한 표시는?",
+    "options": [
+      "drwxrwxrwt",
+      "drwsr-xr-x",
+      "drwxr-xr-x",
+      "drwxr-sr-x"
+    ],
+    "answer": 0,
+    "explanation": "마지막 실행 권한 자리에 't'가 있으면 Sticky Bit가 설정된 것임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 221,
+    "question": "다음 중 윈도우의 'UAC(사용자 계정 컨트롤)'를 우회하려는 공격 시도가 발생할 때 방어자가 확인해야 할 사항은?",
+    "options": [
+      "관리자 계정 삭제",
+      "레지스트리 변경 감시 및 UAC 알림 수준을 최대로 설정",
+      "게스트 계정 활성화",
+      "UAC 끄기"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 레지스트리 변경 감시 및 UAC 알림 수준을 최대로 설정 UAC 설정을 낮추면 악성코드가 몰래 권한을 상승시킬 수 있음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 222,
+    "question": "IPv4 헤더의 Checksum 필드는 무엇을 검증하는가?",
+    "options": [
+      "IP 헤더의 오류 여부",
+      "전체 패킷의 오류 여부",
+      "데이터(Payload)의 오류 여부",
+      "목적지 주소의 정확성"
+    ],
+    "answer": 0,
+    "explanation": "IPv4 체크섬은 헤더 부분의 오류만 검출함 (데이터는 TCP/UDP가 검증).",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 223,
+    "question": "웹 애플리케이션에서 'JWT(JSON Web Token)'의 서명(Signature) 부분이 제거된 토큰을 서버가 수락하는 취약점은?",
+    "options": [
+      "XSS",
+      "None Algorithm Attack (alg: none)",
+      "Brute Force",
+      "Replay Attack"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② None Algorithm Attack (alg: none) 헤더의 alg를 'none'으로 조작했을 때 서버가 검증 없이 받아들이면 위조 토큰 사용 가능.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 224,
+    "question": "HTTP 요청 메소드 중, 웹 서버에 파일 업로드(PUT)나 삭제(DELETE) 등을 수행할 수 있어 보안상 비활성화해야 하는 것은?",
+    "options": [
+      "불필요한 HTTP Methods (PUT, DELETE, TRACE 등)",
+      "HEAD",
+      "POST",
+      "GET"
+    ],
+    "answer": 0,
+    "explanation": "REST API 등 특별한 경우가 아니면 불필요한 메소드는 차단해야 함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 225,
+    "question": "윈도우 시스템에서 'DNS Cache' 정보를 확인하고 초기화하는 명령어는?",
+    "options": [
+      "nslookup /clear",
+      "route print /clean",
+      "ipconfig /displaydns, ipconfig /flushdns",
+      "netstat -r, netstat -c"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ ipconfig /displaydns, ipconfig /flushdns DNS 캐시 조회는 /displaydns, 삭제(초기화)는 /flushdns 옵션을 사용함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 226,
+    "question": "다음 중 'EMV' 표준이란 무엇에 관한 규격인가?",
+    "options": [
+      "무선 결제",
+      "인터넷 뱅킹",
+      "가상 화폐",
+      "IC칩(스마트카드) 기반의 신용카드 결제 표준 (Europay, MasterCard, Visa)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ IC칩(스마트카드) 기반의 신용카드 결제 표준 (Europay, MasterCard, Visa) 마그네틱 카드의 취약점을 보완하기 위한 IC카드 표준.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 227,
+    "question": "SQL Injection 공격 중, 쿼리 결과가 참인지 거짓인지만을 이용하여 데이터를 알아내는 기법은?",
+    "options": [
+      "Error-based SQL Injection",
+      "Union SQL Injection",
+      "Blind SQL Injection",
+      "Stored Procedure Injection"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Blind SQL Injection 에러 메시지나 데이터를 직접 보여주지 않을 때, 참/거짓 반응(화면 변화, 시간 지연 등)을 통해 추론함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 228,
+    "question": "접근 제어 모델 중, 이해 상충(Conflict of Interest) 문제를 해결하기 위해 '중국 만리장성 모델(Chinese Wall Model)'을 사용하는 목적은?",
+    "options": [
+      "군사 기밀 보호",
+      "가용성 극대화",
+      "데이터 무결성 보장",
+      "경쟁 관계에 있는 기업의 데이터에 동시 접근을 차단"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 경쟁 관계에 있는 기업의 데이터에 동시 접근을 차단 컨설팅 회사 등에서 경쟁사 A의 정보를 본 사람은 경쟁사 B의 정보를 못 보게 하는 동적 접근 통제.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 229,
+    "question": "다음 중 '키로거(Keylogger)'의 기능은?",
+    "options": [
+      "사용자의 키보드 입력 내용을 몰래 기록하여 ID/PW 등을 탈취",
+      "파일을 암호화",
+      "화면을 캡처",
+      "네트워크를 차단"
+    ],
+    "answer": 0,
+    "explanation": "입력 정보를 가로채는 스파이웨어의 일종.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 230,
+    "question": "OSI 7계층 중 '데이터 무결성, 흐름 제어, 오류 제어'를 담당하며 종단 간(End-to-End) 통신을 수행하는 계층은?",
+    "options": [
+      "전송 계층 (Transport Layer)",
+      "네트워크 계층 (Network Layer)",
+      "세션 계층 (Session Layer)",
+      "데이터 링크 계층 (Data Link Layer)"
+    ],
+    "answer": 0,
+    "explanation": "TCP/UDP가 동작하는 전송 계층(4계층)은 종단 간 신뢰성 있는 데이터 전송을 담당함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 231,
+    "question": "다음 중 타원곡선 암호(ECC)의 장점은?",
+    "options": [
+      "키 길이가 길어도 된다",
+      "짧은 키로 높은 보안 강도",
+      "구현이 매우 간단하다",
+      "해시 함수를 대체한다"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 짧은 키로 높은 보안 강도 ECC는 RSA에 비해 짧은 키 길이로도 동등하거나 더 높은 보안 강도를 제공합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 232,
+    "question": "SQL Injection 공격을 방어하기 위한 가장 효과적인 방법은?",
+    "options": [
+      "방화벽 설치",
+      "Prepared Statement 사용",
+      "안티바이러스 설치",
+      "네트워크 분리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Prepared Statement 사용 Prepared Statement(준비된 문장)를 사용하면 SQL 쿼리와 데이터를 분리하여 SQL Injection 공격을 효과적으로 방어할 수 있습니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 233,
+    "question": "리눅스 시스템에서 부팅 시 파일 시스템에 오류가 있는지 검사하고 복구하는 명령어는?",
+    "options": [
+      "mkfs",
+      "mount",
+      "fsck",
+      "fdisk"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ fsck File System Consistency Check(fsck)는 비정상 종료 등으로 인한 오류를 수정함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 234,
+    "question": "리눅스에서 로그 파일이 너무 커지는 것을 방지하기 위해 주기적으로 로그를 압축하고 새 파일을 생성하는 유틸리티는?",
+    "options": [
+      "logger",
+      "syslog",
+      "cron",
+      "logrotate"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ logrotate logrotate는 설정에 따라 로그 파일을 백업(Rotation), 압축, 삭제 관리함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 235,
+    "question": "리눅스에서 '/etc/hosts' 파일의 용도는?",
+    "options": [
+      "DNS 서버 주소 설정",
+      "도메인 이름과 IP 주소의 정적 매핑",
+      "게이트웨이 설정",
+      "네트워크 인터페이스 설정"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 도메인 이름과 IP 주소의 정적 매핑 DNS 조회 전 로컬에서 도메인 이름을 IP로 변환할 때 참조함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 236,
+    "question": "ICMP 패킷의 크기를 규정된 크기(65,535 바이트)보다 크게 만들어 전송하여 시스템의 버퍼 오버플로우를 유발하는 공격은?",
+    "options": [
+      "Land",
+      "Ping of Death",
+      "Teardrop",
+      "Smurf"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Ping of Death 거대한 패킷을 처리하다가 시스템이 다운됨.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 237,
+    "question": "윈도우 시스템에서 '섀도우 복사본(Volume Shadow Copy)' 서비스의 주된 보안상 용도는?",
+    "options": [
+      "파일 압축",
+      "디스크 포맷",
+      "삭제되거나 변조된 파일의 이전 버전을 복구 (랜섬웨어 대응 등)",
+      "네트워크 공유"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 삭제되거나 변조된 파일의 이전 버전을 복구 (랜섬웨어 대응 등) 시스템 복원 지점이나 파일의 과거 상태를 저장하여 복구를 지원함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 238,
+    "question": "TCP 헤더의 플래그(Flag) 중, 연결 종료를 요청할 때 사용하는 플래그는?",
+    "options": [
+      "RST",
+      "PSH",
+      "FIN",
+      "SYN"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ FIN FIN(Finish) 플래그는 정상적인 연결 종료 요청 시 사용됨. RST는 강제 종료.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 239,
+    "question": "다음 중 GDPR(유럽 일반 개인정보보호법)에서 '잊혀질 권리'라고 불리는 것은?",
+    "options": [
+      "접근권",
+      "이동권",
+      "삭제권 (Right to erasure)",
+      "정보주체 권리"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 삭제권 (Right to erasure) 자신의 정보가 더 이상 필요하지 않을 때 삭제를 요청할 권리.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 240,
+    "question": "다음 중 스턱스넷(Stuxnet) 악성코드가 타겟으로 삼았던 시스템 환경은?",
+    "options": [
+      "Database Server",
+      "SCADA (산업제어시스템)",
+      "Web Server",
+      "Android Mobile"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SCADA (산업제어시스템) 이란 원전 시설의 지멘스 PLC 장비를 노린 웜 바이러스.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 241,
+    "question": "다음 중 'Syskey' 기능(현재는 제거됨)의 원래 목적은 무엇이었는가?",
+    "options": [
+      "SAM 데이터베이스를 추가로 암호화하여 보호",
+      "레지스트리 백업",
+      "부팅 속도 향상",
+      "사용자 로그인 자동화"
+    ],
+    "answer": 0,
+    "explanation": "SAM 파일이 유출되어도 크랙하기 어렵게 한 번 더 암호화하는 기능이었으나 랜섬웨어 악용 등으로 Win10 1709부터 제거됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 242,
+    "question": "개인정보보호법에 따라 '민감정보'를 분실·도난·유출·위조·변조 또는 훼손되지 않도록 안전성 확보 조치를 하지 않아 유출된 경우의 과징금 기준은?",
+    "options": [
+      "5억원 이하",
+      "3천만원 이하",
+      "과징금 없음",
+      "전체 매출액의 3% 이하"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 전체 매출액의 3% 이하 개정법에 따라 안전조치 의무 위반으로 유출 시 전체 매출액의 3% 이하 과징금 부과 가능.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 243,
+    "question": "다음 중 방화벽(Firewall)의 구축 형태 중 '내부 네트워크와 외부 네트워크 사이에 완충 지대(DMZ)'를 두는 방식은?",
+    "options": [
+      "Bastion Host",
+      "Dual-Homed Gateway",
+      "Screened Subnet Architecture",
+      "Screening Router"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Screened Subnet Architecture 스크린드 서브넷 구조는 외부/내부 방화벽 사이에 DMZ(완충 구간)를 두어 웹 서버 등을 배치하는 가장 보안성이 높은 구조임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 244,
+    "question": "다음 중 'Sliding Window' 기법은 어느 계층에서 흐름 제어(Flow Control)를 위해 사용하는가?",
+    "options": [
+      "물리 계층",
+      "응용 계층",
+      "네트워크 계층",
+      "전송 계층 (TCP)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 전송 계층 (TCP) 수신 측의 버퍼 크기에 맞춰 전송 데이터 양을 조절하는 TCP의 기능.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 245,
+    "question": "최신 브라우저들이 지원하는 'DoH (DNS over HTTPS)'의 주된 목적은?",
+    "options": [
+      "캐시 서버 제거",
+      "광고 차단",
+      "DNS 쿼리를 HTTPS로 암호화하여 ISP 등의 도청 및 조작 방지",
+      "속도 향상"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ DNS 쿼리를 HTTPS로 암호화하여 ISP 등의 도청 및 조작 방지 평문으로 전송되던 DNS 쿼리를 암호화하여 프라이버시를 강화함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 246,
+    "question": "다음 중 'Directory Traversal' 공격을 막기 위해 필터링해야 할 문자열은?",
+    "options": [
+      "frame",
+      "SELECT",
+      "../ (상위 디렉터리 이동)",
+      "<script>"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ ../ (상위 디렉터리 이동) 경로 조작 문자인 dot-dot-slash(../)를 차단해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 247,
+    "question": "OSI 7계층 중, 데이터의 암호화, 압축, 포맷 변환 등을 담당하여 상호 이해 가능한 형식으로 만드는 계층은?",
+    "options": [
+      "표현 계층 (Presentation Layer)",
+      "전송 계층",
+      "응용 계층",
+      "세션 계층"
+    ],
+    "answer": 0,
+    "explanation": "데이터의 표현 형식(Format)을 결정하는 계층임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 248,
+    "question": "침입탐지시스템(IDS)의 탐지 기법 중 비정상 행위 탐지 방식의 장점은?",
+    "options": [
+      "오탐률이 낮다",
+      "알려지지 않은 공격 탐지 가능",
+      "설정이 간단하다",
+      "시그니처 업데이트가 불필요하다"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 알려지지 않은 공격 탐지 가능 비정상 행위 탐지(Anomaly Detection)는 정상 행위 패턴을 학습하여 이를 벗어난 행위를 탐지하므로 알려지지 않은 새로운 공격도 탐지할 수 있습니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 249,
+    "question": "OECD 개인정보 보호 8원칙 중, 수집된 개인정보는 수집 목적과 양립할 수 있는 범위 내에서만 이용되어야 한다는 원칙은?",
+    "options": [
+      "수집 제한의 원칙",
+      "정보 정확성의 원칙",
+      "공개(투명성)의 원칙",
+      "이용 제한의 원칙"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 이용 제한의 원칙 목적 외 이용 금지 원칙을 의미함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 250,
+    "question": "블록체인 보안 취약점 중 '51% 공격'이란?",
+    "options": [
+      "51%의 확률로 암호를 깸",
+      "네트워크 노드의 51%를 파괴함",
+      "지분의 51%를 소각함",
+      "전체 해시 파워(컴퓨팅 파워)의 51% 이상을 장악하여 거래 내역을 조작하거나 이중 지불을 하는 공격"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 전체 해시 파워(컴퓨팅 파워)의 51% 이상을 장악하여 거래 내역을 조작하거나 이중 지불을 하는 공격 PoW 기반 블록체인의 구조적 취약점으로, 과반수의 파워를 가지면 원장을 마음대로 쓸 수 있음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 251,
+    "question": "공공기관의 정보공개에 관한 법률상 정보공개 청구를 받은 날부터 며칠 이내에 공개 여부를 결정해야 하는가?",
+    "options": [
+      "즉시",
+      "7일 이내",
+      "10일 이내",
+      "30일 이내"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 10일 이내 부득이한 경우 10일 연장 가능.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 252,
+    "question": "다음 중 '사회 공학 공격'의 예방 대책으로 가장 중요한 것은?",
+    "options": [
+      "바이러스 백신 설치",
+      "보안 인식 교육 및 훈련",
+      "최신 방화벽 도입",
+      "서버 이중화"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 보안 인식 교육 및 훈련 사람 심리를 이용하므로 기술적 통제보다 사람에 대한 교육이 핵심임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 253,
+    "question": "다음 중 리눅스에서 파일의 'SetUID' 비트가 설정되어 있는지 확인하는 방법으로 옳은 것은?",
+    "options": [
+      "ls -a 실행",
+      "stat 명령어 실행",
+      "file 명령어 실행",
+      "ls -l 명령 실행 시 실행 권한 자리에 's' 또는 'S' 확인"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ls -l 명령 실행 시 실행 권한 자리에 's' 또는 'S' 확인 권한 표시에 rwsr-xr-x 처럼 's'가 보이면 SetUID가 설정된 것임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 254,
+    "question": "윈도우의 'Active Directory'에서 도메인 내의 모든 객체(사용자, 그룹 등) 정보를 저장하고 있는 데이터베이스 파일은?",
+    "options": [
+      "SECURITY",
+      "NTDS.DIT",
+      "SAM",
+      "SYSTEM"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② NTDS.DIT AD의 핵심 데이터베이스 파일은 ntds.dit임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 255,
+    "question": "전자서명 인증사업자가 준수해야 할 운영 기준으로 틀린 것은?",
+    "options": [
+      "가입자 신원 확인",
+      "인증 업무 기록 관리",
+      "인증서 발급 내역 공개 (누구나 볼 수 있게)",
+      "보안 체계 수립"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 인증서 발급 내역 공개 (누구나 볼 수 있게) 발급 내역(개인정보 포함)을 무단 공개하면 안 됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 256,
+    "question": "다음 중 개인정보 유출사고 발생 시 우선적으로 해야 할 행동은?",
+    "options": [
+      "침해 사실 조사 및 신고",
+      "데이터 압축",
+      "백업 파일 삭제",
+      "UI 변경"
+    ],
+    "answer": 0,
+    "explanation": "침해 사실 확인과 신고가 우선해야 할 행동입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 257,
+    "question": "정보보호 정책 수립 시 고려해야 할 사항으로 가장 거리가 먼 것은?",
+    "options": [
+      "법적 요구사항",
+      "조직의 비즈니스 목표",
+      "경쟁사의 직원 명단",
+      "이해관계자의 요구"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 경쟁사의 직원 명단 경쟁사 직원 명단은 정책 수립의 고려 요소가 아님.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 258,
+    "question": "다음 중 'Insecure Direct Object References (IDOR)' 취약점의 예시는?",
+    "options": [
+      "URL의 파라미터(id=123)를 조작하여 다른 사용자의 정보(id=124)를 열람",
+      "스크립트 태그를 입력",
+      "SQL 문에 따옴표를 삽입",
+      "패스워드를 무차별 대입"
+    ],
+    "answer": 0,
+    "explanation": "객체 참조값에 대한 접근 통제가 미흡하여 발생하는 권한 우회 취약점.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 259,
+    "question": "개인정보 안전성 확보조치 기준에 따라, 접속기록은 최소 얼마 기간 동안 보관해야 하는가? (일반적인 경우)",
+    "options": [
+      "3년 이상",
+      "6개월 이상",
+      "2년 이상",
+      "1년 이상"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 1년 이상 기본 1년 이상, 월 1회 이상 점검. (5만명 이상 등은 2년)",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 260,
+    "question": "다음 중 Code Signing의 목적은?",
+    "options": [
+      "코드 압축",
+      "소프트웨어 무결성 및 출처 검증",
+      "코드 실행 속도 향상",
+      "메모리 최적화"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 소프트웨어 무결성 및 출처 검증 Code Signing은 디지털 서명을 통해 소프트웨어의 무결성과 출처를 검증하여 변조를 방지합니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 261,
+    "question": "디지털 포렌식 원칙 중 '동일한 조건에서 동일한 도구로 분석하면 항상 같은 결과가 나와야 한다'는 원칙은?",
+    "options": [
+      "정당성",
+      "재현성 (Reproducibility)",
+      "무결성",
+      "신속성"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 재현성 (Reproducibility) 결과의 신뢰성을 보장하기 위한 과학적 검증 요건.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 262,
+    "question": "다음 중 'ARP (Address Resolution Protocol)'의 기능은?",
+    "options": [
+      "MAC 주소를 IP 주소로 변환 (RARP)",
+      "IP 주소를 MAC 주소로 변환",
+      "사설 IP를 공인 IP로 변환 (NAT)",
+      "도메인을 IP로 변환 (DNS)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② IP 주소를 MAC 주소로 변환 논리적 주소(IP)를 물리적 주소(MAC)로 매핑함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 263,
+    "question": "다음 중 'Diffie-Hellman' 키 교환 알고리즘의 취약점인 '중간자 공격(MITM)'을 막기 위한 방법은?",
+    "options": [
+      "해시 함수 사용 안 함",
+      "전자서명 등을 통한 상호 인증 수행 (Station-to-Station)",
+      "비밀키 공유",
+      "키 길이를 줄임"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 전자서명 등을 통한 상호 인증 수행 (Station-to-Station) 인증 단계가 없는 DH의 약점을 보완하기 위해 서명이나 인증서를 추가함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 264,
+    "question": "다음 중 '개인정보의 안전성 확보조치 기준'에서 내부 관리계획 수립 대상자는?",
+    "options": [
+      "대기업만 해당",
+      "정보통신서비스 제공자만 해당",
+      "공공기관만 해당",
+      "개인정보를 처리하는 모든 개인정보처리자 (단, 소상공인 등 예외 존재)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 개인정보를 처리하는 모든 개인정보처리자 (단, 소상공인 등 예외 존재) 원칙적으로 모든 처리자가 대상이나 규모에 따라 내용이 차등 적용됨.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 265,
+    "question": "정보보호 및 개인정보보호 관리체계(ISMS-P) 인증 고시에 따른 심사 수행 기관은?",
+    "options": [
+      "심사기관",
+      "교육기관",
+      "인증기관",
+      "컨설팅기관"
+    ],
+    "answer": 0,
+    "explanation": "KISA(인증기관)가 지정한 심사기관(KAIT, TTA 등)이 심사를 수행할 수 있음.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 266,
+    "question": "무선 네트워크에서 'Rogue AP' 탐지를 위해 사용하는 기법 중, 무선 신호의 도달 시간 차이 등을 이용해 위치를 찾는 기술은?",
+    "options": [
+      "워 드라이빙",
+      "패킷 스니핑",
+      "핑거프린팅",
+      "삼각 측량 (Triangulation)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 삼각 측량 (Triangulation) 3개 이상의 센서에서 신호 강도나 시간을 측정하여 불법 AP의 물리적 위치를 추적함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 267,
+    "question": "다음 중 네트워크 계층에서 데이터의 무결성을 보장하기 위한 프로토콜은?",
+    "options": [
+      "IPSec",
+      "SSL",
+      "SSH",
+      "PGP"
+    ],
+    "answer": 0,
+    "explanation": "IPSec은 3계층에서 암호화 및 인증을 제공함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 268,
+    "question": "윈도우 서버의 DNS 서비스에서 'Zone Transfer(영역 전송)' 보안 설정 시 권장 사항은?",
+    "options": [
+      "모든 서버에 전송 허용",
+      "지정된 IP 주소(보조 DNS)로만 전송 허용",
+      "누구에게나 허용",
+      "전송 기능 비활성화 (다중화 포기)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 지정된 IP 주소(보조 DNS)로만 전송 허용 Zone Transfer를 아무에게나 허용하면 전체 도메인 구조가 유출됨.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 269,
+    "question": "정보보호 위험 관리 용어 중, 위협(Threat)이 취약점(Vulnerability)을 이용하여 자산(Asset)에 손실을 입힐 가능성을 무엇이라 하는가?",
+    "options": [
+      "공격 (Attack)",
+      "대책 (Safeguard)",
+      "위험 (Risk)",
+      "노출 (Exposure)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 위험 (Risk) 위험 = 자산 가치 x 위협 x 취약점 (개념적으로).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 270,
+    "question": "웹 애플리케이션의 파일 업로드 기능을 이용하여, 서버 측에서 실행 가능한 스크립트 파일(php, jsp, asp 등)을 업로드하여 시스템 제어권을 탈취하는 공격은?",
+    "options": [
+      "RFI",
+      "LFI",
+      "File Download",
+      "File Upload Vulnerability (Web Shell)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ File Upload Vulnerability (Web Shell) 악성 스크립트(웹쉘)를 업로드하고 실행하여 서버 명령어를 수행함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 271,
+    "question": "웹 애플리케이션 방화벽(WAF)의 주요 기능이 아닌 것은?",
+    "options": [
+      "정보 유출 방지",
+      "SQL Injection 차단",
+      "XSS 차단",
+      "바이러스 치료"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 바이러스 치료 WAF는 웹 공격 방어가 주 목적이며, 바이러스 치료는 백신(Anti-virus)의 영역임.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 272,
+    "question": "접근 통제 행렬(Access Control Matrix)을 자원(객체) 중심으로 구현한 리스트는?",
+    "options": [
+      "Role List",
+      "ACL (Access Control List)",
+      "Capability List",
+      "Token"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ACL (Access Control List) 객체(파일 등)에 붙어있으며 누가 접근 가능한지 명시함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 273,
+    "question": "다음 중 '개인정보 유출'로 보지 않는 경우는?",
+    "options": [
+      "해킹 사고",
+      "시스템 오류로 인한 노출",
+      "적법한 절차에 따른 수사기관 제공",
+      "직원 실수로 메일 발송"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 적법한 절차에 따른 수사기관 제공 법적 의무에 따른 제공은 유출이 아님.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 274,
+    "question": "네트워크 포렌식에서 'NetFlow' 데이터가 제공하는 정보는?",
+    "options": [
+      "패킷의 헤더 요약 정보 (출발지/목적지 IP, 포트, 프로토콜, 패킷 수 등)",
+      "패킷의 페이로드 전체",
+      "파일의 내용",
+      "암호화 키"
+    ],
+    "answer": 0,
+    "explanation": "전체 패킷 캡처(PCAP)보다 용량이 작아 장기간 트래픽 통계 분석에 유용함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 275,
+    "question": "리눅스 시스템 로그 설정 파일 '/etc/rsyslog.conf'에서, 모든 시설(facility)의 'alert' 등급 이상의 로그를 콘솔로 출력하는 설정은?",
+    "options": [
+      "./dev/console",
+      "*.alert",
+      "alert./dev/console",
+      "*.alert /dev/console"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ *.alert /dev/console 앞부분이 facility, 뒷부분이 level임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 276,
+    "question": "다음 중 계정 인증 정보를 안전하게 저장하는 방법은?",
+    "options": [
+      "평문 저장",
+      "해시 + 솔트",
+      "이메일 전송",
+      "CDN 사용"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 해시 + 솔트 인증 정보는 해시+솔트로 안전하게 저장해야 합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 277,
+    "question": "다음 중 'Open Redirect' 취약점을 이용하여 발생할 수 있는 피해는?",
+    "options": [
+      "DoS 공격",
+      "피싱(Phishing) 사이트로 사용자 유도",
+      "서버 권한 획득",
+      "DB 삭제"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 피싱(Phishing) 사이트로 사용자 유도 신뢰할 수 있는 도메인의 리다이렉트 기능을 악용하여 악성 사이트로 이동시킴.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 278,
+    "question": "다음 중 'sudo' 명령어를 사용할 수 있는 사용자를 정의하는 설정 파일은?",
+    "options": [
+      "/etc/root",
+      "/etc/su",
+      "/etc/admin",
+      "/etc/sudoers"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ /etc/sudoers visudo 명령어를 통해 편집하며, 권한 위임 정책을 정의함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 279,
+    "question": "리눅스 파일 시스템에서 저널링(Journaling) 기능을 제공하여 시스템 충돌 시 복구가 빠른 파일 시스템은?",
+    "options": [
+      "ext4",
+      "ext2",
+      "minix",
+      "FAT32"
+    ],
+    "answer": 0,
+    "explanation": "ext3/ext4, XFS 등은 저널링을 지원하여 데이터 무결성을 높임. ext2는 지원 안 함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 280,
+    "question": "다음 중 'Open Source 라이브러리' 사용 시 보안 위협을 줄이기 위한 활동은?",
+    "options": [
+      "최신 버전 유지 및 알려진 취약점(CVE) 모니터링 (SCA 도구 활용)",
+      "코드를 모두 직접 작성",
+      "오픈 소스 사용 금지",
+      "라이브러리 파일명 변경"
+    ],
+    "answer": 0,
+    "explanation": "오픈 소스의 취약점을 이용한 공급망 공격에 대비해 지속적인 관리가 필요함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 281,
+    "question": "다음 중 'LDAP Injection' 공격을 막기 위한 방법으로 옳은 것은?",
+    "options": [
+      "SQL 쿼리 사용 금지",
+      "숫자만 입력 허용",
+      "입력값에서 특수문자((, ), *, & 등)를 필터링하거나 이스케이프 처리",
+      "HTML 태그 제거"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 입력값에서 특수문자((, ), *, & 등)를 필터링하거나 이스케이프 처리 LDAP 필터 구문에 사용되는 특수문자를 적절히 처리해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 282,
+    "question": "Wireshark에서 'Follow TCP Stream' 기능의 역할은?",
+    "options": [
+      "TCP 패킷 하나만 분석함",
+      "패킷을 삭제함",
+      "암호를 해독함",
+      "해당 TCP 세션의 전체 데이터 흐름을 보기 좋게 재조립하여 텍스트로 보여줌"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 해당 TCP 세션의 전체 데이터 흐름을 보기 좋게 재조립하여 텍스트로 보여줌 조각난 패킷들을 합쳐서 실제 송수신된 내용을 쉽게 확인할 수 있게 해줌.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 283,
+    "question": "다음 중 FTP 사용 시 보안상 가장 취약한 점은?",
+    "options": [
+      "파일 크기 제한",
+      "속도가 느림",
+      "접속이 어려움",
+      "아이디와 비밀번호, 데이터가 평문으로 전송됨"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 아이디와 비밀번호, 데이터가 평문으로 전송됨 스니핑에 매우 취약하므로 SFTP나 FTPS를 사용해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 284,
+    "question": "메일 헤더 분석 시, 메일이 거쳐온 경로(메일 서버들의 정보)를 확인할 수 있는 필드는?",
+    "options": [
+      "To",
+      "Subject",
+      "Received",
+      "From"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Received Received 헤더를 역추적하여 메일 발송지를 파악할 수 있음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 285,
+    "question": "다음 중 정보보호 영향 평가의 첫 단계는?",
+    "options": [
+      "위험 분석",
+      "자산 식별",
+      "취약점 점검",
+      "대응책 도출"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 자산 식별 영향 평가는 우선 보호해야 할 자산을 식별하는 것부터 시작합니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 286,
+    "question": "웹 서버 설정 중 'Directory Listing'이 활성화되어 있을 때의 위험성은?",
+    "options": [
+      "DB 데이터가 삭제된다.",
+      "관리자 패스워드가 즉시 변경된다.",
+      "서버의 파일 구조와 목록이 노출되어 민감한 파일이 발견될 수 있다.",
+      "서버가 다운된다."
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 서버의 파일 구조와 목록이 노출되어 민감한 파일이 발견될 수 있다. 브라우징을 통해 백업 파일이나 소스 코드 등을 찾을 수 있게 됨.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 287,
+    "question": "다음 중 'TCSEC (Orange Book)'은 어느 나라의 보안 평가 기준이었는가?",
+    "options": [
+      "한국",
+      "미국 (DoD)",
+      "국제 표준",
+      "영국"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 미국 (DoD) 미국 국방부의 평가 기준으로, 기밀성 중심이었음. (현재는 CC로 대체)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 288,
+    "question": "다음 중 포트 스캐닝 도구는?",
+    "options": [
+      "Wireshark",
+      "Nmap",
+      "Metasploit",
+      "Burp Suite"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Nmap Nmap은 네트워크 탐색 및 포트 스캐닝을 위한 대표적인 도구입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 289,
+    "question": "다음 중 '개인정보 분쟁조정위원회'에 분쟁조정을 신청할 수 있는 자는?",
+    "options": [
+      "수사기관",
+      "개인정보와 관련하여 피해를 입은 정보주체",
+      "법원",
+      "해커"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 개인정보와 관련하여 피해를 입은 정보주체 피해 구제를 원하는 정보주체가 신청함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 290,
+    "question": "유럽 GDPR에서 개인정보를 EU 역외로 이전할 때 필요한 적정성 결정(Adequacy Decision)을 받은 국가는 별도의 조치 없이 이전 가능하다. 한국은 적정성 결정을 받았는가?",
+    "options": [
+      "받았다 (초기 적정성 결정 통과)",
+      "영구 탈락했다",
+      "심사 중이다",
+      "못 받았다"
+    ],
+    "answer": 0,
+    "explanation": "한국은 GDPR 적정성 결정을 통과하여 EU 시민의 정보를 국내로 이전할 수 있음.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 291,
+    "question": "다음 중 악성코드가 실행될 때 가상머신(VM) 환경임을 감지하고 동작을 멈추는 기법은?",
+    "options": [
+      "Anti-Debugging",
+      "Obfuscation",
+      "Packing",
+      "Anti-VM (Anti-Virtualization)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Anti-VM (Anti-Virtualization) 분석을 회피하기 위해 VM 특유의 하드웨어 값이나 레지스트리를 확인함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 292,
+    "question": "악성코드가 탐지를 피하기 위해 자신을 다른 정상적인 프로세스 메모리에 주입하여 실행하는 기법은?",
+    "options": [
+      "Polymorphism",
+      "Obfuscation",
+      "Rootkit",
+      "Process Injection (DLL Injection)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Process Injection (DLL Injection) 정상 프로세스에 코드를 삽입하여 보안 솔루션을 우회하는 기법.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 293,
+    "question": "다음 중 DB 접근 제어 솔루션(DBSAfer 등)의 주요 기능이 아닌 것은?",
+    "options": [
+      "SQL 명령어 통제",
+      "접근 권한 제어",
+      "감사 로그 기록",
+      "웹 서버 부하 분산"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 웹 서버 부하 분산 DB 접근 제어는 DB 보안에 특화되어 있음. 로드 밸런싱은 아님.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 294,
+    "question": "다음 중 정보보호 거버넌스 프레임워크인 'ISO/IEC 27014'가 제시하는 6대 원칙에 해당하지 않는 것은?",
+    "options": [
+      "비용 최소화",
+      "비즈니스 목표 연계",
+      "책임성 확립",
+      "전사적 위험 관리"
+    ],
+    "answer": 0,
+    "explanation": "단순 비용 절감이 아니라 가치 전달, 성과 측정, 자원 최적화 등이 원칙임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 295,
+    "question": "다음 중 정책 수립 시 고려해야 할 요소가 아닌 것은?",
+    "options": [
+      "법령 준수",
+      "조직 환경",
+      "서비스 가격",
+      "위험 요소"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 서비스 가격 서비스 가격은 정책 수립에 필수 요소가 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 296,
+    "question": "HTML5의 'LocalStorage'와 'SessionStorage'에 민감한 정보를 저장할 때 가장 큰 보안 위협은?",
+    "options": [
+      "서버로 전송되지 않음",
+      "용량 부족",
+      "CSRF",
+      "XSS 공격을 통해 자바스크립트로 데이터 탈취 가능"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ XSS 공격을 통해 자바스크립트로 데이터 탈취 가능 쿠키(HttpOnly)와 달리 스크립트 접근을 막을 방법이 없음.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 297,
+    "question": "다음 중 윈도우 파일 시스템에서 'ADS(Alternate Data Stream)'를 확인하기 위한 CMD 명령어 옵션은?",
+    "options": [
+      "dir /a",
+      "dir /w",
+      "dir /s",
+      "dir /r"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ dir /r dir /r 옵션을 사용하면 숨겨진 ADS 스트림 파일명($DATA)을 볼 수 있음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 298,
+    "question": "CC (Common Criteria)에서 소비자가 제품에 요구하는 보안 요구사항을 정의한 문서는?",
+    "options": [
+      "PP (Protection Profile, 보호 프로파일)",
+      "ST (Security Target, 보안 목표 명세서)",
+      "EAL",
+      "TOE"
+    ],
+    "answer": 0,
+    "explanation": "구현 독립적인 요구사항 명세. (ST는 개발사가 작성하는 상세 명세)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 299,
+    "question": "접근 통제 3요소 중, '식별(Identification)'이란 무엇인가?",
+    "options": [
+      "로그를 남기는 행위",
+      "자신의 신원(ID)을 시스템에게 알리는 행위",
+      "신원이 맞는지 증명하는 행위(PW)",
+      "권한을 부여하는 행위"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 자신의 신원(ID)을 시스템에게 알리는 행위 ID 입력이 식별, 패스워드 입력은 인증임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 300,
+    "question": "리눅스에서 프로세스 상태 중 '좀비(Zombie) 프로세스'를 의미하는 상태 코드는?",
+    "options": [
+      "R",
+      "D",
+      "S",
+      "Z"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Z Z(Zombie)는 실행은 종료되었으나 부모 프로세스가 회수하지 않아 테이블에 남은 상태.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 301,
+    "question": "개인정보보호법상 '자동화된 결정(Automated Decision Making)'에 대해 정보주체가 거부하거나 설명을 요구할 수 있는 권리는?",
+    "options": [
+      "처리정지권",
+      "삭제권",
+      "자동화된 결정에 대한 대응권",
+      "열람권"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 자동화된 결정에 대한 대응권 AI 등 자동화된 결정이 중대한 영향을 미칠 때 거부/설명요구 등을 할 수 있는 권리가 신설됨.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 302,
+    "question": "HTML5에서 로컬 스토리지(Local Storage)와 세션 스토리지(Session Storage)에 대한 보안 설명으로 틀린 것은?",
+    "options": [
+      "XSS 공격에 취약하므로 민감한 정보(비밀번호 등)를 저장하면 안 된다.",
+      "로컬 스토리지는 영구적으로 데이터가 보관된다.",
+      "세션 스토리지는 브라우저 종료 시 데이터가 삭제된다.",
+      "HttpOnly 속성을 사용하여 자바스크립트 접근을 막을 수 있다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ HttpOnly 속성을 사용하여 자바스크립트 접근을 막을 수 있다. Web Storage(Local/Session)는 자바스크립트로 제어되므로 HttpOnly 같은 보호 속성이 없음. XSS에 매우 취약.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 303,
+    "question": "다음 중 악성 이메일 첨부파일 탐지 방법이 아닌 것은?",
+    "options": [
+      "샌드박스 실행",
+      "평문 다운로드",
+      "바이러스 검사",
+      "파일 확장자 확인"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 평문 다운로드 평문 다운로드는 점검에 해당하지 않으며, 샌드박스/바이러스검사가 주요 방법입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 304,
+    "question": "정보통신망법상 이용자의 스마트폰 등 단말기에 영리 목적의 광고성 정보를 전송하려 할 때, 앱 설치 시 동의를 받아야 하는 권한은?",
+    "options": [
+      "주소록 접근 동의",
+      "위치 정보 동의",
+      "앱 푸시(Push) 알림 전송 동의",
+      "카메라 접근 동의"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 앱 푸시(Push) 알림 전송 동의 영리 목적 광고성 정보(앱 푸시)는 별도의 수신 동의가 필요함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 305,
+    "question": "다음 중 네트워크 스니핑(Sniffing) 도구로 널리 사용되는 것은?",
+    "options": [
+      "Nmap",
+      "Metasploit",
+      "John the Ripper",
+      "Wireshark"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Wireshark Wireshark는 대표적인 패킷 분석(스니핑) 도구임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 306,
+    "question": "다음 중 'Tor (The Onion Router)' 네트워크에서 익명성을 보장하기 위해 사용하는 라우팅 방식은?",
+    "options": [
+      "어니언 라우팅 (다중 암호화 계층)",
+      "최단 경로 라우팅",
+      "소스 라우팅",
+      "브로드캐스트"
+    ],
+    "answer": 0,
+    "explanation": "패킷을 여러 겹으로 암호화하여 릴레이 노드들이 전체 경로를 알 수 없게 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 307,
+    "question": "ISMS-P 인증 마크 사용 위반 시의 제재 조치는?",
+    "options": [
+      "인증 취소 및 과태료",
+      "형사 고발",
+      "경고만 함",
+      "제재 없음"
+    ],
+    "answer": 0,
+    "explanation": "거짓으로 마크를 사용하면 과태료가 부과될 수 있음.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 308,
+    "question": "다음 중 '정보보호산업의 진흥에 관한 법률'에 따라 정보보호 공시를 의무적으로 해야 하는 자는?",
+    "options": [
+      "동네 병원",
+      "개인 사업자",
+      "모든 중소기업",
+      "ISP(인터넷서비스제공자), IDC, 상급종합병원, 일정 매출 이상 클라우드 사업자 등"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ISP(인터넷서비스제공자), IDC, 상급종합병원, 일정 매출 이상 클라우드 사업자 등 국민 생활에 밀접한 영향을 주는 주요 사업자들이 의무 공시 대상임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 309,
+    "question": "개인정보보호법 상 '개인정보 처리자'가 정보주체의 열람 요구를 거절할 수 있는 정당한 사유가 아닌 것은?",
+    "options": [
+      "단순히 업무가 바빠서",
+      "법률에 따라 열람이 금지된 경우",
+      "타인의 생명·신체를 해할 우려가 있는 경우",
+      "타인의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우"
+    ],
+    "answer": 0,
+    "explanation": "업무 과다는 정당한 거절 사유가 아님.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 310,
+    "question": "VPN 구현 기술 중 3계층(L3) 터널링 프로토콜이 아닌 것은?",
+    "options": [
+      "PPTP",
+      "IPSec (Tunnel Mode)",
+      "L2TP",
+      "GRE"
+    ],
+    "answer": 0,
+    "explanation": "PPTP와 L2TP는 2계층(Data Link) 터널링 프로토콜임. (문제 의도: L2 터널링인 PPTP를 고르는 것)",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 311,
+    "question": "ISMS-P 인증 기준 중 '인적 보안' 항목에서 퇴직/직무 변경 시 이행해야 할 조치는?",
+    "options": [
+      "퇴직금 지급",
+      "이메일 계정 영구 보관",
+      "접근 권한의 지체 없는 회수 또는 조정",
+      "개인 PC 포맷"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 접근 권한의 지체 없는 회수 또는 조정 퇴사자의 계정이 남아있어 발생하는 보안 사고를 막기 위해 즉시 권한을 회수해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 312,
+    "question": "다음 중 보안 취약점 진단 자동화 도구가 아닌 것은?",
+    "options": [
+      "Nessus",
+      "OpenVAS",
+      "Notepad",
+      "Qualys"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Notepad Notepad는 단순 텍스트 편집기로 진단 도구가 아닙니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 313,
+    "question": "리눅스 명령어 'chmod 4755 file'에서 맨 앞의 숫자 '4'가 의미하는 것은?",
+    "options": [
+      "읽기 권한",
+      "SetUID 설정",
+      "SetGID 설정",
+      "Sticky Bit 설정"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SetUID 설정 4: SetUID, 2: SetGID, 1: Sticky Bit.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 314,
+    "question": "전자화폐의 조건 중, '양도성(Transferability)'이란?",
+    "options": [
+      "익명성이 보장됨",
+      "사용자 간에 자유롭게 화폐를 주고받을 수 있는 성질",
+      "은행을 통해서만 이동 가능함",
+      "복제가 가능함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 사용자 간에 자유롭게 화폐를 주고받을 수 있는 성질 현금처럼 은행 개입 없이 유통될 수 있어야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 315,
+    "question": "백신 프로그램의 주된 기능은?",
+    "options": [
+      "악성코드 탐지 및 제거",
+      "데이터 압축",
+      "네트워크 속도 측정",
+      "시스템 백업"
+    ],
+    "answer": 0,
+    "explanation": "백신은 악성코드를 탐지하여 제거하는 기능을 가집니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 316,
+    "question": "다음 중 'Tor (The Onion Router)' 네트워크를 사용하여 통신 경로를 난독화하고 익명성을 보장하는 기술의 원리는?",
+    "options": [
+      "MAC 주소를 주기적으로 변경",
+      "여러 중계 노드를 거치며 다중 암호화된 데이터를 양파 껍질 벗기듯 복호화",
+      "DNS 쿼리를 암호화",
+      "단일 VPN 서버를 통한 IP 세탁"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 여러 중계 노드를 거치며 다중 암호화된 데이터를 양파 껍질 벗기듯 복호화 각 노드마다 한 겹씩 복호화하며 다음 경로로 전달하여 추적을 어렵게 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 317,
+    "question": "다음 중 'LFI (Local File Inclusion)' 공격이 성공했을 때 볼 수 있는 파일은?",
+    "options": [
+      "클라이언트의 파일",
+      "없음",
+      "원격 서버의 파일",
+      "웹 서버 내부의 시스템 파일 (/etc/passwd 등)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 웹 서버 내부의 시스템 파일 (/etc/passwd 등) 서버 로컬에 존재하는 파일을 페이지에 포함시켜 내용을 노출시킴.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 318,
+    "question": "개인정보보호법상 '개인정보 유출 통지'는 며칠 이내에 해야 하는가?",
+    "options": [
+      "24시간 이내",
+      "7일 이내",
+      "30일 이내",
+      "지체 없이 (5일 이내, 실제론 알게 된 때로부터 72시간 권고이나 법령상 지체없이)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 지체 없이 (5일 이내, 실제론 알게 된 때로부터 72시간 권고이나 법령상 지체없이) 법조문상 '지체 없이(통상 5일)'이나, GDPR 영향 등으로 실무상 72시간 내 통지를 권장함. (정답은 법령 문구인 '지체 없이' 또는 '72시간' 중 선택. *수정: 표준개인정보보호지침 등에서 72시간 명시하는 추세. 객관식에선 24시간/72시간/5일/7일 중 나오면 72시간이 가장 적절)",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 319,
+    "question": "개인정보 파기 시, 다른 법령에 따라 보존해야 하는 경우 조치 방법은?",
+    "options": [
+      "즉시 파기",
+      "홈페이지에 공개",
+      "다른 개인정보와 분리하여 별도로 저장·관리",
+      "함께 보관하되 암호화"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 다른 개인정보와 분리하여 별도로 저장·관리 법적 의무 보관 정보는 운영 DB와 분리하여(논리적/물리적) 안전하게 보관해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 320,
+    "question": "윈도우 시스템에서 'UAC (User Account Control)'의 주요 기능은?",
+    "options": [
+      "바이러스를 실시간 검사함",
+      "사용자 계정을 자동으로 생성함",
+      "관리자 권한이 필요한 작업 수행 시 사용자에게 승인을 요청하여 권한 상승을 제어함",
+      "외부 네트워크 접근을 차단함"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 관리자 권한이 필요한 작업 수행 시 사용자에게 승인을 요청하여 권한 상승을 제어함 일반 작업은 표준 권한으로, 중요 작업은 관리자 승인을 거치게 하여 보안성을 높임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 321,
+    "question": "IPSec 프로토콜의 두 가지 핵심 프로토콜 중, 기밀성(암호화)을 제공하는 것은?",
+    "options": [
+      "ISAKMP",
+      "AH (Authentication Header)",
+      "IKE",
+      "ESP (Encapsulating Security Payload)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ESP (Encapsulating Security Payload) AH는 무결성과 인증만 제공하고, ESP는 암호화까지 제공함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 322,
+    "question": "다음 중 'PIA (Privacy Impact Assessment, 개인정보 영향평가)'의 대상이 되는 경우는?",
+    "options": [
+      "동호회 명부 관리자",
+      "일정 규모 이상의 개인정보 파일을 구축·운용하려는 공공기관",
+      "개인 블로그 운영자",
+      "모든 민간 소상공인"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 일정 규모 이상의 개인정보 파일을 구축·운용하려는 공공기관 공공기관이 대규모 개인정보 파일을 처리하는 시스템을 도입할 때 의무임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 323,
+    "question": "네트워크 패킷 분석 도구 Wireshark에서 'HTTP GET 요청'만 필터링하는 구문은?",
+    "options": [
+      "ip.proto == \"GET\"",
+      "tcp.port == 80",
+      "http.response.code == 200",
+      "http.request.method == \"GET\""
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ http.request.method == \"GET\" HTTP 프로토콜의 요청 메소드가 GET인 패킷을 찾음.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 324,
+    "question": "다음 중 개인정보 처리방침 공개의 목적이 아닌 것은?",
+    "options": [
+      "법적 책임 이행",
+      "정보주체 권리 보호",
+      "서비스 속도 향상",
+      "투명성 확보"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 서비스 속도 향상 속도 향상은 공개 목적이 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 325,
+    "question": "클라우드 서비스 보안 인증(CSAP) 'SaaS 간편 등급' 인증이 적용되는 대상은?",
+    "options": [
+      "금융권 코어 뱅킹",
+      "민간 클라우드 서비스를 이용하는 전자결재 등 중요도가 낮은 민간 서비스",
+      "국방/외교 등 기밀 데이터",
+      "행정 기관의 핵심 업무"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 민간 클라우드 서비스를 이용하는 전자결재 등 중요도가 낮은 민간 서비스 보안 우려가 낮은 서비스의 공공 진입 장벽을 낮추기 위한 등급임. (공공용 민간 SaaS 중 중요도 낮은 것)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 326,
+    "question": "다음 중 소프트웨어 개발 생명주기(SDLC)의 각 단계에 보안 활동을 통합한 방법론은?",
+    "options": [
+      "Agile",
+      "Waterfall",
+      "DevOps",
+      "MS-SDL"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ MS-SDL MS-SDL(Security Development Lifecycle)은 개발 전 과정에 보안을 고려하는 방법론. (DevSecOps도 유사 개념이나 MS-SDL이 전통적 답)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 327,
+    "question": "다음 중 '개인정보 파기' 시 파기하지 않고 보존해야 하는 경우는?",
+    "options": [
+      "다른 법령에 따라 보존하여야 하는 경우",
+      "저장 공간이 남아서",
+      "나중에 쓸 것 같아서",
+      "담당자의 판단"
+    ],
+    "answer": 0,
+    "explanation": "상법, 전자상거래법 등 타 법령 의무가 있으면 파기하지 않고 분리 보관해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 328,
+    "question": "웹 애플리케이션에서 사용자의 비밀번호를 DB에 저장할 때 가장 안전한 방법은?",
+    "options": [
+      "대칭키 암호화 저장",
+      "평문 저장",
+      "Base64 인코딩 저장",
+      "솔트(Salt)를 추가하여 해시 함수(PBKDF2, Argon2 등)로 암호화 저장"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 솔트(Salt)를 추가하여 해시 함수(PBKDF2, Argon2 등)로 암호화 저장 단순 해시가 아닌 솔팅과 키 스트레칭이 적용된 안전한 알고리즘을 써야 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 329,
+    "question": "전자서명법 상 '전자서명인증사업자'가 되기 위해 갖추어야 할 요건이 아닌 것은?",
+    "options": [
+      "자본금 1000억 이상",
+      "물리적/관리적/기술적 보안 조치",
+      "재정적 능력",
+      "전문 인력 보유"
+    ],
+    "answer": 0,
+    "explanation": "자본금 요건 등은 법령에 따라 합리적인 수준으로 정해지며 1000억 같은 과도한 액수는 아님. (실제 요건은 인력, 설비, 규정 등임)",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 330,
+    "question": "OSI 7계층 모델에서 종단 간 신뢰성 있는 데이터 전송을 담당하는 계층은?",
+    "options": [
+      "네트워크 계층",
+      "세션 계층",
+      "전송 계층",
+      "응용 계층"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 전송 계층 전송 계층(Transport Layer)은 종단 간 신뢰성 있는 데이터 전송을 담당하며 TCP, UDP 프로토콜이 동작합니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 331,
+    "question": "Secure Coding 규칙 중, 예외 처리(Exception Handling) 시 주의해야 할 사항은?",
+    "options": [
+      "모든 예외를 무시한다.",
+      "구체적인 에러 메시지나 스택 트레이스 정보를 사용자에게 노출하지 않는다.",
+      "에러 로그를 남기지 않는다.",
+      "예외 발생 시 프로그램을 즉시 종료한다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 구체적인 에러 메시지나 스택 트레이스 정보를 사용자에게 노출하지 않는다. 상세한 에러 정보는 공격자에게 시스템 내부 정보를 제공할 수 있음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 332,
+    "question": "다음 중 'SNMP v3'가 v1, v2c와 달리 강화된 보안 기능은?",
+    "options": [
+      "UDP 사용",
+      "텍스트 기반 전송",
+      "커뮤니티 스트링 사용",
+      "메시지 암호화 및 사용자 인증 (USM)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 메시지 암호화 및 사용자 인증 (USM) 이전 버전은 평문(Community String)을 사용해 취약했으나, v3는 기밀성, 무결성, 인증을 제공함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 333,
+    "question": "리눅스에서 부팅 시 자동으로 마운트할 파일 시스템 정보를 담고 있는 파일은?",
+    "options": [
+      "/etc/inittab",
+      "/etc/fstab",
+      "/etc/mtab",
+      "/proc/mounts"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② /etc/fstab File System Table의 약자로 부팅 시 마운트 정보를 정의함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 334,
+    "question": "리눅스에서 프로세스의 우선순위(Priority)를 변경하기 위해 사용하는 명령어는?",
+    "options": [
+      "ps",
+      "top",
+      "kill",
+      "nice / renice"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ nice / renice nice는 실행 시 우선순위 설정, renice는 실행 중인 프로세스의 우선순위 변경.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 335,
+    "question": "Diffie-Hellman 키 교환 알고리즘의 주된 목적은?",
+    "options": [
+      "문서를 암호화하기 위함",
+      "두 사용자 간에 안전하게 비밀키(대칭키)를 공유(생성)하기 위함",
+      "해시값을 만들기 위함",
+      "전자서명을 하기 위함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 두 사용자 간에 안전하게 비밀키(대칭키)를 공유(생성)하기 위함 도청자가 있는 채널에서도 안전하게 공통의 키를 합의할 수 있음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 336,
+    "question": "리눅스 시스템에서 '/var/log/wtmp' 파일에 대한 설명으로 올바른 것은?",
+    "options": [
+      "사용자의 성공한 로그인/로그아웃 이력 및 시스템 부팅 기록",
+      "시스템의 모든 커널 메시지 기록",
+      "현재 시스템에 로그인한 사용자 정보 기록",
+      "실패한 로그인 시도 기록"
+    ],
+    "answer": 0,
+    "explanation": "wtmp는 로그인/로그아웃 이력, 부팅 기록을 저장(last 명령어). utmp는 현재 로그인 사용자(w, who), btmp는 실패 기록(lastb).",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 337,
+    "question": "다음 중 '스피어 피싱(Spear Phishing)'의 특징으로 가장 적절한 것은?",
+    "options": [
+      "가짜 웹사이트로 유도하는 파밍",
+      "특정 대상(개인, 조직)을 표적으로 맞춤형 이메일 공격",
+      "전화 통화를 이용한 사기",
+      "불특정 다수에게 대량 스팸 발송"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 특정 대상(개인, 조직)을 표적으로 맞춤형 이메일 공격 스피어 피싱은 '작살'처럼 특정 타겟을 정교하게 노리는 이메일 피싱임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 338,
+    "question": "다음 중 'Snort' 룰 옵션에서 패킷 내용에 특정 문자열이 포함되었는지 검사하는 키워드는?",
+    "options": [
+      "content",
+      "msg",
+      "sid",
+      "rev"
+    ],
+    "answer": 0,
+    "explanation": "content:\"pattern\" 형식으로 패킷 페이로드를 검색함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 339,
+    "question": "개인정보보호법상 개인정보처리자가 개인정보 유출을 알게 되었을 때, 정보주체에게 통지해야 하는 기한은?",
+    "options": [
+      "5일 이내",
+      "24시간 이내",
+      "3일 이내",
+      "72시간 이내"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 72시간 이내 개인정보보호법 제34조에 따라 유출 사실을 안 때로부터 72시간 이내에 통지해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 340,
+    "question": "다음 중 악성코드가 분석을 어렵게 하기 위해 코드의 실행 흐름을 복잡하게 꼬거나 의미 없는 명령어를 삽입하는 기법은?",
+    "options": [
+      "난독화 (Obfuscation)",
+      "암호화",
+      "스테가노그래피",
+      "압축"
+    ],
+    "answer": 0,
+    "explanation": "코드를 읽기 어렵게 만들어 리버스 엔지니어링을 방해함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 341,
+    "question": "웹 애플리케이션에서 세션 ID를 안전하게 관리하기 위한 방법이 아닌 것은?",
+    "options": [
+      "로그아웃 시 세션 파기",
+      "세션 타임아웃 설정",
+      "로그인 시 세션 ID를 재발급하지 않음 (고정)",
+      "HttpOnly 및 Secure 속성 적용"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 로그인 시 세션 ID를 재발급하지 않음 (고정) 로그인 전후 세션 ID가 같으면 세션 고정(Session Fixation) 공격에 취약함. 로그인 시 반드시 재발급해야 함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 342,
+    "question": "다음 중 일정 규모 이상의 기업에서 CISO(정보보호 최고책임자)가 겸직해서는 안 되는 업무는?",
+    "options": [
+      "정보보호 정책 수립",
+      "침해사고 대응",
+      "정보보호와 관련 없는 다른 직무 (예: 일반 IT 운영, 개발, 영업 등)",
+      "보안 감사"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 정보보호와 관련 없는 다른 직무 (예: 일반 IT 운영, 개발, 영업 등) 자산 5조원 이상 등 대규모 기업의 CISO는 보안 업무에 전념해야 함 (겸직 금지).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 343,
+    "question": "파일 업로드 취약점 대응 방안으로 가장 미흡한 것은?",
+    "options": [
+      "클라이언트 사이드 스크립트로 확장자 검사",
+      "업로드 폴더 실행 권한 제거",
+      "파일명 난수화 저장",
+      "파일 확장자 검증 (서버 사이드)"
+    ],
+    "answer": 0,
+    "explanation": "클라이언트 측 검증은 프록시 툴 등으로 쉽게 우회 가능하므로 서버 측 검증이 필수임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 344,
+    "question": "다음 중 패스워드 크래킹 기법으로, 가능한 모든 문자 조합을 대입해보는 방식은?",
+    "options": [
+      "Dictionary Attack",
+      "Brute Force Attack",
+      "Social Engineering",
+      "Rainbow Table"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Brute Force Attack 무차별 대입 공격(Brute Force)은 모든 경우의 수를 시도함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 345,
+    "question": "다음 중 ARP(Address Resolution Protocol)의 역할로 올바른 것은?",
+    "options": [
+      "도메인 이름을 IP로 변환한다.",
+      "IP 주소를 MAC 주소로 변환한다.",
+      "MAC 주소를 IP 주소로 변환한다.",
+      "라우팅 경로를 설정한다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② IP 주소를 MAC 주소로 변환한다. 같은 네트워크 대역에서 통신하기 위해 상대방의 물리적 주소(MAC)를 알아내는 프로토콜.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 346,
+    "question": "다음 중 Fileless Malware의 특징은?",
+    "options": [
+      "파일로 저장되어 실행",
+      "메모리에서만 실행되어 탐지 회피",
+      "네트워크 속도 향상",
+      "데이터 백업"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 메모리에서만 실행되어 탐지 회피 Fileless Malware는 디스크에 파일을 저장하지 않고 메모리에서만 실행되어 전통적인 탐지를 회피합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 347,
+    "question": "웹 서버 설정에서 불필요한 HTTP 메소드(PUT, DELETE, TRACE 등)를 차단해야 하는 이유는?",
+    "options": [
+      "파일 업로드, 삭제, 디버깅 정보 노출 등의 위험을 방지하기 위해",
+      "SSL 적용을 위해",
+      "서버 속도 향상을 위해",
+      "검색 엔진 접근을 막기 위해"
+    ],
+    "answer": 0,
+    "explanation": "PUT은 파일 업로드, DELETE는 삭제, TRACE는 XST 공격 등에 악용될 수 있음.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 348,
+    "question": "웹 서버 설정 파일인 'robots.txt'의 용도는?",
+    "options": [
+      "사용자 접속 로그 기록",
+      "서버 성능 향상",
+      "검색 엔진 로봇의 접근을 제어하기 위한 규칙 정의",
+      "웹 사이트 해킹 방지"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 검색 엔진 로봇의 접근을 제어하기 위한 규칙 정의 검색 엔진 크롤러가 방문해도 되는 페이지와 안 되는 페이지를 알려줌 (보안 기능은 아님).",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 349,
+    "question": "보안 감사를 통해 발견할 수 없는 사항은?",
+    "options": [
+      "취약점",
+      "정책 위반",
+      "개인 사생활",
+      "로그 분석"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 개인 사생활 개인 사생활은 감사 대상이 아니며, 취약점 및 정책 위반은 발견할 수 있습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 350,
+    "question": "다음 중 보안 정책의 핵심 요소가 아닌 것은?",
+    "options": [
+      "목적",
+      "책임",
+      "예산",
+      "범위"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 예산 보안 정책은 목적, 범위, 책임 등으로 구성되며 예산은 관리 요소입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 351,
+    "question": "다음 중 '업무 연속성 계획(BCP)' 수립 절차의 첫 단계는?",
+    "options": [
+      "모의 훈련",
+      "복구 전략 수립",
+      "업무 영향 분석 (BIA)",
+      "프로젝트 범위 설정 및 기획"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 프로젝트 범위 설정 및 기획 범위를 먼저 정하고 BIA를 수행함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 352,
+    "question": "다음 중 '사설 IP 주소' 대역에 포함되지 않는 것은?",
+    "options": [
+      "192.168.0.0 ~ 192.168.255.255",
+      "169.254.0.0 ~ 169.254.255.255",
+      "10.0.0.0 ~ 10.255.255.255",
+      "172.16.0.0 ~ 172.31.255.255"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 169.254.0.0 ~ 169.254.255.255 169.254.x.x는 APIPA(자동 사설 IP 주소) 대역으로, DHCP 실패 시 할당되는 주소임. 일반적인 사설 IP(RFC 1918) 대역은 아님.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 353,
+    "question": "웹 애플리케이션에서 'Open Redirect' 취약점이란?",
+    "options": [
+      "오픈 소스를 사용하여 발생하는 취약점",
+      "모든 페이지가 공개되는 취약점",
+      "포트가 열려있는 취약점",
+      "신뢰되지 않은 입력값에 의해 사용자가 악성 사이트로 리다이렉트되는 취약점"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 신뢰되지 않은 입력값에 의해 사용자가 악성 사이트로 리다이렉트되는 취약점 피싱 사이트로 유도하는 데 악용될 수 있음.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 354,
+    "question": "방화벽 정책 설정 시, '모든 것을 차단하고 허용할 것만 명시적으로 허용'하는 원칙은?",
+    "options": [
+      "Proxy",
+      "Default Allow (Blacklist)",
+      "Stateful Inspection",
+      "Default Deny (Whitelist)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Default Deny (Whitelist) 보안상 가장 안전한 정책은 기본 차단(Deny All) 후 필요한 것만 여는 것임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 355,
+    "question": "공격자가 사용자의 세션 ID를 미리 발급받은 뒤, 사용자가 그 세션 ID로 로그인하게 유도하여 세션을 탈취하는 공격은?",
+    "options": [
+      "Sniffing",
+      "Session Fixation (세션 고정)",
+      "Session Replay",
+      "Brute Force"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Session Fixation (세션 고정) 로그인 전과 후의 세션 ID가 변하지 않을 때 발생하는 취약점.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 356,
+    "question": "ISMS-P 결함 조치 기간으로 원칙적으로 주어지는 기간은?",
+    "options": [
+      "최대 100일 (기본 40일 + 연장 가능)",
+      "1주일",
+      "1년",
+      "기간 없음"
+    ],
+    "answer": 0,
+    "explanation": "결함 발견 시 인증위원회 상정 전까지 조치를 완료해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 357,
+    "question": "다음 중 FIPS 140-2의 목적은?",
+    "options": [
+      "웹 디자인 표준",
+      "암호화 모듈 보안 요구사항 정의",
+      "네트워크 속도 측정",
+      "데이터베이스 설계"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 암호화 모듈 보안 요구사항 정의 FIPS 140-2는 미국 정부의 암호화 모듈에 대한 보안 요구사항을 정의한 표준입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 358,
+    "question": "모바일 앱 보안에서 '루팅(Rooting)' 또는 '탈옥(Jailbreak)' 탐지 시 앱이 취해야 할 가장 안전한 조치는?",
+    "options": [
+      "앱 실행 차단 및 종료",
+      "기능 일부 제한",
+      "경고 메시지만 띄우고 실행",
+      "로그만 남김"
+    ],
+    "answer": 0,
+    "explanation": "금융 앱 등 보안이 중요한 앱은 루팅 환경에서 실행되지 않도록 강제 종료해야 함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 359,
+    "question": "다음 중 'SOAP' 기반 웹 서비스 보안을 위해 메시지 수준에서 암호화와 서명을 적용하는 표준은?",
+    "options": [
+      "PGP",
+      "SSL/TLS",
+      "IPSec",
+      "WS-Security"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ WS-Security SOAP 헤더에 보안 토큰, 서명, 암호화 정보를 포함시키는 표준.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 360,
+    "question": "HTTP/2 프로토콜이 HTTP/1.1과 보안적으로 다른 점 중 하나인 'HPACK'은 무엇을 압축하는가?",
+    "options": [
+      "HTTP 바디",
+      "동영상",
+      "HTTP 헤더 (Header)",
+      "이미지"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ HTTP 헤더 (Header) 헤더 크기를 줄여 성능을 높이고, CRIME 공격 등의 위험을 완화하기 위해 개발된 헤더 압축 방식.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 361,
+    "question": "방화벽 구성 형태 중 'Bastion Host'란?",
+    "options": [
+      "라우터 전용 장비",
+      "데이터베이스 서버",
+      "내부망 깊숙이 숨겨진 서버",
+      "내부 네트워크와 외부 네트워크의 경계에 위치하여 보안 방어 기능을 수행하는 호스트"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 내부 네트워크와 외부 네트워크의 경계에 위치하여 보안 방어 기능을 수행하는 호스트 공격에 노출되기 쉬운 위치에서 방어막 역할을 하는 요새 호스트.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 362,
+    "question": "다음 중 'Reverse Proxy'의 보안상 이점은?",
+    "options": [
+      "모든 포트를 개방한다.",
+      "클라이언트의 IP를 숨긴다.",
+      "실제 내부 서버의 IP를 숨기고, 로드 밸런싱 및 웹 방화벽 기능을 수행할 수 있다.",
+      "내부망 접속 속도를 늦춘다."
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 실제 내부 서버의 IP를 숨기고, 로드 밸런싱 및 웹 방화벽 기능을 수행할 수 있다. 외부 요청을 대신 받아 내부 서버로 전달하므로 내부 구조를 은폐할 수 있음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 363,
+    "question": "다음 중 '트로이 목마(Trojan Horse)'와 '바이러스'의 가장 큰 차이점은?",
+    "options": [
+      "트로이 목마는 치료가 불가능함",
+      "차이가 없음",
+      "트로이 목마는 자기 복제 능력이 없음",
+      "바이러스는 네트워크를 안 씀"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 트로이 목마는 자기 복제 능력이 없음 트로이 목마는 정상 프로그램으로 위장하여 실행되지만, 다른 파일로 전파(감염)되지는 않음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 364,
+    "question": "SSL/TLS 프로토콜에서 클라이언트와 서버가 암호화 알고리즘을 협상하고 세션 키를 생성하는 단계는?",
+    "options": [
+      "Change Cipher Spec Protocol",
+      "Record Protocol",
+      "Alert Protocol",
+      "Handshake Protocol"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Handshake Protocol 핸드셰이크 프로토콜에서 Cipher Suite 협상 및 키 교환이 이루어짐.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 365,
+    "question": "다음 중 리눅스에서 'cron'을 이용하여 매월 1일 새벽 3시에 백업 스크립트(/root/backup.sh)를 실행하는 설정은?",
+    "options": [
+      "* 3 1 * * /root/backup.sh",
+      "0 3 1 * * /root/backup.sh",
+      "3 0 1 * * /root/backup.sh",
+      "0 3 * * 1 /root/backup.sh"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 0 3 1 * * /root/backup.sh 순서: 분(0) 시(3) 일(1) 월() 요일().",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 366,
+    "question": "리눅스에서 특정 파일 내의 문자열을 검색할 때 사용하는 명령어는?",
+    "options": [
+      "awk",
+      "grep",
+      "find",
+      "cat"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② grep grep은 파일 내용에서 패턴(문자열)을 검색하는 명령어임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 367,
+    "question": "다음 중 정보보호 3대 요소(CIA Triad)에 해당하지 않는 것은?",
+    "options": [
+      "기밀성(Confidentiality)",
+      "무결성(Integrity)",
+      "가용성(Availability)",
+      "효율성(Efficiency)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 효율성(Efficiency) 정보보호 3대 요소는 기밀성, 무결성, 가용성이며, 효율성은 포함되지 않습니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 368,
+    "question": "무선 LAN 보안에서 'WPA2-Enterprise' 모드가 'WPA2-Personal'과 다른 점은?",
+    "options": [
+      "암호화를 하지 않는다.",
+      "모든 사용자가 동일한 비밀번호를 쓴다.",
+      "WEP 키를 사용한다.",
+      "별도의 인증 서버(RADIUS)를 사용하여 사용자별 인증을 수행한다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 별도의 인증 서버(RADIUS)를 사용하여 사용자별 인증을 수행한다. Enterprise 모드는 802.1x/EAP 인증을 통해 개별 사용자 인증을 수행함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 369,
+    "question": "다음 중 'Command Injection' 공격이 발생할 수 있는 함수는? (Java 기준)",
+    "options": [
+      "String.valueOf()",
+      "System.out.println()",
+      "Integer.parseInt()",
+      "Runtime.exec()"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Runtime.exec() 외부 시스템 명령어를 실행하는 함수로, 입력값 검증 없이 사용 시 위험함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 370,
+    "question": "안전한 소프트웨어 개발을 위해 입력값 검증 시 사용하는 'Allow-list(White-list)' 방식의 의미는?",
+    "options": [
+      "알려진 악성 패턴만 차단한다.",
+      "입력값을 암호화한다.",
+      "모든 입력을 허용한다.",
+      "허용된 안전한 문자나 패턴만 받아들이고 나머지는 차단한다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 허용된 안전한 문자나 패턴만 받아들이고 나머지는 차단한다. 보안성이 가장 높은 방식으로, 허용 목록 외에는 전부 거부함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 371,
+    "question": "리눅스에서 파일의 타임스탬프 중 'ctime'이 갱신되는 경우가 아닌 것은?",
+    "options": [
+      "파일 내용을 읽었을 때 (cat 등)",
+      "파일 권한을 변경했을 때 (chmod)",
+      "파일 크기가 변했을 때",
+      "파일 소유자를 변경했을 때 (chown)"
+    ],
+    "answer": 0,
+    "explanation": "내용을 읽는 것은 'atime(Access Time)'만 변경함. ctime은 inode 속성(권한, 소유자 등) 변경 시 갱신됨.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 372,
+    "question": "리눅스 파일 시스템에서 파일 이름이 저장되는 곳은?",
+    "options": [
+      "Inode",
+      "Super Block",
+      "Boot Sector",
+      "디렉터리 데이터 블록 (Directory Data Block)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 디렉터리 데이터 블록 (Directory Data Block) Inode에는 메타데이터만 있고, '파일명'은 디렉터리(일종의 파일)의 데이터 블록에 Inode 번호와 매핑되어 저장됨.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 373,
+    "question": "해시 함수(Hash)의 결과값들을 미리 계산하여 저장해 둔 거대한 표를 사용하여 패스워드를 빠르게 역추적하는 공격은?",
+    "options": [
+      "Spoofing",
+      "Brute Force",
+      "Dictionary Attack",
+      "Rainbow Table Attack"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Rainbow Table Attack 해시 체인을 사용하여 계산 시간과 저장 공간을 트레이드오프한 테이블.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 374,
+    "question": "RTO (Recovery Time Objective, 목표 복구 시간)란?",
+    "options": [
+      "수리 시간",
+      "장비 고장 시간",
+      "데이터 손실 허용 시간",
+      "재해 발생 후 업무가 중단된 시점부터 서비스가 재개될 때까지 허용되는 최대 시간"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 재해 발생 후 업무가 중단된 시점부터 서비스가 재개될 때까지 허용되는 최대 시간 얼마나 빨리 복구해야 하는가.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 375,
+    "question": "데이터베이스 암호화 방식 중, 애플리케이션 서버가 아닌 DB 서버 내에서 암/복호화 모듈(API 등)이 동작하는 방식은?",
+    "options": [
+      "TDE (Transparent Data Encryption)",
+      "API 방식",
+      "Plug-in 방식",
+      "Hybrid 방식"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Plug-in 방식 DB 서버에 암호화 패키지를 설치(Plug-in)하여 처리하는 방식. API 방식은 App 서버에서 수행.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 376,
+    "question": "다음 중 시스템의 취약점을 스캔하여 보안 설정 미흡 등을 점검하는 도구는?",
+    "options": [
+      "Nessus",
+      "Wireshark",
+      "John the Ripper",
+      "Snort"
+    ],
+    "answer": 0,
+    "explanation": "Nessus는 대표적인 시스템 및 네트워크 취약점 스캐너임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 377,
+    "question": "접근 통제 모델 중 '주체(User)의 신분'이 아닌 '주체의 보안 등급'과 '객체의 보안 등급'을 비교하여 접근을 통제하는 모델은?",
+    "options": [
+      "DAC (Discretionary Access Control)",
+      "RBAC (Role Based Access Control)",
+      "MAC (Mandatory Access Control)",
+      "ABAC (Attribute Based Access Control)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ MAC (Mandatory Access Control) MAC(강제적 접근 통제)는 보안 레이블(Top Secret 등)을 통해 시스템이 강제로 권한을 제어하는 방식임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 378,
+    "question": "다음 중 Sandboxing의 주요 목적은?",
+    "options": [
+      "시스템 속도 향상",
+      "의심스러운 프로그램을 격리 실행",
+      "데이터 압축",
+      "네트워크 대역폭 증가"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 의심스러운 프로그램을 격리 실행 Sandboxing은 의심스러운 프로그램을 격리된 환경에서 실행하여 시스템을 보호하는 기술입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 379,
+    "question": "ISMS-P 인증 기준 2.2.3 '정보시스템 접근' 항목에서 세션 타임아웃(Session Timeout) 설정이 필요한 이유는?",
+    "options": [
+      "서버 전력을 아끼기 위해",
+      "일정 시간 미사용 시 접속을 차단하여 비인가자의 세션 도용을 방지하기 위함",
+      "사용자를 귀찮게 하기 위해",
+      "네트워크 트래픽을 줄이기 위해"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 일정 시간 미사용 시 접속을 차단하여 비인가자의 세션 도용을 방지하기 위함 자리를 비운 사이 발생할 수 있는 악용을 막기 위함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 380,
+    "question": "위험 관리 기법 중, 과거의 경험이나 전문가의 조언을 바탕으로 체크리스트를 사용하는 정성적 분석 방법은?",
+    "options": [
+      "과거 자료 분석법",
+      "체크리스트법",
+      "시나리오법",
+      "델파이법"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 체크리스트법 항목별로 O/X 등을 체크하여 평가하는 단순하고 직관적인 방법.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 381,
+    "question": "다음 중 VPN 터널링 프로토콜 중 2계층(Data Link)에서 동작하는 것은?",
+    "options": [
+      "IKE",
+      "L2TP, PPTP",
+      "SSL",
+      "IPSec"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② L2TP, PPTP L2TP와 PPTP는 2계층 프레임을 캡슐화함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 382,
+    "question": "공개키 기반 구조(PKI)에서 인증서가 유효하지 않음(폐기됨)을 실시간으로 확인하는 프로토콜은?",
+    "options": [
+      "OCSP (Online Certificate Status Protocol)",
+      "HTTP",
+      "LDAP",
+      "CRL (Certificate Revocation List)"
+    ],
+    "answer": 0,
+    "explanation": "OCSP는 실시간으로 인증서 상태를 서버에 질의하여 확인하는 프로토콜. CRL은 목록 다운로드 방식(비실시간).",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 383,
+    "question": "리눅스 시스템에서 새로운 사용자 생성 시 기본적으로 적용되는 홈 디렉터리의 뼈대가 되는 디렉터리는?",
+    "options": [
+      "/usr/share",
+      "/etc/default",
+      "/etc/skel",
+      "/home/base"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ /etc/skel useradd 시 /etc/skel 안의 파일들(.bashrc 등)이 사용자 홈으로 복사됨.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 384,
+    "question": "SetUID가 설정된 파일을 찾기 위한 'find' 명령어 옵션으로 올바른 것은?",
+    "options": [
+      "find / -perm -1000",
+      "find / -perm -4000",
+      "find / -perm -2000",
+      "find / -type s"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② find / -perm -4000 SetUID의 8진수 비트 값은 4000임 (SetGID는 2000, StickyBit는 1000).",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 385,
+    "question": "다음 중 Security Audit의 주요 목적은?",
+    "options": [
+      "시스템 성능 향상",
+      "보안 정책 준수 여부 확인",
+      "소프트웨어 개발",
+      "사용자 교육"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 보안 정책 준수 여부 확인 보안 감사(Security Audit)는 조직이 보안 정책과 규정을 준수하고 있는지 확인하고 평가하는 활동입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 386,
+    "question": "다음 중 'RBAC (Role Based Access Control)'에서 역할(Role) 할당의 기준이 되는 것은?",
+    "options": [
+      "사용자의 직무 및 책임",
+      "사용자의 신원 ID",
+      "데이터의 민감도",
+      "사용자의 보안 등급"
+    ],
+    "answer": 0,
+    "explanation": "인사 조직상의 역할(팀장, 팀원 등)에 따라 권한을 부여함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 387,
+    "question": "NAT(Network Address Translation)의 종류 중, 내부 사설 IP 여러 개를 공인 IP 하나로 변환하며 포트 번호로 구분하는 방식은?",
+    "options": [
+      "Static NAT",
+      "PAT (Port Address Translation) / NAPT",
+      "Bridge NAT",
+      "Dynamic NAT"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② PAT (Port Address Translation) / NAPT 공유기 환경에서 가장 많이 쓰이며 포트를 이용해 다대일 통신을 지원함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 388,
+    "question": "다음 중 'SSL VPN'의 장점은?",
+    "options": [
+      "모든 프로토콜 지원",
+      "장비 가격이 저렴함",
+      "별도의 클라이언트 소프트웨어 설치 없이 웹 브라우저로 접속 가능",
+      "속도가 IPSec보다 월등히 빠름"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 별도의 클라이언트 소프트웨어 설치 없이 웹 브라우저로 접속 가능 Clientless 방식이 가능하여 사용자 편의성이 높음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 389,
+    "question": "다음 중 'Session Hijacking' 공격의 전제 조건으로, 공격자가 클라이언트와 서버 사이의 패킷을 엿볼 수 있어야 한다는 공격 기법은?",
+    "options": [
+      "Phishing",
+      "Spoofing",
+      "Scanning",
+      "Sniffing (스니핑)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Sniffing (스니핑) 세션 ID나 시퀀스 넘버를 알아내기 위해 패킷 도청(스니핑)이 선행되어야 함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 390,
+    "question": "이메일 전송 프로토콜인 SMTP의 보안 강화를 위해, 메일 서버의 IP 주소가 도메인의 실제 발송 서버인지 DNS에서 확인하는 기술은?",
+    "options": [
+      "DMARC",
+      "PGP",
+      "DKIM",
+      "SPF (Sender Policy Framework)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ SPF (Sender Policy Framework) SPF는 DNS의 TXT 레코드에 발송 허용 IP를 등록하여 스팸을 방지하는 기술.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 391,
+    "question": "다음 중 데이터베이스의 '트랜잭션(Transaction)' 4가지 특성(ACID)에 해당하지 않는 것은?",
+    "options": [
+      "Consistency (일관성)",
+      "Availability (가용성)",
+      "Atomicity (원자성)",
+      "Isolation (고립성)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Availability (가용성) ACID는 원자성, 일관성, 고립성, 지속성(Durability)임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 392,
+    "question": "다음 중 보안 사고 원인으로 가장 빈번한 것은?",
+    "options": [
+      "인적오류",
+      "완벽한 접근 통제",
+      "자동 삭제",
+      "업무 프로세스 강화"
+    ],
+    "answer": 0,
+    "explanation": "인적 오류가 사고 원인 중 가장 많습니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 393,
+    "question": "다음 중 'HSTS (HTTP Strict Transport Security)' 헤더의 역할은?",
+    "options": [
+      "클릭재킹을 방지함",
+      "브라우저가 해당 사이트에 접속할 때 강제로 HTTPS만 사용하도록 지시함",
+      "캐시를 제어함",
+      "XSS를 방지함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 브라우저가 해당 사이트에 접속할 때 강제로 HTTPS만 사용하도록 지시함 중간자 공격(SSL Stripping)을 막기 위해 HTTPS 접속을 강제함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 394,
+    "question": "VPN 기술 중 'SSL VPN'이 'IPSec VPN'에 비해 가지는 장점은?",
+    "options": [
+      "별도의 클라이언트 소프트웨어 설치 없이 웹 브라우저로 이용 가능 (Clientless 모드)",
+      "L3 계층 보안만 제공한다",
+      "사이트 간(Site-to-Site) 연결에 유리하다",
+      "속도가 훨씬 빠르다"
+    ],
+    "answer": 0,
+    "explanation": "접근성과 사용 편의성이 SSL VPN의 최대 장점임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 395,
+    "question": "PGP(Pretty Good Privacy)에서 사용하는 'Web of Trust' 개념이란?",
+    "options": [
+      "중앙 인증 기관(CA) 없이 사용자들끼리 서로의 키를 신뢰하고 보증하는 방식",
+      "웹 서버만 신뢰함",
+      "CA가 모든 것을 인증함",
+      "아무도 신뢰하지 않음"
+    ],
+    "answer": 0,
+    "explanation": "상호 인증을 통해 신뢰망을 구축함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 396,
+    "question": "다음 중 '전자서명(Digital Signature)' 생성 시 사용하는 키는?",
+    "options": [
+      "수신자의 개인키",
+      "송신자의 공개키(Public Key)",
+      "수신자의 공개키",
+      "송신자의 개인키(Private Key)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 송신자의 개인키(Private Key) 서명은 본인만 할 수 있어야 하므로 개인키로 암호화(서명)함. 검증은 공개키로 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 397,
+    "question": "다음 중 공공기관이 개인정보 영향평가(PIA)를 실시해야 하는 시점은?",
+    "options": [
+      "매년 정기적으로",
+      "사고 발생 시",
+      "사업 완료 후 1년 뒤",
+      "해당 사업(시스템 구축 등) 구축 완료 전 (설계/개발 단계)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 해당 사업(시스템 구축 등) 구축 완료 전 (설계/개발 단계) 사전에 위험 요인을 제거하기 위해 구축 단계에서 수행함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 398,
+    "question": "생체 인식 기술 중 FRR(본인 거부율)과 FAR(타인 수락률)이 같아지는 지점으로, 시스템의 정확도를 판단하는 척도는?",
+    "options": [
+      "Precision",
+      "Zero Error Rate",
+      "EER (Equal Error Rate) / CER (Crossover Error Rate)",
+      "Accuracy"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ EER (Equal Error Rate) / CER (Crossover Error Rate) EER이 낮을수록 성능이 좋은 시스템임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 399,
+    "question": "다음 중 ISMS-P의 관리적 보호조치에 해당하지 않는 것은?",
+    "options": [
+      "정보보안 교육",
+      "접근 제어 정책 수립",
+      "물리적 출입통제",
+      "위험 평가"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 물리적 출입통제 물리적 출입통제는 물리적 보호조치에 해당합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 400,
+    "question": "안드로이드 앱 보안에서 루팅(Rooting) 여부를 탐지하는 주된 이유는?",
+    "options": [
+      "광고 차단을 막기 위해",
+      "배터리 소모를 줄이기 위해",
+      "불법 복제를 막기 위해",
+      "최고 권한을 가진 환경에서는 앱의 샌드박스 보호가 무력화될 수 있기 때문"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 최고 권한을 가진 환경에서는 앱의 샌드박스 보호가 무력화될 수 있기 때문 루팅된 폰에서는 메모리 해킹, 데이터 탈취 등이 훨씬 쉬워지므로 금융 앱 등은 실행을 차단함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 401,
+    "question": "Secure Coding에서 'Hardcoded Password' 제거란?",
+    "options": [
+      "비밀번호를 자주 바꾸는 것",
+      "비밀번호를 사용하지 않는 것",
+      "소스 코드 내에 비밀번호를 직접 적지 말고 설정 파일이나 암호화된 저장소를 이용하라는 것",
+      "비밀번호를 복잡하게 만드는 것"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 소스 코드 내에 비밀번호를 직접 적지 말고 설정 파일이나 암호화된 저장소를 이용하라는 것 코드는 언제든 유출될 수 있으므로 중요 정보는 분리해야 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 402,
+    "question": "다음 중 'CSRF (Cross Site Request Forgery)' 공격의 특징은?",
+    "options": [
+      "네트워크 패킷을 스니핑함",
+      "웹 서버의 DB를 직접 조작함",
+      "사용자가 자신의 의지와 무관하게 공격자가 의도한 행위(비밀번호 변경, 결제 등)를 하게 만듦",
+      "서버의 쉘 권한을 획득함"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 사용자가 자신의 의지와 무관하게 공격자가 의도한 행위(비밀번호 변경, 결제 등)를 하게 만듦 이미 로그인된 사용자의 권한을 도용하여 위조된 요청을 서버에 전송함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 403,
+    "question": "다음 중 생체 인식 기술의 성능 지표로, '타인을 본인으로 잘못 인식할 확률'을 의미하는 것은?",
+    "options": [
+      "CER (Crossover Error Rate)",
+      "FRR (False Rejection Rate)",
+      "EER (Equal Error Rate)",
+      "FAR (False Acceptance Rate)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ FAR (False Acceptance Rate) 오인식률(FAR)은 보안성에 치명적인 지표임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 404,
+    "question": "다음 중 전자서명법상 전자서명 인증기관의 역할이 아닌 것은?",
+    "options": [
+      "서명 생성",
+      "인증서 발급",
+      "시점확인",
+      "폐기확인"
+    ],
+    "answer": 0,
+    "explanation": "서명은 이용자가 생성하며, 인증기관은 발급, 관리, 폐기확인 역할을 담당합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 405,
+    "question": "윈도우 시스템에서 'NTFS' 권한과 '공유(Share)' 권한이 충돌할 때 적용되는 규칙은?",
+    "options": [
+      "공유 권한이 우선함",
+      "두 권한 중 가장 제한적인(보수적인) 권한이 적용됨",
+      "나중에 설정한 권한이 우선함",
+      "NTFS 권한이 우선함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 두 권한 중 가장 제한적인(보수적인) 권한이 적용됨 보안 원칙에 따라 더 엄격한(교집합) 권한이 최종 적용됨.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 406,
+    "question": "HTTP 응답 헤더 중 'Content-Security-Policy (CSP)'의 역할은?",
+    "options": [
+      "쿠키 보안 설정",
+      "HTTPS 강제 적용",
+      "웹 페이지에서 로드할 수 있는 리소스(스크립트, 이미지 등)의 출처를 제한하여 XSS 등을 방지",
+      "클릭재킹 방지"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 웹 페이지에서 로드할 수 있는 리소스(스크립트, 이미지 등)의 출처를 제한하여 XSS 등을 방지 허용된 도메인의 스크립트만 실행하게 하여 XSS 피해를 줄임.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 407,
+    "question": "BCP(업무 연속성 계획)에서 재해 발생 직후부터 복구 조직이 가동되어 업무가 재개될 때까지의 비상 대응 활동을 무엇이라 하는가?",
+    "options": [
+      "위험 평가",
+      "사업 영향 분석",
+      "위기 관리 (Crisis Management)",
+      "모의 훈련"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 위기 관리 (Crisis Management) 혼란스러운 초기 상황을 통제하고 대응하는 활동.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 408,
+    "question": "다음 중 '접근 제어 행렬(Access Control Matrix)'의 열(Column)에 해당하는 것은?",
+    "options": [
+      "주체의 권한 목록 (Capability List)",
+      "사용자 ID",
+      "객체에 대한 접근 권한 목록 (ACL)",
+      "그룹 ID"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 객체에 대한 접근 권한 목록 (ACL) 행(Row)은 주체(Capability), 열(Column)은 객체(ACL)를 나타냄.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 409,
+    "question": "전자상거래에서 '재전송 공격(Replay Attack)'을 막기 위해 메시지에 포함시키는 값은?",
+    "options": [
+      "고정된 비밀번호",
+      "IP 주소",
+      "사용자 이름",
+      "Nonce (난스) 또는 Timestamp"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Nonce (난스) 또는 Timestamp 매번 달라지는 값(시간, 난수)을 넣어 이전에 캡처한 패킷의 재사용을 막음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 410,
+    "question": "파일 업로드 취약점 대응을 위해 서버 측에서 이미지 파일의 헤더(Magic Number)를 검사하는 이유는?",
+    "options": [
+      "확장자를 위조한 악성 실행 파일(Web Shell) 탐지",
+      "파일명 중복 방지",
+      "파일 용량 제한",
+      "이미지 화질 개선"
+    ],
+    "answer": 0,
+    "explanation": "확장자만 .jpg로 바꾸고 내용은 실행 파일인 경우를 막기 위해 파일 시그니처(헤더)를 확인함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 411,
+    "question": "다음 중 '부인 방지(Non-repudiation)'를 위해 반드시 신뢰할 수 있는 제3자(TTP)가 필요한 경우는?",
+    "options": [
+      "기밀성",
+      "가용성",
+      "송신 부인 방지",
+      "수신 부인 방지 (배달 증명 등)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 수신 부인 방지 (배달 증명 등) 보낸 사람은 증명하기 쉽지만(서명), 받았다는 사실을 부인하지 못하게 하려면 등기우편처럼 제3자가 개입해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 412,
+    "question": "웹 애플리케이션에서 사용자 입력값을 검증하지 않아 발생하는 'XSS (Cross Site Scripting)'의 대표적인 유형이 아닌 것은?",
+    "options": [
+      "Reflected XSS",
+      "Stored XSS",
+      "Time-based XSS",
+      "DOM-based XSS"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Time-based XSS Time-based는 주로 Blind SQL Injection의 기법임. (XSS 유형: Stored, Reflected, DOM)",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 413,
+    "question": "다음 중 'FIDO (Fast Identity Online)' 인증의 장점은?",
+    "options": [
+      "서버에서 생체 정보를 관리한다.",
+      "생체 정보가 서버에 전송되지 않아 유출 위험이 적다.",
+      "별도의 단말기가 필요 없다.",
+      "비밀번호를 사용하므로 익숙하다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 생체 정보가 서버에 전송되지 않아 유출 위험이 적다. 개인키와 생체정보는 단말에 저장되고, 서버와는 공개키 기반으로 인증함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 414,
+    "question": "개인정보보호법 위반 시 과징금 부과 한도는? (개정법 기준)",
+    "options": [
+      "5억원 이하",
+      "10억원 이하",
+      "전체 매출액의 3% 이하",
+      "위반 매출액의 3% 이하"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 전체 매출액의 3% 이하 개정법은 '전체 매출액'의 3% 이하로 상향 조정됨 (위반과 무관한 매출 제외).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 415,
+    "question": "다음 중 데이터베이스 보안 강화에 해당하지 않는 것은?",
+    "options": [
+      "접근통제 강화",
+      "평문 암호 저장",
+      "암호화 적용",
+      "감사로그 기록"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 평문 암호 저장 평문 암호는 보안 강화가 아닙니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 416,
+    "question": "개인정보 수집 시 정보주체의 동의를 받지 않아도 되는 경우가 아닌 것은?",
+    "options": [
+      "마케팅 목적으로 활용하고자 하는 경우",
+      "정보주체의 명백한 이익을 위해 필요한 경우(급박한 생명/신체 위험)",
+      "정보주체와의 계약 체결 및 이행을 위해 불가피한 경우",
+      "법률에 특별한 규정이 있는 경우"
+    ],
+    "answer": 0,
+    "explanation": "마케팅, 홍보 목적은 반드시 별도의 동의를 받아야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 417,
+    "question": "접근 통제 정책 중 'Need-to-Know' 원칙과 가장 관련이 깊은 것은?",
+    "options": [
+      "역할에 따라 자동으로 권한을 할당한다.",
+      "상위 직급자에게 모든 권한을 준다.",
+      "모든 정보를 공개한다.",
+      "알 필요가 있는 최소한의 권한만 부여한다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 알 필요가 있는 최소한의 권한만 부여한다. 직무 수행에 꼭 필요한 정보만 접근하도록 제한하는 원칙.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 418,
+    "question": "다음 중 블록 암호 운영 모드(Mode of Operation)에서 병렬 처리가 가능하여 속도가 빠른 모드는?",
+    "options": [
+      "CFB (Cipher Feedback)",
+      "CTR (Counter) Mode",
+      "CBC (Cipher Block Chaining)",
+      "OFB (Output Feedback)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② CTR (Counter) Mode CTR 모드는 카운터 값을 암호화하므로 각 블록을 독립적으로 병렬 처리할 수 있음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 419,
+    "question": "다음 중 Command Injection 공격을 방어하는 방법은?",
+    "options": [
+      "입력값 검증 및 이스케이프 처리",
+      "방화벽 설치",
+      "안티바이러스 업데이트",
+      "네트워크 속도 증가"
+    ],
+    "answer": 0,
+    "explanation": "Command Injection은 사용자 입력을 시스템 명령어로 실행하는 취약점이므로 입력값 검증과 이스케이프 처리가 필수입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 420,
+    "question": "DDoS 공격 방어 장비인 'Scrubber'의 역할은?",
+    "options": [
+      "공격자의 IP를 역추적하여 해킹",
+      "모든 트래픽을 차단하여 서비스 중지",
+      "웹 서버의 로그를 백업",
+      "트래픽을 우회시켜 악성 트래픽을 걸러내고 정상 트래픽만 서버로 전송"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 트래픽을 우회시켜 악성 트래픽을 걸러내고 정상 트래픽만 서버로 전송 대용량 공격 트래픽을 정화 센터(Scrubber)로 유도하여 처리함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 421,
+    "question": "'전자금융감독규정'에 따라 금융회사가 전산실 등 중요 구역에 설치해야 하는 출입통제 시스템의 인증 방식 요건은?",
+    "options": [
+      "생체인증 등 강화된 인증 방식 권고 (또는 다중 인증)",
+      "자유 출입",
+      "카드키만 사용",
+      "비밀번호만 사용"
+    ],
+    "answer": 0,
+    "explanation": "중요 시설은 단순 소유 기반보다 생체 인식 등을 포함한 강력한 통제를 요구함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 422,
+    "question": "웹 페이지의 히든 필드(Hidden Field)에 상품 가격을 저장하여 전송할 때의 보안 취약점은?",
+    "options": [
+      "서버 성능이 저하된다.",
+      "사용자가 소스 보기를 통해 가격을 확인하고 변조하여 전송할 수 있다.",
+      "암호화되어 안전하다.",
+      "DB에 저장이 안 된다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 사용자가 소스 보기를 통해 가격을 확인하고 변조하여 전송할 수 있다. 클라이언트 측 데이터는 언제나 변조 가능하므로 신뢰해선 안 됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 423,
+    "question": "TCP 3-Way Handshake 과정의 순서로 올바른 것은?",
+    "options": [
+      "SYN → ACK → SYN/ACK",
+      "SYN → SYN/ACK → ACK",
+      "ACK → SYN → SYN/ACK",
+      "SYN/ACK → SYN → ACK"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SYN → SYN/ACK → ACK TCP 연결 수립 과정은 SYN(클라이언트) → SYN/ACK(서버) → ACK(클라이언트) 순서로 진행됩니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 424,
+    "question": "접근 통제 모델 중 'Bell-LaPadula (BLP)' 모델의 핵심 규칙은?",
+    "options": [
+      "Least Privilege",
+      "No Read Up, No Write Down (기밀성)",
+      "Separation of Duty",
+      "No Read Down, No Write Up (무결성)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② No Read Up, No Write Down (기밀성) 자신보다 높은 등급은 못 읽고(기밀 유출 방지), 낮은 등급엔 못 씀(정보 흐름 통제 - 실제로는 무결성보다는 기밀성 중심). *정확히는 낮은 등급에 쓰면 높은 등급 정보가 낮은 곳으로 흘러가므로 금지함(No Write Down).",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 425,
+    "question": "IPv4 주소 고갈 문제를 해결하기 위해 등장한 IPv6의 주소 길이는 몇 비트인가?",
+    "options": [
+      "64비트",
+      "32비트",
+      "128비트",
+      "256비트"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 128비트 IPv4는 32비트, IPv6는 128비트 주소 체계를 사용함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 426,
+    "question": "악성코드 감염 등 침해사고 발생 시 신고해야 하는 기관은?",
+    "options": [
+      "KISA (한국인터넷진흥원) 또는 수사기관",
+      "행정안전부",
+      "방송통신위원회",
+      "통계청"
+    ],
+    "answer": 0,
+    "explanation": "침해사고 신고는 KISA 보호나라(118) 또는 경찰청 등으로 함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 427,
+    "question": "리눅스 권한 'drwxr-xr-x'의 의미로 올바른 것은?",
+    "options": [
+      "소유자만 쓰기 가능",
+      "모든 사용자가 쓰기 가능",
+      "디렉터리이며, 소유자는 모든 권한, 그룹과 기타는 읽기/실행만 가능",
+      "일반 파일이며 실행 가능함"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 디렉터리이며, 소유자는 모든 권한, 그룹과 기타는 읽기/실행만 가능 d는 디렉터리, 755 권한임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 428,
+    "question": "정보통신기반보호법에서 주요정보통신기반시설을 침해하여 교란·마비시킨 자에 대한 처벌 수위는?",
+    "options": [
+      "3년 이하 징역",
+      "10년 이하의 징역 또는 1억원 이하의 벌금",
+      "5년 이하 징역",
+      "무기징역"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 10년 이하의 징역 또는 1억원 이하의 벌금 기반시설 침해는 매우 중대한 범죄로 강력하게 처벌함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 429,
+    "question": "라우팅 프로토콜 BGP(Border Gateway Protocol)에서 라우팅 정보 조작을 막기 위한 보안 기술은?",
+    "options": [
+      "VLAN",
+      "WPA2",
+      "SSL",
+      "RPKI (Resource Public Key Infrastructure)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ RPKI (Resource Public Key Infrastructure) IP 주소와 AS 번호의 소유권을 인증서로 검증하여 라우트 하이재킹을 방지함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 430,
+    "question": "위험 관리(Risk Management) 단계 중, 조직이 수용할 수 있는 위험 수준(DoA, Degree of Assurance)을 결정하는 단계는?",
+    "options": [
+      "정보 수집",
+      "사후 관리",
+      "자산 식별",
+      "위험 평가 및 대책 선정"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 위험 평가 및 대책 선정 모든 위험을 제거할 순 없으므로 수용 가능한 수준을 정하고 그 이상인 위험을 관리함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 431,
+    "question": "다음 중 랜섬웨어 예방을 위한 조치로 가장 효과가 떨어지는 것은?",
+    "options": [
+      "OS 및 SW 최신 보안 업데이트",
+      "중요 자료 정기 백업",
+      "출처 불분명한 이메일 실행 금지",
+      "화면 보호기 암호 설정"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 화면 보호기 암호 설정 화면 보호기 암호는 물리적 접근 통제 수단이며, 랜섬웨어(악성코드) 감염 예방과는 직접적 연관성이 낮음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 432,
+    "question": "다음 중 Linux에서 파일의 소유자만 읽기/쓰기 권한을 부여하는 chmod 명령은?",
+    "options": [
+      "chmod 777 filename",
+      "chmod 600 filename",
+      "chmod 755 filename",
+      "chmod 444 filename"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② chmod 600 filename chmod 600은 소유자에게만 읽기(4)와 쓰기(2) 권한을 부여합니다(6=4+2).",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 433,
+    "question": "ISMS-P 인증 기준 2.4.2 '재해 복구'에서, 재해 복구 모의훈련은 최소 연 몇 회 이상 실시해야 하는가?",
+    "options": [
+      "3년에 1회",
+      "연 2회 이상",
+      "월 1회",
+      "연 1회 이상"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 연 1회 이상 실효성 검증을 위해 연 1회 이상 훈련하고 결과를 반영해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 434,
+    "question": "다음 중 'Insecure Deserialization(안전하지 않은 역직렬화)' 취약점 공격으로 달성할 수 있는 가장 치명적인 결과는?",
+    "options": [
+      "단순 에러 발생",
+      "UI 깨짐",
+      "로그 파일 삭제",
+      "RCE (Remote Code Execution)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ RCE (Remote Code Execution) 객체를 복원하는 과정에서 악성 코드가 실행되어 서버를 장악할 수 있음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 435,
+    "question": "다음 중 Social Engineering 공격에 해당하는 것은?",
+    "options": [
+      "SQL Injection",
+      "Phishing",
+      "Buffer Overflow",
+      "Port Scanning"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Phishing Phishing은 사용자를 속여 민감한 정보를 탈취하는 대표적인 사회공학 공격입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 436,
+    "question": "다음 중 'Feistel 구조'를 사용하는 대표적인 블록 암호 알고리즘은?",
+    "options": [
+      "SHA-256",
+      "RSA",
+      "AES (SPN 구조)",
+      "DES"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DES DES는 Feistel, AES는 SPN 구조를 사용함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 437,
+    "question": "다음 중 침해사고 대응 단계에서 가장 먼저 수행되어야 하는 것은?",
+    "options": [
+      "사후 검토",
+      "사고 근절",
+      "사고 식별 및 초기 대응",
+      "사고 복구"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 사고 식별 및 초기 대응 사고 여부를 판단(식별)하고 피해 확산을 막는 초기 대응이 최우선임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 438,
+    "question": "암호화 키와 복호화 키가 동일한 암호화 방식을 무엇이라 하는가?",
+    "options": [
+      "해시 함수",
+      "공개키 암호화",
+      "대칭키 암호화 (관용 암호)",
+      "비대칭키 암호화"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 대칭키 암호화 (관용 암호) 암복호화 키가 같아 키 배송(Key Distribution) 문제가 발생함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 439,
+    "question": "정보보호 관리 활동 중 '위험 수용(Risk Acceptance)'을 선택하는 경우는?",
+    "options": [
+      "인명 피해가 예상될 때",
+      "위험 처리 비용이 사고 손실액보다 클 때 (가성비가 안 나올 때)",
+      "위험이 너무 클 때",
+      "법적으로 금지될 때"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 위험 처리 비용이 사고 손실액보다 클 때 (가성비가 안 나올 때) 경영진의 승인 하에 위험을 감수하고 운영함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 440,
+    "question": "다음 중 Wireshark의 주요 용도는?",
+    "options": [
+      "파일 압축",
+      "네트워크 패킷 캡처 및 분석",
+      "코드 컴파일",
+      "데이터베이스 관리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 네트워크 패킷 캡처 및 분석 Wireshark는 네트워크 트래픽을 캡처하고 분석하는 패킷 분석 도구입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 441,
+    "question": "DNS 서버에 대량의 쿼리를 보내거나 응답을 증폭시켜 공격하는 기법은?",
+    "options": [
+      "DNS Cache Poisoning",
+      "Zone Transfer",
+      "DNS Amplification Attack (DNS 증폭 공격)",
+      "DNS Spoofing"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ DNS Amplification Attack (DNS 증폭 공격) 공격자가 출발지 IP를 피해자 IP로 변조(Spoofing)하여 Open Resolver DNS에 대량의 질의를 보내 응답 폭탄을 맞게 하는 기법.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 442,
+    "question": "다음 중 '접속기록'에 반드시 포함되어야 할 항목이 아닌 것은?",
+    "options": [
+      "접속 일시",
+      "접속자 ID",
+      "접속자 IP 주소",
+      "접속자의 키와 몸무게"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 접속자의 키와 몸무게 신체 정보는 로그 항목이 아님.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 443,
+    "question": "위치정보의 보호 및 이용 등에 관한 법률에 따라 개인위치정보를 수집할 때 필요한 것은?",
+    "options": [
+      "필요 없음",
+      "위치정보 주체의 동의",
+      "통신사의 허가",
+      "경찰의 허가"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 위치정보 주체의 동의 개인의 위치는 민감한 정보이므로 동의가 필수임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 444,
+    "question": "생체 인식 시스템의 성능 지표 중, '잘못된 사용자를 본인으로 잘못 인증하는 비율'은?",
+    "options": [
+      "FAR (False Acceptance Rate, 오인식률)",
+      "CER",
+      "FRR (False Rejection Rate)",
+      "EER"
+    ],
+    "answer": 0,
+    "explanation": "보안상 가장 위험한 오류임 (남을 나라고 들여보내줌).",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 445,
+    "question": "리눅스 부팅 로더(Boot Loader)로, LILO의 단점을 보완하여 널리 사용되는 것은?",
+    "options": [
+      "UEFI",
+      "MBR",
+      "GRUB",
+      "BIOS"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ GRUB GRUB(Grand Unified Bootloader)는 리눅스의 대표적인 부팅 로더임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 446,
+    "question": "SSL Stripping 공격은 어떤 보안 프로토콜을 무력화하기 위한 것인가?",
+    "options": [
+      "SSH",
+      "IPSec",
+      "HTTPS (SSL/TLS)",
+      "SFTP"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ HTTPS (SSL/TLS) 사용자와 서버 사이에서 HTTPS 연결을 HTTP로 다운그레이드하여 통신 내용을 도청함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 447,
+    "question": "IPSec VPN의 동작 모드 중, IP 헤더는 암호화하지 않고 데이터(Payload) 부분만 암호화하여 내부 네트워크 통신에 주로 쓰이는 모드는?",
+    "options": [
+      "전송 모드 (Transport Mode)",
+      "브리지 모드",
+      "게이트웨이 모드",
+      "터널 모드 (Tunnel Mode)"
+    ],
+    "answer": 0,
+    "explanation": "전송 모드는 End-to-End 통신에 사용되며 헤더는 유지하고 페이로드만 보호함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 448,
+    "question": "다음 중 Layer 2(데이터 링크 계층)에서 동작하는 보안 장비 기능이 아닌 것은?",
+    "options": [
+      "VLAN",
+      "MAC Filtering",
+      "Port Security",
+      "NAT (Network Address Translation)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ NAT (Network Address Translation) NAT는 IP 주소를 변환하므로 Layer 3(네트워크 계층) 기능임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 449,
+    "question": "시스템 공격 기법 중 'Format String Attack'에서 메모리 내용을 읽거나 쓰기 위해 악용하는 문자열 포맷 인자는?",
+    "options": [
+      "%n, %x, %s",
+      "SELECT",
+      "#include",
+      "<div>"
+    ],
+    "answer": 0,
+    "explanation": "printf 등의 함수에서 %n(쓰기), %x(읽기) 등을 적절히 검증하지 않아 발생함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 450,
+    "question": "다음 중 '생일 역설(Birthday Paradox)'을 이용한 암호 공격 기법은 무엇을 공격 대상으로 하는가?",
+    "options": [
+      "대칭키",
+      "전자서명",
+      "해시 함수의 충돌(Collision)",
+      "RSA 키"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 해시 함수의 충돌(Collision) 해시 충돌쌍을 찾는 데 필요한 시도 횟수가 생각보다 적음을 이용한 공격 (Birthday Attack).",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 451,
+    "question": "다음 중 개인정보 파기 의무를 위반하여 파기하지 않은 경우의 벌칙은?",
+    "options": [
+      "경고",
+      "1억원 과징금",
+      "5년 이하 징역",
+      "3천만원 이하의 과태료"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 3천만원 이하의 과태료 보유기간 경과 후 미파기 시 3천만원 이하 과태료 처분.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 452,
+    "question": "다음 중 '망법'에 따라 영리 목적의 광고성 정보를 전송할 때, 야간(오후 9시 ~ 다음 날 오전 8시) 전송을 위해 필요한 조치는?",
+    "options": [
+      "관리자 승인",
+      "그냥 전송 가능",
+      "홈페이지 공지",
+      "수신자의 별도 사전 동의"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 수신자의 별도 사전 동의 야간 광고 전송은 스팸 스트레스가 크므로 별도의 추가 동의가 필수임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 453,
+    "question": "개인정보 안전성 확보조치 기준에 따라, 10만 명 이상의 정보주체 정보를 처리하는 대기업이 접속기록을 보관해야 하는 최소 기간은?",
+    "options": [
+      "3년 이상",
+      "6개월 이상",
+      "2년 이상",
+      "1년 이상"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 2년 이상 개인정보 유출 탐지를 강화하기 위해 대규모 처리자는 2년(기본 1년) 보관.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 454,
+    "question": "정보보호 대책 수립 시 '심층 방어(Defense in Depth)' 원칙이란?",
+    "options": [
+      "내부망은 보안을 하지 않는 것",
+      "여러 계층(물리, 네트워크, 시스템, 앱 등)에 다중 보안 대책을 적용하는 것",
+      "공격을 당하면 즉시 반격하는 것",
+      "한 가지 강력한 방화벽에 의존하는 것"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 여러 계층(물리, 네트워크, 시스템, 앱 등)에 다중 보안 대책을 적용하는 것 한 계층이 뚫려도 다음 계층에서 방어할 수 있도록 다중화함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 455,
+    "question": "다음 중 '/etc/passwd' 파일의 구성 필드가 아닌 것은?",
+    "options": [
+      "사용자명",
+      "암호화된 패스워드 (실제 해시값)",
+      "홈 디렉터리",
+      "UID"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 암호화된 패스워드 (실제 해시값) 과거에는 있었으나 현재는 보안상 'x'로 표시되고 실제 해시는 /etc/shadow에 저장됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 456,
+    "question": "스위칭 허브에서 'Port Mirroring(SPAN)' 기능을 사용하는 주된 목적은?",
+    "options": [
+      "포트 보안을 강화하기 위함",
+      "네트워크 트래픽을 복제하여 IDS나 분석 장비로 모니터링하기 위함",
+      "VLAN을 구성하기 위함",
+      "네트워크 속도를 2배로 높이기 위함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 네트워크 트래픽을 복제하여 IDS나 분석 장비로 모니터링하기 위함 특정 포트의 트래픽을 다른 포트로 복사해주어 패킷 분석을 가능하게 함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 457,
+    "question": "전자금융감독규정상 금융회사의 CISO(정보보호최고책임자) 자격 요건 중, 정보보호 경력 또는 IT 경력이 필요한 기간은?",
+    "options": [
+      "10년 이상",
+      "1년 이상",
+      "정보보호 경력 3년 이상 등 일정 자격 필요",
+      "경력 무관"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 정보보호 경력 3년 이상 등 일정 자격 필요 총 경력, 정보보호/IT 경력 합산 등 구체적 요건(5-5-7 등)이 있음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 458,
+    "question": "다음 중 '전자문서 및 전자거래 기본법'에 따라 공인전자문서센터에 보관된 전자문서의 효력은?",
+    "options": [
+      "사본으로 간주",
+      "효력 없음",
+      "임시 보관용",
+      "원본과 동일한 효력을 추정"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 원본과 동일한 효력을 추정 안전하게 보관된 경우 원본이 변경/훼손되지 않은 것으로 봄.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 459,
+    "question": "ISMS-P 인증 기준에서 정보보호 및 개인정보보호 관리체계의 주기적 검토 및 개선 주기는?",
+    "options": [
+      "6개월",
+      "1년",
+      "2년",
+      "3년"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 1년 ISMS-P 인증에서 관리체계는 최소 연 1회 이상 정기적으로 검토 및 개선되어야 합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 460,
+    "question": "다음 중 DoS와 DDoS의 차이점은?",
+    "options": [
+      "공격 주체 수",
+      "사용되는 프로토콜",
+      "공격 대상",
+      "공격 시간"
+    ],
+    "answer": 0,
+    "explanation": "DDoS는 다수의 분산된 주체가 공격합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 461,
+    "question": "다음 중 'Null Pointer Dereference' 오류를 막기 위한 방법은?",
+    "options": [
+      "예외 처리를 끈다",
+      "객체를 참조하기 전에 null 여부를 반드시 검사한다",
+      "포인터를 쓰지 않는다",
+      "모든 변수를 null로 초기화한다"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 객체를 참조하기 전에 null 여부를 반드시 검사한다 널 값을 가진 참조 변수를 사용하면 프로그램이 비정상 종료됨.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 462,
+    "question": "다음 중 '정보보호 거버넌스' 표준인 ISO/IEC 27014에서 제시하는 원칙이 아닌 것은?",
+    "options": [
+      "성과 측정",
+      "전략적 연계",
+      "위험 관리",
+      "수익 극대화"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 수익 극대화 거버넌스는 비즈니스 목표와 보안의 연계, 효율성 등을 추구함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 463,
+    "question": "다음 중 '사이버 위기 경보' 단계(관심, 주의, 경계, 심각) 중 가장 낮은(평시 다음의) 단계는?",
+    "options": [
+      "심각 (Red)",
+      "경계 (Orange)",
+      "주의 (Yellow)",
+      "관심 (Blue)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 관심 (Blue) 정상 -> 관심 -> 주의 -> 경계 -> 심각 순서.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 464,
+    "question": "디지털 포렌식 절차 중, 수집된 증거가 법정에 제출될 때까지 훼손되지 않았음을 증명하는 연속적인 이력 관리는?",
+    "options": [
+      "Chain of Custody (연계 보관성)",
+      "Live Response",
+      "Timeline Analysis",
+      "Data Recovery"
+    ],
+    "answer": 0,
+    "explanation": "증거의 획득, 이송, 분석, 보관, 제출의 전 과정을 기록하여 무결성을 입증함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 465,
+    "question": "리눅스 'find' 명령어 옵션 중, 파일의 권한이 '정확히 755'인 파일만 검색하는 옵션은?",
+    "options": [
+      "-perm /755",
+      "-perm -755",
+      "-mode 755",
+      "-perm 755"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ -perm 755 -perm 755는 정확히 일치하는 것, -perm -755는 755 권한을 '포함'하는 것을 찾음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 466,
+    "question": "ISMS-P 심사원 자격 유효기간은?",
+    "options": [
+      "1년",
+      "5년",
+      "3년",
+      "영구"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 3년 심사원 자격은 3년이며, 보수교육 이수 등을 통해 갱신해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 467,
+    "question": "다음 중 정보통신서비스 제공자가 이용자의 개인정보를 파기할 때 사용하는 기술적 방법이 아닌 것은?",
+    "options": [
+      "디가우징",
+      "파일 덮어쓰기 (Overwriting)",
+      "소각",
+      "단순 포맷(Quick Format)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 단순 포맷(Quick Format) 단순 포맷은 복구가 가능하므로 파기 방법으로 인정되지 않음 (Low Level Format 등 필요).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 468,
+    "question": "전자서명(Digital Signature)이 제공하는 보안 기능이 아닌 것은?",
+    "options": [
+      "인증",
+      "무결성",
+      "기밀성 (Confidentiality)",
+      "부인 방지"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 기밀성 (Confidentiality) 전자서명은 내용을 암호화하여 숨기는 것이 아니라, 서명자의 신원과 문서 위변조 여부를 확인하는 기술임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 469,
+    "question": "다음 중 서버 인증을 위해 사용되는 프로토콜은?",
+    "options": [
+      "ARP",
+      "SSL/TLS",
+      "SMTP",
+      "FTP"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SSL/TLS SSL/TLS는 서버와 클라이언트 간 안전한 인증 및 통신에 사용됩니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 470,
+    "question": "다음 중 'Tor' 네트워크 사용자가 출구 노드(Exit Node)에서 직면할 수 있는 보안 위험은?",
+    "options": [
+      "Tor는 암호화되지 않음",
+      "출구 노드 운영자가 평문 트래픽(HTTP 등)을 스니핑할 수 있음",
+      "익명성이 보장되어 위험 없음",
+      "입구 노드가 위험함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 출구 노드 운영자가 평문 트래픽(HTTP 등)을 스니핑할 수 있음 Tor 내부 통신은 암호화되지만, 출구 노드에서 인터넷으로 나갈 때 SSL을 안 쓰면 평문이 노출됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 471,
+    "question": "다음 중 'CSP (Content Security Policy)'를 설정하는 방법은?",
+    "options": [
+      "자바스크립트 변수 설정",
+      "HTTP 응답 헤더 또는 HTML 메타 태그 사용",
+      "URL 파라미터",
+      "쿠키 설정"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② HTTP 응답 헤더 또는 HTML 메타 태그 사용 Content-Security-Policy 헤더를 통해 정책을 브라우저에 전달함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 472,
+    "question": "TCP 3-Way Handshake 과정의 올바른 순서는?",
+    "options": [
+      "SYN -> ACK -> SYN/ACK",
+      "SYN/ACK -> SYN -> ACK",
+      "ACK -> SYN -> SYN/ACK",
+      "SYN -> SYN/ACK -> ACK"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ SYN -> SYN/ACK -> ACK 연결 수립을 위한 표준 절차임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 473,
+    "question": "네트워크 프로토콜 중 'IGMP (Internet Group Management Protocol)'의 주된 용도는?",
+    "options": [
+      "멀티캐스트 그룹 관리 (가입/탈퇴)",
+      "IP 주소 할당",
+      "오류 보고",
+      "라우팅 경로 설정"
+    ],
+    "answer": 0,
+    "explanation": "IPTV 등 멀티캐스트 통신에서 호스트가 그룹 멤버십을 라우터에 알리는 데 사용됨.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 474,
+    "question": "윈도우 방화벽의 인바운드 규칙과 아웃바운드 규칙 중, 기본적으로 '모두 차단'으로 설정되어 있는 것은? (일반적인 보안 권고)",
+    "options": [
+      "아웃바운드만 차단",
+      "인바운드만 허용",
+      "둘 다 모두 허용",
+      "인바운드(Inbound)는 차단, 아웃바운드(Outbound)는 허용이 기본값이나 보안상 둘 다 통제 필요"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 인바운드(Inbound)는 차단, 아웃바운드(Outbound)는 허용이 기본값이나 보안상 둘 다 통제 필요 외부에서 들어오는(Inbound) 연결은 기본 차단이 원칙임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 475,
+    "question": "다음 중 'DRS (Disaster Recovery System)' 구축 시 고려사항이 아닌 것은?",
+    "options": [
+      "비용 대비 효과",
+      "복구 목표 시간(RTO)",
+      "직원의 점심 메뉴",
+      "재해 발생 가능성"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 직원의 점심 메뉴 비용, RTO/RPO, 중요도 등을 고려해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 476,
+    "question": "소스 코드 난독화(Obfuscation)의 목적은?",
+    "options": [
+      "실행 속도 향상",
+      "역공학(Reverse Engineering)을 어렵게 하여 지식재산권을 보호하고 코드 분석을 방해함",
+      "버그 수정",
+      "코드 가독성 높임"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 역공학(Reverse Engineering)을 어렵게 하여 지식재산권을 보호하고 코드 분석을 방해함 코드를 읽기 어렵게 만들어 분석 비용을 높임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 477,
+    "question": "다음 중 윈도우의 'SAM' 파일이 저장된 기본 경로는?",
+    "options": [
+      "C:\\Windows\\Security",
+      "C:\\Windows\\System",
+      "C:\\Windows\\SAM",
+      "C:\\Windows\\System32\\config"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ C:\\Windows\\System32\\config 레지스트리 하이브 파일들은 주로 System32\\config 폴더에 위치함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 478,
+    "question": "리눅스 파일 시스템에서 파일의 메타데이터(소유자, 크기, 권한, 위치 등)를 저장하는 영역은?",
+    "options": [
+      "Data Block",
+      "Boot Block",
+      "Inode",
+      "Superblock"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Inode Inode(아이노드)는 파일의 실제 데이터가 아닌 속성 정보를 저장하는 구조체임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 479,
+    "question": "다음 중 '킬 체인(Kill Chain)' 모델에서 공격의 마지막 단계는?",
+    "options": [
+      "전달 (Delivery)",
+      "설치 (Installation)",
+      "무기화 (Weaponization)",
+      "목표 달성 (Actions on Objectives)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 목표 달성 (Actions on Objectives) 사이버 킬 체인의 7단계 중 마지막은 공격자가 원래 목적(데이터 유출, 파괴 등)을 수행하는 것.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 480,
+    "question": "IPSec VPN의 동작 모드 중, IP 헤더를 포함한 전체 패킷을 암호화하고 새로운 IP 헤더를 붙여 전송하는 모드는?",
+    "options": [
+      "Bridge Mode",
+      "Gateway Mode",
+      "Transport Mode (전송 모드)",
+      "Tunnel Mode (터널 모드)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Tunnel Mode (터널 모드) 주로 게이트웨이 간(Site-to-Site) 통신에 사용되며 전체 패킷을 캡슐화함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 481,
+    "question": "다음 중 파일 다운로드 취약점(Path Traversal)을 방어하기 위한 가장 확실한 방법은?",
+    "options": [
+      "웹 서버 실행 권한 축소",
+      "파일 확장자 검사",
+      "입력값에서 '../' 문자열 필터링",
+      "다운로드 파일 경로와 이름을 DB에 저장하고 식별자(ID)로 호출"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 다운로드 파일 경로와 이름을 DB에 저장하고 식별자(ID)로 호출 사용자가 직접 경로를 입력하지 못하게 하고, 매핑된 ID로만 접근하게 하는 것이 가장 안전함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 482,
+    "question": "리눅스 부팅 시 파일 시스템을 자동으로 마운트하도록 설정하는 파일은?",
+    "options": [
+      "/etc/mtab",
+      "/boot/grub.cfg",
+      "/etc/fstab",
+      "/etc/mount"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ /etc/fstab fstab(File System Table)에 부팅 시 마운트할 정보를 정의함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 483,
+    "question": "다음 중 'ARP Spoofing' 공격을 근본적으로 차단하기 위해 스위치 장비에서 설정하는 기능은?",
+    "options": [
+      "DAI (Dynamic ARP Inspection)",
+      "Port Mirroring",
+      "STP (Spanning Tree Protocol)",
+      "VLAN Tagging"
+    ],
+    "answer": 0,
+    "explanation": "신뢰된 포트와 DHCP Snooping 바인딩 테이블을 기반으로 위조된 ARP 패킷을 차단함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 484,
+    "question": "웹 애플리케이션에서 'Parameter Tampering'을 통해 쇼핑몰 결제 금액을 변조하는 것을 막기 위한 가장 확실한 검증 위치는?",
+    "options": [
+      "웹 브라우저 쿠키",
+      "클라이언트 자바스크립트",
+      "결제 요청을 처리하는 서버 측 로직",
+      "HTML 폼 태그"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 결제 요청을 처리하는 서버 측 로직 클라이언트 데이터는 조작 가능하므로 반드시 서버에서 최종 가격과 수량을 재계산/검증해야 함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 485,
+    "question": "다음 중 서버 취약점 점검 시 발견할 수 있는 사항은?",
+    "options": [
+      "미사용 서비스 활성화",
+      "물리적 건물 위치",
+      "시스템 사용 매뉴얼",
+      "백업 주기"
+    ],
+    "answer": 0,
+    "explanation": "미사용 서비스 활성화는 취약점의 주요 원인입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 486,
+    "question": "다음 중 '동형 암호(Homomorphic Encryption)'가 활용될 수 있는 가장 적절한 분야는?",
+    "options": [
+      "웹사이트 로그인",
+      "네트워크 속도 향상",
+      "프라이버시 보존 데이터 마이닝 및 통계 분석 (클라우드 환경)",
+      "단순 파일 저장"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 프라이버시 보존 데이터 마이닝 및 통계 분석 (클라우드 환경) 데이터를 암호화한 상태로 분석할 수 있어 개인정보 보호와 빅데이터 활용에 적합함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 487,
+    "question": "정보보호의 3요소(CIA) 중, 인가된 사용자만이 정보 자산에 접근할 수 있음을 보장하는 성질은?",
+    "options": [
+      "가용성 (Availability)",
+      "기밀성 (Confidentiality)",
+      "인증성 (Authenticity)",
+      "무결성 (Integrity)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 기밀성 (Confidentiality) 기밀성은 인가되지 않은 자의 접근을 차단하고 인가된 자만 접근 허용하는 것.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 488,
+    "question": "리눅스 명령어 'chmod 751 file' 실행 시 그룹(Group) 사용자가 갖는 권한은?",
+    "options": [
+      "읽기+실행 (r-x)",
+      "읽기+쓰기+실행 (rwx)",
+      "실행 (x) 만",
+      "읽기 (r) 만"
+    ],
+    "answer": 0,
+    "explanation": "7(rwx) 5(r-x) 1(--x). 그룹 권한은 5이므로 읽기(4)+실행(1) = r-x.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 489,
+    "question": "HTTP 메소드 중 서버의 상태 정보를 변경할 수 있어 보안상 위험할 수 있는 메소드(PUT, DELETE 등)를 차단하는 설정은?",
+    "options": [
+      "Directory Listing 방지",
+      "불필요한 HTTP Method 제한",
+      "Server Token 숨김",
+      "SSL 적용"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 불필요한 HTTP Method 제한 PUT, DELETE, TRACE 등의 메소드는 파일 업로드/삭제 등 위험이 있으므로 허용 목록(GET, POST) 외에는 제한해야 함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 490,
+    "question": "리눅스에서 'LVM(Logical Volume Manager)'을 사용할 때, 물리적 디스크를 초기화하여 LVM에서 사용할 수 있도록 만드는 명령어는?",
+    "options": [
+      "vgcreate",
+      "fdisk",
+      "pvcreate",
+      "lvcreate"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ pvcreate pvcreate(Physical Volume Create)는 물리 볼륨을 초기화함. (vg: 볼륨그룹, lv: 논리볼륨)",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 491,
+    "question": "다음 중 'Tcp Wrappers'를 이용한 접근 제어 설정 파일은?",
+    "options": [
+      "/etc/access.conf",
+      "/etc/resolv.conf",
+      "/etc/hosts.allow, /etc/hosts.deny",
+      "/etc/iptables"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ /etc/hosts.allow, /etc/hosts.deny inetd/xinetd 기반 서비스의 호스트 기반 접근 제어를 담당함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 492,
+    "question": "다음 중 OSI 3계층 장비인 라우터가 패킷의 경로를 결정할 때 참조하는 테이블은?",
+    "options": [
+      "세션 테이블",
+      "MAC 주소 테이블",
+      "ARP 테이블",
+      "라우팅 테이블"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 라우팅 테이블 라우터는 라우팅 테이블의 목적지 네트워크 주소를 보고 경로를 결정함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 493,
+    "question": "다음 중 'Heap Spraying' 기법은 어떤 공격을 성공시키기 위해 사용되는가?",
+    "options": [
+      "DDoS",
+      "브라우저나 애플리케이션의 취약점을 이용한 쉘코드 실행 (Exploit)",
+      "패스워드 크랙",
+      "SQL Injection"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 브라우저나 애플리케이션의 취약점을 이용한 쉘코드 실행 (Exploit) 힙 메모리에 쉘코드를 다량으로 뿌려놓고 실행 흐름이 그중 하나에 걸리도록 유도함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 494,
+    "question": "HTTP 응답 헤더 중, 브라우저가 페이지를 렌더링할 때 XSS 필터를 활성화하도록 강제하는 헤더는?",
+    "options": [
+      "Strict-Transport-Security",
+      "X-Frame-Options",
+      "X-XSS-Protection",
+      "Content-Security-Policy"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ X-XSS-Protection 구형 브라우저의 내장 XSS 필터를 켜는 헤더임.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 495,
+    "question": "접근통제 모델 중 주체의 보안 등급과 객체의 보안 등급을 비교하여 접근을 통제하는 모델은?",
+    "options": [
+      "DAC",
+      "MAC",
+      "RBAC",
+      "ABAC"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② MAC MAC(Mandatory Access Control)은 주체와 객체의 보안 레이블을 비교하여 강제적으로 접근을 통제하는 모델입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 496,
+    "question": "다음 중 스캔 도구 사용 시 주의 사항이 아닌 것은?",
+    "options": [
+      "타인 시스템 동의",
+      "비인가 스캔 금지",
+      "스캔 결과 암호화",
+      "확산 공격"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 확산 공격 확산 공격은 스캔 도구의 주의 사항이 아니며, 비인가 사용이 문제입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 497,
+    "question": "사용자 식별을 위해 사용하는 'OpenID'의 특징은?",
+    "options": [
+      "중앙 집중식 관리",
+      "하드웨어 토큰 필수",
+      "생체 정보 사용",
+      "하나의 ID(URL 형태)로 여러 사이트에서 인증할 수 있는 분산형 디지털 식별 시스템"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 하나의 ID(URL 형태)로 여러 사이트에서 인증할 수 있는 분산형 디지털 식별 시스템 URL을 아이디로 사용하는 개방형 표준.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 498,
+    "question": "네트워크 레이어의 주요 기능은?",
+    "options": [
+      "경로 선택 및 데이터 전달",
+      "데이터 암호화",
+      "세션 생성",
+      "애플리케이션 실행"
+    ],
+    "answer": 0,
+    "explanation": "네트워크 레이어는 경로 선택과 데이터의 정확한 전달을 담당합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 499,
+    "question": "리눅스에서 패스워드 만료일, 계정 잠금 등 사용자 계정의 에이징(Aging) 정보를 관리하는 명령어는?",
+    "options": [
+      "passwd",
+      "groupadd",
+      "chage",
+      "usermod"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ chage chage 명령어는 패스워드 만료일, 변경 간격 등 계정 노화 정보를 설정함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 500,
+    "question": "정보보호 시스템 평가 기준인 'CC 인증'에서 보호 프로파일(PP)이란?",
+    "options": [
+      "개발자 가이드",
+      "평가 결과 보고서",
+      "특정 제품군(예: 방화벽)에 대한 공통적인 보안 요구사항 명세서",
+      "특정 제품의 상세 설계서"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 특정 제품군(예: 방화벽)에 대한 공통적인 보안 요구사항 명세서 구매자나 사용자 입장에서 필요한 보안 기능을 정의한 문서.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 501,
+    "question": "윈도우 시스템에서 사용자 계정 및 암호 정보를 저장하고 있는 데이터베이스 파일은?",
+    "options": [
+      "SAM (Security Account Manager)",
+      "SOFTWARE",
+      "SYSTEM",
+      "NTDS.DIT"
+    ],
+    "answer": 0,
+    "explanation": "로컬 계정 정보는 SAM 파일에 해시 형태로 저장됨. (도메인 컨트롤러는 NTDS.DIT)",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 502,
+    "question": "해시 함수의 성질 중, 서로 다른 두 입력값이 같은 해시값을 갖는 것을 발견하기 어려워야 한다는 성질은?",
+    "options": [
+      "압축성",
+      "제2 역상 저항성",
+      "역상 저항성",
+      "충돌 회피성 (Collision Resistance)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 충돌 회피성 (Collision Resistance) H(x) = H(y)인 쌍을 찾는 것이 계산적으로 불가능해야 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 503,
+    "question": "다음 중 'DOM-based XSS' 취약점이 발생하는 위치는?",
+    "options": [
+      "방화벽 설정",
+      "웹 서버의 로그 파일",
+      "서버의 데이터베이스",
+      "클라이언트 브라우저 내의 DOM(Document Object Model) 처리 스크립트"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 클라이언트 브라우저 내의 DOM(Document Object Model) 처리 스크립트 서버를 거치지 않고 브라우저에서 실행되는 스크립트가 URL 파편(#) 등을 잘못 처리하여 발생.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 504,
+    "question": "다음 중 '정보보호 공시'를 이행하지 않았을 때의 과태료는?",
+    "options": [
+      "5천만원 이하",
+      "1천만원 이하",
+      "3천만원 이하",
+      "1억원 이하"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 1천만원 이하 의무 대상자가 공시를 안 하면 1천만원 이하 과태료.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 505,
+    "question": "다음 중 Blue Team의 역할은?",
+    "options": [
+      "공격 시뮬레이션",
+      "방어 및 모니터링",
+      "취약점 발견",
+      "침투 테스트"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 방어 및 모니터링 Blue Team은 조직의 보안 방어, 모니터링, 사고 대응을 담당하는 팀입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 506,
+    "question": "다음 중 개인정보 파기 근거가 아닌 것은?",
+    "options": [
+      "보유기간 종료",
+      "목적 달성",
+      "정부 정책",
+      "정보주체 요청"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 정부 정책 정부 정책은 파기 근거가 아닙니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 507,
+    "question": "다음 중 API 보안의 주된 위험 요소는?",
+    "options": [
+      "인증 미비",
+      "네트워크 속도 저하",
+      "UI 디자인",
+      "데이터 압축"
+    ],
+    "answer": 0,
+    "explanation": "인증 미비, 인가 오류, 데이터 노출 등이 API 보안의 주요 위험입니다.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 508,
+    "question": "다음 중 SSO 시스템 도입 효과는?",
+    "options": [
+      "여러 서비스 동시 로그인",
+      "비밀번호 안전성 저하",
+      "인증서 자동 폐기",
+      "데이터 압축"
+    ],
+    "answer": 0,
+    "explanation": "SSO는 여러 서비스에 한번의 로그인만으로 접근할 수 있는 편의성 효과가 있습니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 509,
+    "question": "다음 중 블록 암호 운영 모드 중 'ECB (Electronic Code Book)' 모드의 단점은?",
+    "options": [
+      "동일한 평문 블록이 동일한 암호문 블록으로 변환되어 패턴이 노출됨",
+      "암호화 속도가 느림",
+      "병렬 처리가 불가능함",
+      "초기화 벡터(IV) 관리가 어려움"
+    ],
+    "answer": 0,
+    "explanation": "가장 단순하지만 패턴이 그대로 드러나 보안성이 낮음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 510,
+    "question": "침해사고 대응 7단계 절차(KISA 등 일반적 모델) 중, 사고 발생 초기 대응 단계에서 수행해야 할 활동은?",
+    "options": [
+      "사고 정황 파악 및 네트워크 차단(피해 확산 방지)",
+      "해커 역공격",
+      "시스템 포맷",
+      "언론 인터뷰"
+    ],
+    "answer": 0,
+    "explanation": "피해가 커지지 않도록 격리하는 것이 우선임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 511,
+    "question": "OECD 개인정보 8원칙 중, 개인정보 관리자가 누구인지, 이용 목적이 무엇인지 등을 투명하게 공개해야 한다는 원칙은?",
+    "options": [
+      "정보 정확성의 원칙",
+      "공개의 원칙 (Openness Principle)",
+      "안전성 확보의 원칙",
+      "이용 제한의 원칙"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 공개의 원칙 (Openness Principle) 개인정보 처리 정책과 관리자 정보를 공개해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 512,
+    "question": "다음 중 포렌식 분석의 최우선 원칙은?",
+    "options": [
+      "신속성",
+      "무결성 유지",
+      "비용 절감",
+      "자동 미삭제"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 무결성 유지 포렌식은 증거의 무결성 유지가 최우선입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 513,
+    "question": "ISMS-P 심사 시, 인증 범위 내의 모든 자산을 식별하고 목록화했는지 확인하는 항목은?",
+    "options": [
+      "1.2.1 정보자산 식별",
+      "1.1.1 경영진 참여",
+      "3.1.1 수집 제한",
+      "2.1.1 정책 수립"
+    ],
+    "answer": 0,
+    "explanation": "자산 식별은 위험 관리의 기초임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 514,
+    "question": "다음 중 'XSS (Cross Site Scripting)' 공격의 주된 피해 대상은?",
+    "options": [
+      "방화벽",
+      "데이터베이스 서버",
+      "웹 서버의 운영체제",
+      "웹 페이지를 열람하는 클라이언트(사용자)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 웹 페이지를 열람하는 클라이언트(사용자) 스크립트가 사용자의 브라우저에서 실행되어 세션 쿠키 등을 탈취함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 515,
+    "question": "다음 중 다양한 보안 장비(방화벽, IDS, 웹방화벽 등)의 로그를 수집하여 상관관계를 분석하고 통합 관제하는 시스템은?",
+    "options": [
+      "KMS",
+      "VPN",
+      "UTM",
+      "ESM (Enterprise Security Management) / SIEM"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ESM (Enterprise Security Management) / SIEM 이기종 보안 장비의 로그를 통합 분석하여 위협을 식별함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 516,
+    "question": "다음 중 '사회 공학 공격'을 방지하기 위한 가장 효과적인 대책은?",
+    "options": [
+      "데이터 암호화",
+      "임직원 보안 인식 교육 및 훈련",
+      "백신 업데이트",
+      "방화벽 설치"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 임직원 보안 인식 교육 및 훈련 사람의 취약점을 노리는 공격이므로 교육과 훈련이 가장 중요함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 517,
+    "question": "리눅스 'sysctl' 명령어를 사용하여 설정할 수 있는 커널 파라미터 중, ICMP Echo Request(Ping) 응답을 차단하는 설정은?",
+    "options": [
+      "net.ipv4.conf.all.accept_redirects = 0",
+      "net.ipv4.tcp_syncookies = 1",
+      "net.ipv4.icmp_echo_ignore_all = 1",
+      "net.ipv4.ip_forward = 0"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ net.ipv4.icmp_echo_ignore_all = 1 이 값을 1로 설정하면 핑 요청에 응답하지 않음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 518,
+    "question": "HTML5의 'LocalStorage'에 민감한 정보를 저장할 때의 보안 위험은?",
+    "options": [
+      "서버로 전송되지 않는다.",
+      "유효 기간이 없다.",
+      "용량 제한이 작다.",
+      "XSS 공격을 통해 자바스크립트로 쉽게 탈취될 수 있다."
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ XSS 공격을 통해 자바스크립트로 쉽게 탈취될 수 있다. 로컬 스토리지는 스크립트로 접근 가능하므로 XSS에 취약함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 519,
+    "question": "보안 모델 중, 기밀성(Confidentiality)을 강조하며 'No Read Up, No Write Down' 규칙을 가진 모델은?",
+    "options": [
+      "Chinese Wall 모델",
+      "Bell-LaPadula 모델 (BLP)",
+      "Clark-Wilson 모델",
+      "Biba 모델"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Bell-LaPadula 모델 (BLP) 낮은 등급은 높은 등급을 읽을 수 없고(No Read Up), 높은 등급은 낮은 등급에 쓸 수 없다(No Write Down - 정보 유출 방지).",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 520,
+    "question": "다음 중 'DNS Tunneling' 공격을 탐지하기 위한 방법으로 가장 적절한 것은?",
+    "options": [
+      "DNS 쿼리의 길이, 빈도, 엔트로피, TXT 레코드 내용 등을 분석",
+      "80번 포트 차단",
+      "ICMP 차단",
+      "웹 방화벽 로그 확인"
+    ],
+    "answer": 0,
+    "explanation": "정상적인 DNS 쿼리와 달리 데이터 전송을 위해 쿼리가 길고 복잡하며 TXT 레코드에 인코딩된 데이터가 많음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 521,
+    "question": "데이터베이스의 '무결성 제약조건' 중 기본키(Primary Key)는 NULL 값을 가질 수 없다는 조건은?",
+    "options": [
+      "참조 무결성",
+      "도메인 무결성",
+      "개체 무결성",
+      "키 무결성"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 개체 무결성 개체 무결성은 PK가 중복되거나 NULL일 수 없다는 규칙임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 522,
+    "question": "정보보호 시스템 평가 기준인 'CC (Common Criteria, 공통 평가 기준)'의 평가 보증 등급(EAL)은 총 몇 단계인가?",
+    "options": [
+      "1 ~ 10",
+      "EAL 1 ~ 7 (7단계)",
+      "A ~ D",
+      "1 ~ 5"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② EAL 1 ~ 7 (7단계) EAL1(기능 시험)부터 EAL7(정형적 검증)까지 존재함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 523,
+    "question": "리눅스에서 현재 로그인한 사용자의 ID와 소속 그룹 정보를 확인하는 명령어는?",
+    "options": [
+      "w",
+      "id",
+      "whoami",
+      "groups"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② id id 명령어는 UID, GID, 소속 그룹 정보를 모두 보여줌. whoami는 ID만 보여줌.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 524,
+    "question": "네트워크 패킷의 MTU(Maximum Transmission Unit) 크기는 보통 얼마인가? (Ethernet 기준)",
+    "options": [
+      "65535 바이트",
+      "1500 바이트",
+      "512 바이트",
+      "1024 바이트"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 1500 바이트 일반적인 이더넷 환경의 MTU는 1500 바이트임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 525,
+    "question": "리눅스에서 사용자가 속한 그룹을 변경하거나 추가할 때 사용하는 명령어는?",
+    "options": [
+      "groupadd",
+      "chmod",
+      "chgrp",
+      "usermod"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ usermod usermod -G [그룹명] [계정명] 등으로 그룹 소속을 변경함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 526,
+    "question": "다음 중 윈도우 시스템의 'LSA (Local Security Authority)' 서브시스템의 역할은?",
+    "options": [
+      "네트워크 패킷 필터링",
+      "디스플레이 그래픽 처리",
+      "파일 시스템 암호화",
+      "로컬 및 원격 인증 프로세스 관리, 감사 정책 집행"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 로컬 및 원격 인증 프로세스 관리, 감사 정책 집행 lsass.exe 프로세스는 보안 정책 집행, 토큰 생성, 로그인 검증 등을 담당.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 527,
+    "question": "다음 중 '파일 업로드 취약점'을 이용해 공격자가 서버에 업로드하려는 악성 파일 유형은?",
+    "options": [
+      "텍스트 파일",
+      "PDF 파일",
+      "Web Shell (웹 쉘)",
+      "이미지 파일"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Web Shell (웹 쉘) 서버에서 명령어를 실행할 수 있는 스크립트 파일(jsp, php, asp 등)을 웹 쉘이라 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 528,
+    "question": "다음 중 'UTM (Unified Threat Management)' 장비의 특징은?",
+    "options": [
+      "하나의 기능에만 특화됨",
+      "속도가 가장 빠름",
+      "방화벽, IPS, VPN, 안티바이러스 등 다양한 보안 기능을 하나의 장비로 통합",
+      "무선 전용 장비임"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 방화벽, IPS, VPN, 안티바이러스 등 다양한 보안 기능을 하나의 장비로 통합 관리 편의성과 비용 절감을 위해 기능을 통합한 보안 솔루션.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 529,
+    "question": "ISMS-P 인증 기준 중 '관리체계 수립 및 운영' 단계의 순서로 올바른 것은?",
+    "options": [
+      "기획 -> 설계 -> 구현 -> 테스트 -> 운영",
+      "관리체계 기반 마련 -> 위험 관리 -> 관리체계 운영 -> 관리체계 점검 및 개선",
+      "정책수립 -> 범위설정 -> 대책구현 -> 위험분석 -> 사후관리",
+      "범위설정 -> 정책수립 -> 위험분석 -> 대책구현 -> 사후관리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 관리체계 기반 마련 -> 위험 관리 -> 관리체계 운영 -> 관리체계 점검 및 개선 ISMS-P 인증 기준 1영역은 1.1 관리체계 기반 마련, 1.2 위험 관리, 1.3 운영, 1.4 점검 및 개선 순환 구조임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 530,
+    "question": "다음 중 DNSSEC의 주요 목적은?",
+    "options": [
+      "DNS 속도 향상",
+      "DNS 응답의 무결성 및 인증 제공",
+      "DNS 서버 용량 증가",
+      "웹사이트 디자인"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② DNS 응답의 무결성 및 인증 제공 DNSSEC(DNS Security Extensions)은 디지털 서명을 통해 DNS 응답의 무결성과 인증을 제공합니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 531,
+    "question": "ISMS-P 인증 기준에서 '망분리' 대상(개인정보처리시스템 등)에 대한 접속 통제 요건은?",
+    "options": [
+      "모든 단말기에서 자유롭게 접속",
+      "PC방에서도 접속 허용",
+      "비밀번호 없이 접속",
+      "관리자 단말기 등은 인터넷망과 분리하거나 안전한 접속 수단 적용"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 관리자 단말기 등은 인터넷망과 분리하거나 안전한 접속 수단 적용 중요 정보 접근 단말은 외부 위협으로부터 격리되어야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 532,
+    "question": "공공기관이 개인정보파일을 운용할 때, 그 운용의 영향이 클 경우 실시해야 하는 평가는?",
+    "options": [
+      "개인정보 영향평가 (PIA)",
+      "위험 평가",
+      "취약점 분석평가",
+      "보안성 검토"
+    ],
+    "answer": 0,
+    "explanation": "5만 명 이상의 정보주체 등 일정 기준 이상의 파일을 구축할 때 PIA가 의무임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 533,
+    "question": "RAID 레벨 중 미러링 기법을 사용하는 것은?",
+    "options": [
+      "RAID 0",
+      "RAID 1",
+      "RAID 5",
+      "RAID 6"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② RAID 1 RAID 1은 동일한 데이터를 두 개의 디스크에 미러링하여 저장하는 방식입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 534,
+    "question": "다음 중 Endpoint Security의 구성요소가 아닌 것은?",
+    "options": [
+      "안티바이러스",
+      "EDR",
+      "DLP",
+      "라우터"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 라우터 Endpoint Security는 단말기 보안을 위한 솔루션으로 안티바이러스, EDR, DLP 등을 포함하며, 라우터는 네트워크 장비입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 535,
+    "question": "웹 취약점 스캐너 'OWASP ZAP'이 제공하는 기능이 아닌 것은?",
+    "options": [
+      "자동 취약점 스캔",
+      "소스 코드 정적 분석 (Static Analysis)",
+      "프록시를 통한 패킷 변조",
+      "스파이더링"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 소스 코드 정적 분석 (Static Analysis) ZAP은 동적 분석(DAST) 도구임. 소스 코드를 직접 보는 정적 분석(SAST) 도구가 아님.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 536,
+    "question": "다음 중 PAM(Pluggable Authentication Modules) 설정 파일에서 'required' 모듈의 동작 방식은?",
+    "options": [
+      "선택 사항임",
+      "실패하더라도 즉시 리턴하지 않고 나머지 모듈을 계속 수행한 뒤 최종적으로 실패 처리함",
+      "성공하면 즉시 성공 리턴",
+      "실패하면 즉시 실패 리턴"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 실패하더라도 즉시 리턴하지 않고 나머지 모듈을 계속 수행한 뒤 최종적으로 실패 처리함 공격자가 어느 단계에서 틀렸는지 알 수 없게 하기 위해 검증 과정을 끝까지 진행함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 537,
+    "question": "암호 분석(Cryptanalysis) 기법 중, 평문과 그에 대응하는 암호문 쌍을 알고 있을 때 키를 찾아내는 공격은?",
+    "options": [
+      "암호문 단독 공격",
+      "선택 암호문 공격",
+      "알려진 평문 공격 (Known Plaintext Attack)",
+      "선택 평문 공격"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 알려진 평문 공격 (Known Plaintext Attack) 일부 평문-암호문 쌍(Known Plaintext)을 확보한 상태에서의 공격.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 538,
+    "question": "개인정보보호법에 따라 과징금 부과 기준이 되는 '전체 매출액'에서 제외되는 매출액은?",
+    "options": [
+      "위반행위와 관련 없는 매출액",
+      "국외 매출액",
+      "온라인 매출액",
+      "계열사 매출액"
+    ],
+    "answer": 0,
+    "explanation": "개정법에 따라 '전체 매출액' 기준이나, 위반과 무관함을 입증하면 제외됨. (실질적으로 관련 매출액 중심)",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 539,
+    "question": "웹 애플리케이션에서 사용자가 입력한 데이터가 운영체제의 명령어 파라미터로 전달될 때, 적절한 검증 없이 실행되어 발생하는 취약점은?",
+    "options": [
+      "XSS",
+      "Command Injection",
+      "SQL Injection",
+      "Buffer Overflow"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Command Injection 시스템 명령어를 주입하여 실행시키는 공격(예: ; cat /etc/passwd).",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 540,
+    "question": "웹 취약점 점검 도구인 'Burp Suite'의 기능 중, 브라우저와 서버 사이의 트래픽을 가로채어 변조할 수 있게 해주는 기능은?",
+    "options": [
+      "Spider",
+      "Repeater",
+      "Proxy",
+      "Scanner"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Proxy Intercepting Proxy 기능을 통해 요청/응답 패킷을 중간에서 수정함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 541,
+    "question": "디지털 봉투(Digital Envelope) 기법에서 대칭키(비밀키)를 암호화할 때 사용하는 키는?",
+    "options": [
+      "송신자의 공개키",
+      "송신자의 개인키",
+      "수신자의 개인키",
+      "수신자의 공개키"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 수신자의 공개키 오직 수신자만이 자신의 개인키로 대칭키를 복호화할 수 있게 하기 위함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 542,
+    "question": "IPSec의 두 가지 동작 모드 중, IP 헤더를 포함한 패킷 전체를 암호화하고 새로운 IP 헤더를 붙이는 모드는?",
+    "options": [
+      "전송 모드(Transport Mode)",
+      "브리지 모드",
+      "링크 모드",
+      "터널 모드(Tunnel Mode)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 터널 모드(Tunnel Mode) VPN 등 게이트웨이 간 통신에 주로 사용되며, 원본 패킷 전체를 보호함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 543,
+    "question": "재해 복구 계획(DRP)에서, 재해 발생 시 데이터 손실을 허용할 수 있는 최대 시점(시간)을 의미하는 지표는?",
+    "options": [
+      "MTBF",
+      "MTTR",
+      "RPO (Recovery Point Objective, 목표 복구 시점)",
+      "RTO (Recovery Time Objective)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ RPO (Recovery Point Objective, 목표 복구 시점) 어느 시점까지의 데이터를 살려야 하는가(데이터 손실 허용량).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 544,
+    "question": "커베로스(Kerberos) 프로토콜의 가장 큰 단점 혹은 취약점은?",
+    "options": [
+      "속도가 너무 느리다.",
+      "KDC(Key Distribution Center)가 단일 실패 지점(SPOF)이 될 수 있다.",
+      "비밀번호를 사용하지 않는다.",
+      "암호화를 하지 않는다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② KDC(Key Distribution Center)가 단일 실패 지점(SPOF)이 될 수 있다. 중앙 집중식이므로 KDC가 다운되면 전체 인증이 마비됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 545,
+    "question": "다음 중 '주요정보통신기반시설' 보호지원 업무를 수행하는 기관은?",
+    "options": [
+      "통계청",
+      "한국인터넷진흥원 (KISA) 등 전담기관",
+      "국세청",
+      "경찰청"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 한국인터넷진흥원 (KISA) 등 전담기관 법령에 따라 KISA 등이 보호지원 전담기관으로 지정되어 취약점 분석 등을 지원함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 546,
+    "question": "암호화 알고리즘 사용 시 시큐어 코딩 가이드에서 권장하는 사항은?",
+    "options": [
+      "자체 개발한 암호 알고리즘 사용",
+      "MD5, DES 사용",
+      "키를 소스코드에 저장",
+      "검증된 표준 알고리즘(AES, SHA-256 등)과 충분한 키 길이를 사용함"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 검증된 표준 알고리즘(AES, SHA-256 등)과 충분한 키 길이를 사용함 취약한 알고리즘이나 자체 알고리즘은 사용을 피해야 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 547,
+    "question": "재난 발생 시 업무 연속성을 확보하기 위한 문서화된 계획을 무엇이라 하는가?",
+    "options": [
+      "NDA",
+      "SLA",
+      "BCP (Business Continuity Plan)",
+      "MOU"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ BCP (Business Continuity Plan) 재해 시 핵심 업무를 복구하고 재개하기 위한 계획.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 548,
+    "question": "다음 중 클라우드 서비스 보안 인증(CSAP)의 평가 기준은?",
+    "options": [
+      "관리적/물리적/기술적 보호조치 및 공공기관용 추가 보호조치",
+      "해외 진출 가능성",
+      "가격 경쟁력",
+      "서버 디자인"
+    ],
+    "answer": 0,
+    "explanation": "공공 부문 도입을 위한 보안 인증 제도.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 549,
+    "question": "소프트웨어 개발 보안(시큐어 코딩) 방법론 중, 입력값 검증 누락으로 인해 발생하는 취약점이 아닌 것은?",
+    "options": [
+      "Buffer Overflow",
+      "Race Condition",
+      "XSS",
+      "SQL Injection"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Race Condition 레이스 컨디션은 '동시성 제어(Concurrency)' 실패로 인한 문제임. 나머지는 입력값 검증 문제.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 550,
+    "question": "윈도우 명령 프롬프트에서 사용자 계정을 추가하거나 비밀번호를 변경하는 명령어는?",
+    "options": [
+      "net use",
+      "net localgroup",
+      "net share",
+      "net user"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ net user 'net user [ID] [PW] /add' 등의 형식으로 사용함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 551,
+    "question": "소스 코드 보안 약점 중, 정수형 변수의 범위를 넘어서는 값을 저장할 때 발생하는 문제는?",
+    "options": [
+      "Format String Bug",
+      "Race Condition",
+      "Integer Overflow (정수 오버플로우)",
+      "Buffer Overflow"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Integer Overflow (정수 오버플로우) 변수 타입의 허용 범위를 초과하여 의도치 않은 값(음수 등)으로 바뀌는 현상.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 552,
+    "question": "다음 중 'Fragment Offset' 필드는 무엇을 위해 사용되는가?",
+    "options": [
+      "서비스 품질",
+      "IP 패킷 분할 및 재조립",
+      "에러 검출",
+      "라우팅"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② IP 패킷 분할 및 재조립 MTU보다 큰 패킷이 쪼개질 때 각 조각의 위치를 나타냄.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 553,
+    "question": "데이터베이스 암호화 방식 중, 애플리케이션 서버(API) 단에서 암/복호화를 수행하는 방식은?",
+    "options": [
+      "API 방식",
+      "Plug-in 방식",
+      "TDE (Transparent Data Encryption) 방식",
+      "File 방식"
+    ],
+    "answer": 0,
+    "explanation": "DB 서버 부하를 줄일 수 있지만 애플리케이션 수정이 필요함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 554,
+    "question": "윈도우 시스템에서 'DLL Injection' 공격을 방어하기 위해, 프로세스가 서명된 MS 바이너리만 로드하도록 강제하는 보안 기술은?",
+    "options": [
+      "DEP",
+      "SEHOP",
+      "CIG (Code Integrity Guard)",
+      "ASLR"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ CIG (Code Integrity Guard) 코드 무결성 보호(CIG)는 서명되지 않은 DLL이 프로세스 메모리에 로드되는 것을 차단함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 555,
+    "question": "다음 중 '디지털 봉투 (Digital Envelope)' 기법의 원리는?",
+    "options": [
+      "메시지를 공개키로 바로 암호화",
+      "전자서명만 전송",
+      "메시지를 해시함",
+      "메시지는 대칭키로 암호화하고, 그 대칭키를 수신자의 공개키로 암호화하여 함께 전송"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 메시지는 대칭키로 암호화하고, 그 대칭키를 수신자의 공개키로 암호화하여 함께 전송 대칭키의 속도와 공개키의 키 배송 장점을 결합한 하이브리드 암호화 방식.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 556,
+    "question": "다음 중 '부채널 공격(Side Channel Attack)'의 유형에 해당하지 않는 것은?",
+    "options": [
+      "전력 분석 공격 (SPA/DPA)",
+      "전자기파 분석",
+      "Brute Force Attack",
+      "Timing Attack"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Brute Force Attack Brute Force는 수학적/논리적 전수 조사임. 부채널 공격은 물리적 특성(시간, 전력, 소리 등)을 분석하는 것.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 557,
+    "question": "Buffer Overflow 공격을 방어하기 위한 기법이 아닌 것은?",
+    "options": [
+      "ASLR",
+      "DEP",
+      "Stack Canary",
+      "SQL 파라미터화"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ SQL 파라미터화 SQL 파라미터화는 SQL Injection 방어 기법이며, Buffer Overflow 방어 기법이 아닙니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 558,
+    "question": "개인정보보호법 제39조의6(개인정보 유출 시 손해배상책임)에 따른 '징벌적 손해배상' 제도는 실제 손해액의 몇 배까지 배상할 수 있는가?",
+    "options": [
+      "10배 이내",
+      "2배 이내",
+      "3배 이내 (최대 3배)",
+      "5배 이내"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 3배 이내 (최대 3배) 고의 또는 중대한 과실로 유출 시 손해액의 3배 이내에서 배상 책임을 물을 수 있음.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 559,
+    "question": "정보보안의 3대 요소(CIA Triad) 중, 오직 인가된 사용자만이 정보를 수정할 수 있으며, 정보의 정확성과 완전성을 보장하는 성질은?",
+    "options": [
+      "기밀성 (Confidentiality)",
+      "인증 (Authentication)",
+      "무결성 (Integrity)",
+      "가용성 (Availability)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 무결성 (Integrity) 정보가 위/변조되지 않았음을 보장하는 성질.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 560,
+    "question": "다음 중 Mandatory Access Control(MAC)이 사용되는 환경은?",
+    "options": [
+      "일반 기업 환경",
+      "군사 및 정부 기밀 시스템",
+      "개인 PC",
+      "공개 웹사이트"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 군사 및 정부 기밀 시스템 MAC은 높은 수준의 보안이 요구되는 군사 및 정부 기밀 시스템에서 주로 사용됩니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 561,
+    "question": "다음 중 'Drive-by Download' 공격의 특징은?",
+    "options": [
+      "사용자가 직접 다운로드 버튼을 눌러야 함",
+      "USB를 꽂아야 함",
+      "사용자가 악성 웹사이트에 방문하기만 해도 자동으로 악성코드가 다운로드 및 실행됨",
+      "이메일 첨부파일을 실행해야 함"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 사용자가 악성 웹사이트에 방문하기만 해도 자동으로 악성코드가 다운로드 및 실행됨 브라우저나 플러그인의 취약점을 이용하여 사용자 모르게 감염시킴.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 562,
+    "question": "개인정보 손실 사고 시의 법적 조치로 적절한 것은?",
+    "options": [
+      "손해배상 청구",
+      "데이터 압축",
+      "시스템 재부팅",
+      "UI 개선"
+    ],
+    "answer": 0,
+    "explanation": "개인정보 손실은 법적으로 손해배상 청구가 가능합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 563,
+    "question": "재해 복구 시스템(DRS)의 운용 형태 중, 주 센터와 동일한 자원을 보유하고 실시간으로 데이터를 동기화하여 재해 시 즉시 복구가 가능한 방식은?",
+    "options": [
+      "Warm Site",
+      "Cold Site",
+      "Mirror Site",
+      "Hot Site"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Mirror Site 미러 사이트는 RTO(목표 복구 시간)가 0에 가까운 즉시 복구 방식임. 핫 사이트도 빠르지만 약간의 딜레이(수 시간)가 있을 수 있음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 564,
+    "question": "ISMS-P 인증 기준 2.1.3 '위험 평가'에서 위험을 수용할 수 있는 수준(DoA, Degree of Assurance/Acceptance)을 결정하는 주체는?",
+    "options": [
+      "실무 담당자",
+      "경영진 (정보보호 위원회 등)",
+      "외부 컨설턴트",
+      "KISA"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 경영진 (정보보호 위원회 등) 위험 수용 수준은 조직의 리스크 선호도에 따라 경영진이 승인해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 565,
+    "question": "ISMS-P 통제항목 중 '침해사고 관리'에서 사고 발생 시 수행해야 할 활동 순서로 가장 적절한 것은?",
+    "options": [
+      "복구 -> 탐지 -> 분석 -> 보고",
+      "보고 -> 복구 -> 탐지 -> 분석",
+      "탐지 및 보고 -> 초기 대응 -> 조사 및 분석 -> 복구 및 종결",
+      "분석 -> 탐지 -> 보고 -> 복구"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 탐지 및 보고 -> 초기 대응 -> 조사 및 분석 -> 복구 및 종결 일반적인 사고 대응 절차(IR)를 따름.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 566,
+    "question": "웹 애플리케이션 보안 헤더 중, 브라우저가 페이지를 iframe 등으로 렌더링하는 것을 제한하여 클릭재킹(Clickjacking)을 방지하는 헤더는?",
+    "options": [
+      "Strict-Transport-Security",
+      "X-Frame-Options",
+      "X-XSS-Protection",
+      "Content-Security-Policy"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② X-Frame-Options DENY 또는 SAMEORIGIN 설정을 통해 프레임 내 로딩을 제어함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 567,
+    "question": "시스템 접근 로그의 보관 기간을 규정하는 기준은?",
+    "options": [
+      "개인정보보호법",
+      "저작권법",
+      "형법",
+      "노동법"
+    ],
+    "answer": 0,
+    "explanation": "개인정보보호법에서는 시스템 로그의 보관 및 삭제 기준을 명확히 규정합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 568,
+    "question": "다음 중 Security Orchestration의 주요 목적은?",
+    "options": [
+      "보안 도구들의 자동화 및 통합",
+      "파일 백업",
+      "네트워크 라우팅",
+      "웹사이트 디자인"
+    ],
+    "answer": 0,
+    "explanation": "Security Orchestration은 여러 보안 도구와 프로세스를 자동화하고 통합하여 효율적인 보안 운영을 지원합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 569,
+    "question": "정보통신기반보호법에 따라 주요정보통신기반시설의 취약점 분석·평가는 최소 얼마 주기로 실시해야 하는가?",
+    "options": [
+      "2년마다",
+      "매년",
+      "매월",
+      "분기별"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 매년 관리기관의 장은 매년 취약점 분석/평가를 실시해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 570,
+    "question": "웹 애플리케이션에서 사용자의 입력값을 검증하지 않고 그대로 웹 브라우저에 출력하여, 악성 스크립트가 실행되게 만드는 공격은?",
+    "options": [
+      "Command Injection",
+      "XSS (Cross Site Scripting)",
+      "SQL Injection",
+      "CSRF"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② XSS (Cross Site Scripting) 공격자가 심어둔 스크립트가 피해자의 브라우저에서 실행되어 세션 탈취 등을 일으킴.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 571,
+    "question": "IP 주소를 MAC 주소로 변환하는 프로토콜은 무엇인가?",
+    "options": [
+      "ICMP",
+      "RARP",
+      "DHCP",
+      "ARP"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ARP ARP(Address Resolution Protocol)는 IP 주소를 이용해 해당 기기의 MAC 주소를 알아내는 프로토콜임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 572,
+    "question": "다음 중 Active Directory 환경에서 네트워크 자원 접근 인증을 위해 사용하는 기본 프로토콜은?",
+    "options": [
+      "Kerberos",
+      "RADIUS",
+      "LDAP",
+      "NTLM"
+    ],
+    "answer": 0,
+    "explanation": "AD 도메인 환경의 기본 인증 프로토콜은 티켓 기반의 Kerberos임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 573,
+    "question": "다음 중 'MAC (Mandatory Access Control, 강제적 접근통제)'의 특징은?",
+    "options": [
+      "사용자가 권한을 변경할 수 있음",
+      "보안 등급(Label)과 허가 등급(Clearance)을 비교하여 시스템이 강제로 접근을 제어함",
+      "유연성이 가장 높음",
+      "역할 기반임"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 보안 등급(Label)과 허가 등급(Clearance)을 비교하여 시스템이 강제로 접근을 제어함 군사적 목적으로 개발되었으며 기밀성이 높음 (예: BLP 모델).",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 574,
+    "question": "암호화 기술 중 'LEA (Lightweight Encryption Algorithm)'는 어떤 환경을 위해 개발되었는가?",
+    "options": [
+      "군사 기지",
+      "대형 메인프레임",
+      "금융 서버",
+      "IoT, 모바일 등 경량 고속 환경"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ IoT, 모바일 등 경량 고속 환경 대한민국 국가보안기술연구소(NSR)가 개발한 경량 블록 암호.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 575,
+    "question": "앱 접근 권한(스마트폰 앱)에 대해 이용자에게 알려야 할 사항이 아닌 것은?",
+    "options": [
+      "권한 설정 방법",
+      "접근 권한이 필요한 항목 및 이유",
+      "개발자의 집 주소",
+      "선택적 접근 권한의 경우 동의하지 않아도 서비스 이용 가능함"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 개발자의 집 주소 접근 권한의 필요성과 선택권 보장 여부를 알려야 함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 576,
+    "question": "SSL VPN의 장점에 해당하는 것은?",
+    "options": [
+      "설치가 복잡하다",
+      "브라우저만으로 접속 가능",
+      "고정 IP 필요",
+      "전용 소프트웨어 요구"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 브라우저만으로 접속 가능 SSL VPN은 웹 브라우저만으로도 쉽게 접속 가능합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 577,
+    "question": "난수 생성기의 종류 중, 하드웨어 노이즈 등을 이용하여 예측 불가능한 진성 난수를 생성하는 것은?",
+    "options": [
+      "TRNG (True Random Number Generator)",
+      "Linear Congruential",
+      "DRBG",
+      "PRNG (Pseudo RNG)"
+    ],
+    "answer": 0,
+    "explanation": "물리적 현상(열 잡음 등)을 기반으로 완전한 무작위 수를 만듦.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 578,
+    "question": "ISMS-P 인증 심사에서 '결함' 판정을 받았을 때, 보완 조치를 완료해야 하는 기간은 최대 며칠인가?",
+    "options": [
+      "1년",
+      "7일",
+      "최대 100일 (기본 40일 + 연장)",
+      "30일"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 최대 100일 (기본 40일 + 연장) 기본 40일 이내 조치해야 하며, 불가피한 경우 최대 60일까지 연장 가능 (총 100일).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 579,
+    "question": "개인정보 처리자가 개인정보를 수집할 수 있는 '정당한 이익'의 요건이 아닌 것은?",
+    "options": [
+      "명백하게 정보주체의 권리보다 우선할 것",
+      "이익 달성을 위해 필요한 범위를 초과할 것",
+      "정당한 이익과 상당한 관련성이 있을 것",
+      "합리적인 범위를 초과하지 않을 것"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 이익 달성을 위해 필요한 범위를 초과할 것 필요한 범위를 초과하면 안 됨.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 580,
+    "question": "다음 중 'SSRF (Server-Side Request Forgery)' 공격 시 공격자가 주로 노리는 대상은?",
+    "options": [
+      "외부의 공개 웹사이트",
+      "사용자의 PC",
+      "서버 내부망의 비공개 시스템이나 클라우드 메타데이터 서비스",
+      "DNS 서버"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 서버 내부망의 비공개 시스템이나 클라우드 메타데이터 서비스 웹 서버를 통해 외부에서 접근 불가능한 내부 자원에 접근함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 581,
+    "question": "다음 중 정보 유출 방지 목적에 부합하는 것은?",
+    "options": [
+      "접근권한 제한",
+      "모든 자료 공개",
+      "무단 배포",
+      "무작위 삭제"
+    ],
+    "answer": 0,
+    "explanation": "접근권한 제한 등이 유출 방지에 효과적입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 582,
+    "question": "개인정보 분쟁조정위원회의 조정안을 양 당사자가 수락했을 때의 법적 효력은?",
+    "options": [
+      "행정 처분",
+      "효력 없음",
+      "재판상 화해와 동일한 효력",
+      "단순 권고"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 재판상 화해와 동일한 효력 확정 판결과 동일한 효력을 가져 강제 집행이 가능함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 583,
+    "question": "다음 중 자바(Java) 시큐어 코딩 가이드에서 'NullPointerException'을 방지하기 위한 방법은?",
+    "options": [
+      "try-catch 구문 사용 금지",
+      "Garbage Collection 강제 실행",
+      "객체 사용 전 null 여부 검사",
+      "모든 변수를 static으로 선언"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 객체 사용 전 null 여부 검사 널 포인터 역참조 오류를 막기 위해 사용 전 반드시 null 체크를 수행해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 584,
+    "question": "XSS(Cross Site Scripting) 공격의 주요 목적으로 가장 적절한 것은?",
+    "options": [
+      "사용자 세션 쿠키 탈취",
+      "시스템 파일 변조",
+      "웹 서버 권한 획득",
+      "데이터베이스 삭제"
+    ],
+    "answer": 0,
+    "explanation": "XSS는 클라이언트(브라우저)에서 악성 스크립트를 실행시켜 사용자의 세션 ID(쿠키) 등을 탈취하는 것이 주 목적임.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 585,
+    "question": "개인정보 보호법 상 개인정보를 '제3자에게 제공'할 때 정보주체에게 알려야 할 사항이 아닌 것은?",
+    "options": [
+      "제공받는 자의 성명(법인명)",
+      "제공받는 자의 개인정보 이용 목적",
+      "제공하는 개인정보의 항목",
+      "제공하는 자의 자본금 규모"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 제공하는 자의 자본금 규모 자본금은 고지 의무 사항이 아님.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 586,
+    "question": "리눅스 시스템에서 'Sticky Bit'가 설정된 '/tmp' 디렉터리의 보안상 특징은?",
+    "options": [
+      "파일 내용을 볼 수 없음",
+      "파일 실행이 불가능함",
+      "누구나 파일을 삭제할 수 있음",
+      "파일 소유자와 root만이 해당 파일을 삭제할 수 있음"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 파일 소유자와 root만이 해당 파일을 삭제할 수 있음 공용 디렉터리에서 다른 사용자가 내 파일을 함부로 지우지 못하게 함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 587,
+    "question": "개인정보보호법에 따라 '개인정보 처리방침'에 반드시 포함되어야 할 사항이 아닌 것은?",
+    "options": [
+      "개인정보의 처리 목적",
+      "처리하는 개인정보 항목",
+      "개인정보의 보유 및 이용 기간",
+      "개인정보 처리 담당 부서의 회식 일정"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 개인정보 처리 담당 부서의 회식 일정 회식 일정은 개인정보 처리와 무관함. 권리 행사 방법 등이 포함되어야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 588,
+    "question": "개인정보 비식별 조치 기법 중, 데이터의 평균과 같은 통계값만을 보여주는 방법은?",
+    "options": [
+      "데이터 삭제",
+      "총계 처리 (Aggregation)",
+      "가명 처리",
+      "범주화"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 총계 처리 (Aggregation) 개별 데이터 대신 합계, 평균 등 집계된 값을 제공하여 개인을 식별 못하게 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 589,
+    "question": "다음 중 'Salt'를 해시 함수에 사용하는 주된 이유는?",
+    "options": [
+      "동일한 패스워드라도 다른 해시값을 갖게 하여 레인보우 테이블 공격을 방어함",
+      "암호화 속도를 높임",
+      "해시 길이를 늘림",
+      "복호화를 가능하게 함"
+    ],
+    "answer": 0,
+    "explanation": "사전 계산된 테이블 공격을 무력화함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 590,
+    "question": "전자상거래 보안 프로토콜 중, 신용카드 결제 시 카드 소지자, 상점, 지불 게이트웨이 간의 상호 인증과 암호화를 제공하기 위해 개발된(현재는 거의 안 쓰임) 표준은?",
+    "options": [
+      "HTTPS",
+      "SSL",
+      "SET (Secure Electronic Transaction)",
+      "IPSec"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ SET (Secure Electronic Transaction) 비자(Visa)와 마스터(Master) 카드가 개발했으나 복잡성과 비용 문제로 SSL/TLS에 밀림.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 591,
+    "question": "전자서명 생성 시 서명자는 자신의 무엇을 이용하여 서명하는가?",
+    "options": [
+      "개인키 (Private Key)",
+      "대칭키",
+      "인증서",
+      "공개키"
+    ],
+    "answer": 0,
+    "explanation": "자신만 가진 개인키로 서명해야 본인임을 증명할 수 있음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 592,
+    "question": "다음 중 'APT (Advanced Persistent Threat)' 공격의 방어 대책으로, 외부에서 유입된 파일을 가상 환경에서 실행해보고 악성 여부를 판단하는 솔루션은?",
+    "options": [
+      "Sandboxing (Sandbox)",
+      "WAF",
+      "Firewall",
+      "VPN"
+    ],
+    "answer": 0,
+    "explanation": "알려지지 않은 위협을 탐지하기 위해 격리된 공간(샌드박스)에서 행위를 분석함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 593,
+    "question": "i-PIN(Internet Personal Identification Number)은 주민등록번호를 대체하기 위한 수단이다. i-PIN의 인증 방식이 아닌 것은?",
+    "options": [
+      "휴대폰 인증",
+      "대면 확인",
+      "신체 특징 인증",
+      "공인인증서"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 신체 특징 인증 i-PIN 발급 시 신원 확인 수단으로 생체 정보는 직접 쓰이지 않음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 594,
+    "question": "Kerberos 인증 시스템에서 티켓을 발급하는 서버는?",
+    "options": [
+      "Authentication Server",
+      "TGS(Ticket Granting Server)",
+      "Service Server",
+      "① 및 ②"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ① 및 ② Kerberos에서 AS는 초기 티켓(TGT)을, TGS는 서비스 티켓을 발급하므로 둘 다 티켓 발급 역할을 합니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 595,
+    "question": "무선 네트워크에서 'SSID Broadcasting'을 비활성화(Disable)하면 얻을 수 있는 효과는?",
+    "options": [
+      "암호화가 강화된다",
+      "전송 속도가 빨라진다",
+      "해킹이 불가능해진다",
+      "AP의 이름이 목록에 보이지 않아 일반 사용자의 접근을 1차적으로 숨길 수 있다 (보안성은 낮음)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ AP의 이름이 목록에 보이지 않아 일반 사용자의 접근을 1차적으로 숨길 수 있다 (보안성은 낮음) 스캐너로는 탐지되지만, 일반 목록에서는 숨겨져 호기심에 의한 접속 시도를 줄임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 596,
+    "question": "다음 중 Server-Side Request Forgery(SSRF) 공격의 목적은?",
+    "options": [
+      "클라이언트 공격",
+      "서버를 통해 내부 시스템 접근",
+      "파일 암호화",
+      "네트워크 속도 측정"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 서버를 통해 내부 시스템 접근 SSRF 공격은 서버가 공격자가 지정한 내부 또는 외부 리소스에 요청을 보내도록 하여 내부 시스템에 접근합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 597,
+    "question": "공격자가 출발지 IP 주소를 공격 대상의 IP로 위조하여, 다수의 시스템에 ICMP Echo Request를 브로드캐스트함으로써 공격 대상에게 대량의 응답이 쏟아지게 하는 공격은?",
+    "options": [
+      "Smurf Attack",
+      "Land Attack",
+      "Teardrop",
+      "Ping of Death"
+    ],
+    "answer": 0,
+    "explanation": "증폭 네트워크(Amplifier)를 이용한 반사 공격의 일종.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 598,
+    "question": "다음 중 'Domain Shadowing' 공격이란?",
+    "options": [
+      "공격자가 탈취한 정상 도메인의 서브 도메인을 생성하여 악성 행위에 사용함",
+      "DNS 서버를 다운시킴",
+      "도메인을 삭제함",
+      "비슷한 도메인을 만듦"
+    ],
+    "answer": 0,
+    "explanation": "정상 도메인의 평판을 이용하기 위해 몰래 서브 도메인을 등록해 씀.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 599,
+    "question": "다음 중 '사회 공학(Social Engineering)' 기법 중, 쓰레기통을 뒤져 정보를 수집하는 행위는?",
+    "options": [
+      "Phishing",
+      "Dumpster Diving",
+      "Shoulder Surfing",
+      "Piggybacking"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Dumpster Diving 버려진 문서나 저장매체에서 정보를 찾는 물리적 사회 공학 기법.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 600,
+    "question": "정보통신망 이용촉진 및 정보보호 등에 관한 법률(망법)에서 규정하는 '이용자'란?",
+    "options": [
+      "사업자",
+      "외국인만 해당",
+      "정보통신서비스 제공자가 제공하는 서비스를 이용하는 자",
+      "공무원"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 정보통신서비스 제공자가 제공하는 서비스를 이용하는 자 서비스를 이용하는 회원 및 비회원을 포함함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 601,
+    "question": "다음 중 메일 서버(SMTP)에서 제3자가 메일을 마음대로 발송하지 못하도록 막는 설정은?",
+    "options": [
+      "첨부파일 제한",
+      "배너 변경",
+      "Relay 제한 (Open Relay 방지)",
+      "포트 변경"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Relay 제한 (Open Relay 방지) 스팸 메일 경유지로 악용되지 않도록 릴레이를 허용된 IP에만 열어둬야 함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 602,
+    "question": "다음 중 'Mass Assignment' (또는 Over-posting) 취약점이란?",
+    "options": [
+      "SQL 쿼리를 대량으로 보냄",
+      "변수 할당을 하지 않음",
+      "클라이언트가 전송한 데이터(JSON 등)를 모델 객체에 매핑할 때, 수정해선 안 되는 필드(권한, 잔고 등)까지 일괄 매핑되어 변조되는 것",
+      "대량의 데이터를 전송하는 공격"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 클라이언트가 전송한 데이터(JSON 등)를 모델 객체에 매핑할 때, 수정해선 안 되는 필드(권한, 잔고 등)까지 일괄 매핑되어 변조되는 것 모델 바인딩 시 입력 필드를 제한하지 않아 발생하는 논리적 취약점.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 603,
+    "question": "ARP Request 패킷은 네트워크상에 어떤 방식으로 전송되는가?",
+    "options": [
+      "Broadcast (브로드캐스트)",
+      "Anycast",
+      "Multicast",
+      "Unicast"
+    ],
+    "answer": 0,
+    "explanation": "목적지 MAC을 모르므로 FF:FF:FF:FF:FF:FF로 전체에 뿌림.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 604,
+    "question": "다음 중 버퍼 오버플로우 공격의 일종으로, 스택(Stack)이 아닌 힙(Heap) 영역의 동적 메모리 할당을 악용하는 공격은?",
+    "options": [
+      "Format String Bug",
+      "Stack Smashing",
+      "Heap Overflow",
+      "Race Condition"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Heap Overflow 동적으로 할당되는 힙 메모리 영역의 경계를 넘어 데이터를 덮어쓰는 공격.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 605,
+    "question": "다음 중 윈도우의 'BitLocker' 기능에 대한 설명으로 가장 적절한 것은?",
+    "options": [
+      "볼륨 전체를 암호화하여 데이터 유출을 방지한다.",
+      "개별 파일 단위의 암호화를 제공한다.",
+      "메일 서버의 전송 구간을 암호화한다.",
+      "네트워크 트래픽을 암호화한다."
+    ],
+    "answer": 0,
+    "explanation": "BitLocker는 디스크 볼륨 전체를 암호화하는 윈도우의 기능임 (EFS가 파일 단위).",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 606,
+    "question": "무선 네트워크에서 AP(Access Point)가 자신의 존재(SSID 등)를 알리기 위해 주기적으로 방송하는 프레임은?",
+    "options": [
+      "Association Request",
+      "Beacon Frame",
+      "Data Frame",
+      "Probe Request"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Beacon Frame 비콘 프레임은 AP가 자신의 정보를 클라이언트들에게 알리는 방송 신호임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 607,
+    "question": "다음 중 '정보보호산업법'에 따른 정보보호 공시 내용에 포함되지 않는 것은?",
+    "options": [
+      "정보보호 인력 현황",
+      "정보보호 활동 현황",
+      "임직원의 연봉 상세 내역",
+      "정보보호 투자 현황"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 임직원의 연봉 상세 내역 공시 대상은 투자, 인력, 인증 취득 등의 활동 현황임. 개인 연봉은 아님.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 608,
+    "question": "FIDO (Fast Identity Online) 기술의 핵심 특징은?",
+    "options": [
+      "생체 정보를 서버에 모아서 관리함",
+      "카드를 사용함",
+      "생체 정보는 사용자 단말에만 저장되고, 서버에는 공개키만 등록되어 인증 수행 (서버 해킹 시 생체 정보 유출 방지)",
+      "비밀번호를 길게 만듦"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 생체 정보는 사용자 단말에만 저장되고, 서버에는 공개키만 등록되어 인증 수행 (서버 해킹 시 생체 정보 유출 방지) UAF, U2F 등의 프로토콜이 있으며 비밀번호 없는 인증을 지향함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 609,
+    "question": "정보통신망법에 따라 주요 정보통신서비스 제공자는 서비스의 안정성 확보를 위해 무엇을 수행해야 하는가?",
+    "options": [
+      "해외 서버 사용 금지",
+      "매일 서버 재부팅",
+      "오픈소스 사용 금지",
+      "서버 접속 기록의 위조/변조 방지 조치 등 기술적/관리적 보호조치"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 서버 접속 기록의 위조/변조 방지 조치 등 기술적/관리적 보호조치 서비스 안정성과 보안을 위한 필수 조치들을 이행해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 610,
+    "question": "다음 중 '제로 트러스트(Zero Trust)' 보안 모델의 핵심 원칙은?",
+    "options": [
+      "절대 신뢰하지 말고 항상 검증하라 (Never Trust, Always Verify)",
+      "내부망은 신뢰한다",
+      "한 번 인증하면 영구 신뢰한다",
+      "경계 보안만 강화한다"
+    ],
+    "answer": 0,
+    "explanation": "내/외부 구분 없이 모든 접근 요청을 의심하고 검증하는 모델.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 611,
+    "question": "리눅스 시스템에서 'Ransomware'에 감염되었을 때 나타나는 전형적인 증상은?",
+    "options": [
+      "네트워크 연결이 끊어짐",
+      "모니터가 꺼짐",
+      "중요 파일들의 확장자가 변경되고 암호화되어 열리지 않음",
+      "시스템 속도가 빨라짐"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 중요 파일들의 확장자가 변경되고 암호화되어 열리지 않음 파일을 인질로 잡고 금전을 요구함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 612,
+    "question": "웹 브라우저가 'HttpOnly' 쿠키에 접근하지 못하게 하는 대상은?",
+    "options": [
+      "사용자",
+      "자바스크립트 (document.cookie)",
+      "서버",
+      "네트워크 스니퍼"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 자바스크립트 (document.cookie) HttpOnly 플래그가 설정되면 클라이언트 스크립트로 쿠키를 읽을 수 없어 XSS 쿠키 탈취를 막음.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 613,
+    "question": "공개키 암호 알고리즘인 RSA의 안전성은 어떤 수학적 난제에 기반하는가?",
+    "options": [
+      "소인수분해 (Integer Factorization)",
+      "이산대수 (Discrete Logarithm)",
+      "타원곡선 (Elliptic Curve)",
+      "배낭 문제 (Knapsack)"
+    ],
+    "answer": 0,
+    "explanation": "아주 큰 두 소수의 곱을 다시 소인수분해하는 것이 어렵다는 점을 이용함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 614,
+    "question": "리눅스의 'sudo' 명령어는 어떤 접근 통제 메커니즘과 관련이 깊은가?",
+    "options": [
+      "암호화",
+      "접근 차단",
+      "부인 방지",
+      "권한 위임 및 권한 상승 (Privilege Escalation)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 권한 위임 및 권한 상승 (Privilege Escalation) 일반 사용자가 잠시 관리자 권한을 빌려 쓰는 것.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 615,
+    "question": "정보보호 위험 관리에서 위험을 구성하는 3요소가 아닌 것은?",
+    "options": [
+      "비용 (Cost)",
+      "취약점 (Vulnerability)",
+      "위협 (Threat)",
+      "자산 (Asset)"
+    ],
+    "answer": 0,
+    "explanation": "위험(Risk) = 자산 x 위협 x 취약점으로 산정함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 616,
+    "question": "네트워크 스위치에서 'VLAN Hopping' 공격 중 'Double Tagging' 기법을 막기 위한 대책은?",
+    "options": [
+      "STP 활성화",
+      "Native VLAN을 사용하지 않거나, Native VLAN의 ID를 사용하지 않는 번호로 변경",
+      "허브 사용",
+      "포트 미러링"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Native VLAN을 사용하지 않거나, Native VLAN의 ID를 사용하지 않는 번호로 변경 공격자가 Native VLAN을 이용해 태그를 두 번 붙여 다른 VLAN으로 넘어가는 것을 방지함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 617,
+    "question": "보안 장비의 주기적 점검 목적은?",
+    "options": [
+      "장비 감가상각",
+      "정상 동작 및 최신 상태 유지",
+      "네트워크 속도 증가",
+      "인증서 폐기"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정상 동작 및 최신 상태 유지 주기적 점검은 장비의 정상 동작과 최신 상태 유지가 목적입니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 618,
+    "question": "데이터베이스 보안 통제 기법 중, 낮은 보안 등급의 정보들을 결합하여 높은 등급의 정보를 알아내는 것을 방지하는 것은?",
+    "options": [
+      "추론(Inference) 통제",
+      "접근 통제",
+      "뷰(View) 사용",
+      "집성(Aggregation) 통제"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 집성(Aggregation) 통제 집성(Aggregation)은 다수의 하위 정보를 모아 상위 정보를 알아내는 것을 막는 것. 추론은 없는 정보를 유추하는 것을 막는 것. (둘은 밀접하나 문제 맥락상 다수 정보 결합은 집성)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 619,
+    "question": "다음 중 페이크 AP(Fake Access Point) 공격의 목적은?",
+    "options": [
+      "네트워크 속도 향상",
+      "사용자의 네트워크 트래픽 도청",
+      "데이터 압축",
+      "바이러스 탐지"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 사용자의 네트워크 트래픽 도청 위장된 AP로 사용자를 유인하여 트래픽을 도청하는 것이 목적입니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 620,
+    "question": "기업 정보보호 정책(Security Policy)의 계층 구조 중 최상위 문서는?",
+    "options": [
+      "지침 (Guideline)",
+      "표준 (Standard)",
+      "절차 (Procedure)",
+      "정보보호 정책 (Policy)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 정보보호 정책 (Policy) 경영진의 의지를 담은 최상위 문서.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 621,
+    "question": "다음 중 '마이데이터(MyData)' 사업(본인신용정보관리업)의 핵심 권리인 '개인신용정보 전송요구권'이란?",
+    "options": [
+      "데이터를 수정하라는 권리",
+      "정보주체가 자신이 보유한 정보를 제3자(마이데이터 사업자 등)에게 전송해 줄 것을 요구하는 권리",
+      "데이터를 판매할 권리",
+      "데이터를 삭제하라는 권리"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 정보주체가 자신이 보유한 정보를 제3자(마이데이터 사업자 등)에게 전송해 줄 것을 요구하는 권리 흩어진 내 정보를 통합 관리하기 위해 사업자 간 데이터 이동을 요구할 수 있음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 622,
+    "question": "다음 중 '정보통신기반보호위원회'의 위원장은 누구인가?",
+    "options": [
+      "국무조정실장",
+      "국정원장",
+      "대통령",
+      "과학기술정보통신부 장관"
+    ],
+    "answer": 0,
+    "explanation": "기반시설 보호 정책 심의를 위한 위원회 위원장은 국무조정실장이 맡음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 623,
+    "question": "다음 중 블록체인의 'Smart Contract(스마트 계약)'의 특징은?",
+    "options": [
+      "사람이 수동으로 실행함",
+      "계약 조건이 코드로 구현되어 조건 충족 시 자동으로 이행됨",
+      "수정이 자유로움",
+      "법적 구속력이 없음"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 계약 조건이 코드로 구현되어 조건 충족 시 자동으로 이행됨 자동화되고 신뢰할 수 있는 계약 이행을 보장함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 624,
+    "question": "IDS의 탐지 오류 중, 정상적인 행위를 공격으로 잘못 판단하는 것은?",
+    "options": [
+      "False Positive (오탐)",
+      "True Negative",
+      "True Positive",
+      "False Negative (미탐)"
+    ],
+    "answer": 0,
+    "explanation": "양치기 소년처럼 거짓 경보를 울리는 경우.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 625,
+    "question": "암호화 키 분배 방식 중, 중앙의 신뢰된 제3자(KDC)가 사용자 간의 세션 키를 생성하여 분배하는 방식은?",
+    "options": [
+      "RSA",
+      "Needham-Schroeder 프로토콜 (Kerberos)",
+      "ElGamal",
+      "Diffie-Hellman"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Needham-Schroeder 프로토콜 (Kerberos) 대칭키 기반의 키 분배 센터(KDC) 모델임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 626,
+    "question": "인증서 폐기(Revocation) 사유가 아닌 것은?",
+    "options": [
+      "개인키 유출",
+      "유효기간 만료",
+      "사용자 요청",
+      "서버 속도 저하"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 서버 속도 저하 서버 속도 저하는 폐기 사유가 아닙니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 627,
+    "question": "TLS 1.3에서 핸드셰이크 속도 향상을 위해 도입된 기능으로, 이전에 접속했던 서버에 재접속 시 라운드 트립 없이 데이터를 바로 전송하는 기술은?",
+    "options": [
+      "0-RTT (Zero Round Trip Time)",
+      "False Start",
+      "Session Ticket",
+      "TCP Fast Open"
+    ],
+    "answer": 0,
+    "explanation": "보안성과 속도를 동시에 잡기 위한 TLS 1.3의 핵심 기능 중 하나임. (단, 재전송 공격 위험 고려 필요)",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 628,
+    "question": "다음 중 '사이버 위기 경보' 단계(4단계) 순서가 올바른 것은?",
+    "options": [
+      "초기 -> 중기 -> 말기 -> 완료",
+      "관심 -> 주의 -> 경계 -> 심각",
+      "주의 -> 관심 -> 심각 -> 경계",
+      "정상 -> 주의 -> 경고 -> 위험"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 관심 -> 주의 -> 경계 -> 심각 Blue -> Yellow -> Orange -> Red 순서임.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 629,
+    "question": "암호화된 데이터를 복호화하지 않고도 연산(검색, 통계 등)을 수행할 수 있는 차세대 암호 기술은?",
+    "options": [
+      "대칭키 암호",
+      "양자 암호",
+      "타원곡선 암호",
+      "동형 암호 (Homomorphic Encryption)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 동형 암호 (Homomorphic Encryption) 개인정보 보호와 데이터 활용을 동시에 만족시키는 기술.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 630,
+    "question": "리눅스에서 특정 파일의 소유자를 변경하는 명령어는?",
+    "options": [
+      "chmod",
+      "chown",
+      "umask",
+      "chgrp"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② chown chown(Change Owner)은 파일이나 디렉터리의 소유자를 변경함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 631,
+    "question": "다음 중 무선 랜 보안 프로토콜 'WPA2'에서 사용하는 암호화 알고리즘은?",
+    "options": [
+      "DES",
+      "AES-CCMP",
+      "RC4",
+      "3DES"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② AES-CCMP WPA는 TKIP(RC4 기반), WPA2는 AES 기반의 CCMP를 사용하여 강력함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 632,
+    "question": "다음 중 '민감정보'에 해당하지 않는 것은?",
+    "options": [
+      "개인 성향(취미, 흡연 여부 등 일반적 사항)",
+      "건강/성생활 정보",
+      "사상/신념",
+      "노동조합/정당 가입 탈퇴"
+    ],
+    "answer": 0,
+    "explanation": "일반적인 취미나 기호는 민감정보로 분류되지 않음. (범죄경력 등은 해당)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 633,
+    "question": "다음 중 윈도우의 'PowerShell'에서 실행 정책(Execution Policy)을 확인하는 명령어는?",
+    "options": [
+      "View-Security",
+      "Get-ExecutionPolicy",
+      "Set-ExecutionPolicy",
+      "Check-Policy"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Get-ExecutionPolicy Get-ExecutionPolicy로 현재 정책(Restricted 등)을 확인할 수 있음.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 634,
+    "question": "다음 중 'TOCTOU (Time of Check to Time of Use)' 경쟁 조건 취약점을 방지하기 위한 코딩 기법은?",
+    "options": [
+      "검사를 하지 않음",
+      "사용을 늦게 함",
+      "자원에 대한 검사와 사용을 원자적(Atomic)으로 수행하거나, 락(Lock)을 사용함",
+      "임시 파일을 많이 만듦"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 자원에 대한 검사와 사용을 원자적(Atomic)으로 수행하거나, 락(Lock)을 사용함 검사 시점과 사용 시점 사이의 틈을 없애거나 동기화해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 635,
+    "question": "다음 중 'Zero Trust' 보안 모델의 핵심 원칙은?",
+    "options": [
+      "한 번 인증하면 계속 유지됨",
+      "절대 신뢰하지 말고 항상 검증하라 (Never Trust, Always Verify)",
+      "내부 사용자는 신뢰함",
+      "경계 보안만 강화하면 됨"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 절대 신뢰하지 말고 항상 검증하라 (Never Trust, Always Verify) 내외부 구분 없이 모든 접근 요청을 의심하고 검증함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 636,
+    "question": "개인정보의 안전한 삭제 방법은?",
+    "options": [
+      "논리적 삭제",
+      "물리적 삭제",
+      "백업",
+      "압축"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 물리적 삭제 물리적 삭제를 통한 완전 삭제가 가장 안전합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 637,
+    "question": "웹 애플리케이션에서 세션 ID를 URL 파라미터에 포함시켜 전송할 때 발생할 수 있는 보안 취약점은?",
+    "options": [
+      "Race Condition",
+      "Session Fixation",
+      "CSRF",
+      "Session Exposure via Referer/Logs"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Session Exposure via Referer/Logs URL에 세션 ID가 있으면 Referer 헤더나 웹 로그에 남게 되어 세션 탈취 위험이 있음. (Session Fixation과도 관련 있으나 노출 자체가 문제)",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 638,
+    "question": "개인정보의 기술적/관리적 보호조치 기준에서, 비밀번호 작성 규칙에 포함되지 않는 것은?",
+    "options": [
+      "연속된 숫자 사용 자제",
+      "영문, 숫자, 특수문자 등의 조합",
+      "생체 정보 포함 여부",
+      "최소 자리수(8자리 또는 10자리 이상)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 생체 정보 포함 여부 비밀번호 규칙은 문자 조합과 길이를 규정함. 생체 정보는 별도 인증 수단임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 639,
+    "question": "다음 중 'CSP (Content Security Policy)'의 주된 목적은?",
+    "options": [
+      "서버 부하 분산",
+      "비밀번호 암호화",
+      "SQL Injection 방지",
+      "XSS 및 데이터 주입 공격 완화 (스크립트 실행 출처 제한)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ XSS 및 데이터 주입 공격 완화 (스크립트 실행 출처 제한) 허용된 도메인의 스크립트만 실행하도록 브라우저에 정책을 내려줌.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 640,
+    "question": "윈도우에서 '로컬 보안 정책(secpol.msc)'을 통해 설정할 수 없는 것은?",
+    "options": [
+      "바탕화면 배경 이미지 변경",
+      "암호 복잡성 요건",
+      "계정 잠금 정책",
+      "감사 정책"
+    ],
+    "answer": 0,
+    "explanation": "배경화면은 개인 설정 또는 그룹 정책(GPO)의 관리 템플릿에서 제어함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 641,
+    "question": "ARP Spoofing 공격 시 공격자가 희생자에게 보내는 위조된 패킷의 내용은?",
+    "options": [
+      "자신의 MAC 주소를 게이트웨이 IP 주소에 매핑한 ARP Reply",
+      "게이트웨이의 MAC 주소를 자신의 IP에 매핑",
+      "희생자의 MAC 주소를 브로드캐스트",
+      "자신의 IP를 게이트웨이 MAC에 매핑"
+    ],
+    "answer": 0,
+    "explanation": "'게이트웨이 IP가 나(공격자 MAC)다'라고 속이는 응답을 보냄.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 642,
+    "question": "웹 트래픽을 암호화하는 SSL/TLS 프로토콜이 동작하는 OSI 계층은?",
+    "options": [
+      "네트워크 계층(L3)",
+      "물리 계층(L1)",
+      "데이터 링크 계층(L2)",
+      "전송 계층(L4)과 응용 계층(L7) 사이"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 전송 계층(L4)과 응용 계층(L7) 사이 SSL/TLS는 TCP(L4) 위에서 애플리케이션 데이터를 암호화함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 643,
+    "question": "윈도우의 'BitLocker'를 사용할 때, 부팅 과정에서 시스템 무결성을 검증하고 암호화 키를 보호하는 하드웨어 칩은?",
+    "options": [
+      "CMOS",
+      "CPU",
+      "TPM (Trusted Platform Module)",
+      "BIOS"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ TPM (Trusted Platform Module) TPM 칩은 암호화 키 저장 및 무결성 검증을 위한 보안 하드웨어임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 644,
+    "question": "ISMS-P 인증 기준에서 '직무 분리'가 어려운 경우 취해야 할 조치는?",
+    "options": [
+      "보완 통제 방안(직무자 간 상호 검토, 모니터링 강화 등)을 마련하고 책임자의 승인을 받음",
+      "외부 용역을 쓴다",
+      "그냥 둔다",
+      "직무를 없앤다"
+    ],
+    "answer": 0,
+    "explanation": "인력 부족 등으로 분리가 불가능할 땐 보완책이 필수임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 645,
+    "question": "다음 중 'Subresource Integrity (SRI)' 기능의 용도는?",
+    "options": [
+      "이미지 크기 최적화",
+      "DB 무결성 검사",
+      "서버 부하 분산",
+      "CDN 등 외부에서 로드하는 스크립트나 스타일시트가 변조되지 않았는지 해시값으로 검증"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ CDN 등 외부에서 로드하는 스크립트나 스타일시트가 변조되지 않았는지 해시값으로 검증 외부 리소스에 해시값(integrity 속성)을 지정하여 공급망 공격(CDN 해킹 등)을 방어함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 646,
+    "question": "개인정보 수집 시 '필수 동의' 항목과 '선택 동의' 항목을 구분하지 않고 일괄 동의받는 행위는?",
+    "options": [
+      "적법하다",
+      "위법하다 (구분 동의 받아야 함)",
+      "상관없다",
+      "권장된다"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 위법하다 (구분 동의 받아야 함) 정보주체의 선택권을 보장하기 위해 필수/선택 항목을 구분하고 각각 동의받아야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 647,
+    "question": "SSH 프로토콜의 취약점은 아니지만, 무차별 대입 공격(Brute Force)이 많이 발생한다. 이를 막기 위한 가장 효과적인 방법은?",
+    "options": [
+      "SSH 버전 1 사용",
+      "Telnet 사용",
+      "비밀번호를 짧게 설정",
+      "Fail2Ban 등 접속 제한 도구 사용 및 포트 변경"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Fail2Ban 등 접속 제한 도구 사용 및 포트 변경 반복 실패 IP를 차단하거나 기본 포트를 바꾸는 것이 좋음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 648,
+    "question": "다음 중 망분리(네트워크 분리)의 목적은?",
+    "options": [
+      "네트워크 속도 향상",
+      "외부 접속 통한 침해 방지",
+      "사용자 인증 강화",
+      "데이터 압축"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 외부 접속 통한 침해 방지 망분리는 외부 접속으로 인한 침해를 차단하는 목적으로 사용됩니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 649,
+    "question": "ISMS-P 인증 심사 종류 중 '최초 심사'에 해당하는 경우는?",
+    "options": [
+      "매년 정기적으로 받는 심사",
+      "인증을 처음 취득하거나, 인증 범위에 중요한 변경이 있어 다시 전체를 심사받을 때",
+      "결함을 조치하고 받는 확인 심사",
+      "유효기간 만료 전 갱신할 때"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 인증을 처음 취득하거나, 인증 범위에 중요한 변경이 있어 다시 전체를 심사받을 때 범위가 대폭 변경되거나 처음 받을 때는 최초 심사 대상임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 650,
+    "question": "시큐어 코딩 규칙 중 '캡슐화(Encapsulation)' 위배 사례는?",
+    "options": [
+      "Getter/Setter 사용",
+      "public으로 선언된 클래스 멤버 변수에 외부에서 직접 접근하여 값을 변경함",
+      "private 변수 사용",
+      "접근 제어자 사용"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② public으로 선언된 클래스 멤버 변수에 외부에서 직접 접근하여 값을 변경함 데이터 은닉을 위해 멤버 변수는 private으로 하고 메소드를 통해 접근해야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 651,
+    "question": "다음 중 클라우드 환경에서 IAM(Identity & Access Management) 기능은?",
+    "options": [
+      "계정 및 권한 관리",
+      "네트워크 라우팅",
+      "데이터 암호화",
+      "시스템 백업"
+    ],
+    "answer": 0,
+    "explanation": "IAM은 클라우드 사용자 계정과 권한을 통합 관리합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 652,
+    "question": "다음 중 '클라우드 보안 인증(CSAP)'의 평가 기준 4개 분야가 아닌 것은?",
+    "options": [
+      "기술적 보호조치",
+      "수익성 관리",
+      "물리적 보호조치",
+      "관리적 보호조치"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 수익성 관리 보안 인증은 관리적, 물리적, 기술적, 공공기관용 추가 보호조치 등을 평가함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 653,
+    "question": "다음 중 ISMS-P 인증 취득 시 혜택이 아닌 것은?",
+    "options": [
+      "과태료 면제 (무조건)",
+      "정보보호 조치 우수성 입증",
+      "일부 법적 의무 위반 시 과징금 감경 고려",
+      "대외 신뢰도 향상"
+    ],
+    "answer": 0,
+    "explanation": "무조건 면제가 아니라, 위반 시 감경 사유가 될 수 있음.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 654,
+    "question": "Wireshark 필터에서 출발지 IP가 192.168.0.1인 패킷만 보고 싶을 때 사용하는 구문은?",
+    "options": [
+      "ip.addr == 192.168.0.1",
+      "src.ip = 192.168.0.1",
+      "host 192.168.0.1",
+      "ip.src == 192.168.0.1"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ip.src == 192.168.0.1 ip.src는 출발지, ip.dst는 목적지를 의미함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 655,
+    "question": "정보보호 관리체계(ISMS)의 PDCA 사이클 순서로 옳은 것은?",
+    "options": [
+      "Plan - Check - Do - Act",
+      "Do - Plan - Check - Act",
+      "Plan - Do - Check - Act",
+      "Act - Check - Do - Plan"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Plan - Do - Check - Act 계획-수행-점검-조치의 순환 구조.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 656,
+    "question": "웹 서버에서 에러 발생 시 '500 Internal Server Error'와 함께 스택 트레이스(Stack Trace) 정보를 그대로 노출하면 안 되는 이유는?",
+    "options": [
+      "사용자가 보기에 불편해서",
+      "트래픽이 증가해서",
+      "검색 엔진 최적화에 나빠서",
+      "시스템 내부 구조, 버전, 경로 등의 정보가 공격자에게 노출될 수 있어서"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 시스템 내부 구조, 버전, 경로 등의 정보가 공격자에게 노출될 수 있어서 정보 누출(Information Leakage) 취약점에 해당함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 657,
+    "question": "전자입찰 시스템에서 입찰자가 자신의 입찰 가격을 개찰 시까지 비밀로 유지하다가, 개찰 시에만 공개되도록 하는 암호학적 기법은?",
+    "options": [
+      "전자서명",
+      "영지식 증명",
+      "Commitment Scheme (동전 던지기 프로토콜 등) / Time-lock Puzzle",
+      "은닉 서명"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Commitment Scheme (동전 던지기 프로토콜 등) / Time-lock Puzzle 입찰 내용을 암호화하여 제출(Commit)하고 나중에 키를 공개(Open)함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 658,
+    "question": "다음 중 GDPR의 주요 목적은?",
+    "options": [
+      "네트워크 보안",
+      "개인정보 보호 및 프라이버시 권리 강화",
+      "소프트웨어 라이선스 관리",
+      "클라우드 서비스 규제"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 개인정보 보호 및 프라이버시 권리 강화 GDPR(General Data Protection Regulation)은 EU의 개인정보 보호 규정으로 개인의 프라이버시 권리를 강화합니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 659,
+    "question": "다음 중 'CSP(Content Security Policy)' 설정에서 'unsafe-inline' 옵션의 위험성은?",
+    "options": [
+      "이미지를 로드하지 못함",
+      "HTML 내의 인라인 스크립트(<script>...</script>) 실행을 허용하여 XSS 방어 효과를 무력화함",
+      "외부 스크립트를 차단함",
+      "HTTPS를 강제하지 않음"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② HTML 내의 인라인 스크립트(<script>...</script>) 실행을 허용하여 XSS 방어 효과를 무력화함 편의상 쓰지만, 사실상 XSS 보호 기능을 끄는 것과 다름없는 위험한 설정임.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 660,
+    "question": "소프트웨어 개발 보안 방법론 중 '입력 데이터 검증 및 표현' 항목에서 방지할 수 있는 취약점이 아닌 것은?",
+    "options": [
+      "Race Condition (경쟁 조건)",
+      "Command Injection",
+      "SQL Injection",
+      "XSS"
+    ],
+    "answer": 0,
+    "explanation": "경쟁 조건은 프로세스 실행 타이밍/순서 문제로, 입력값 검증보다는 동기화(Lock) 처리로 해결함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 661,
+    "question": "다음 중 네트워크 접근제어 기법에 해당하는 것은?",
+    "options": [
+      "NAC",
+      "DNS",
+      "DHCP",
+      "FTP"
+    ],
+    "answer": 0,
+    "explanation": "NAC(Network Access Control)는 네트워크 접근제어를 담당합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 662,
+    "question": "랜섬웨어 공격자가 데이터를 암호화한 후, 복호화 키를 주는 대가로 가상화폐를 요구하는 행위는 정보통신망법 상 어떤 죄에 해당하는가?",
+    "options": [
+      "모욕죄",
+      "횡령죄",
+      "공갈죄 및 정보통신망 침해행위 (악성프로그램 유포 등)",
+      "사기죄"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 공갈죄 및 정보통신망 침해행위 (악성프로그램 유포 등) 시스템을 잠그고 돈을 뜯어내는 것은 공갈, 침입/악성코드 설치는 망법 위반임.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 663,
+    "question": "재해 복구 시스템(DRS) 구축 형태 중 'Warm Site'의 특징은?",
+    "options": [
+      "중요 자원은 보유하고 있으나 데이터는 주기적(비실시간)으로 백업받는 형태 (수일~수주 소요)",
+      "운영 센터와 동일한 수준",
+      "장소와 통신 회선만 확보 (데이터 없음)",
+      "모든 자원과 데이터를 실시간 동기화 (즉시 복구)"
+    ],
+    "answer": 0,
+    "explanation": "Hot Site보다 저렴하지만 복구에 시간이 걸림.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 664,
+    "question": "파일이나 디렉터리 생성 시 부여되는 기본 권한을 결정하는 명령어로, 기본값에서 뺄 권한을 지정하는 것은?",
+    "options": [
+      "chown",
+      "chmod",
+      "umask",
+      "setfacl"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ umask umask는 파일 생성 시 최대 권한(파일 666, 디렉터리 777)에서 뺄 값을 설정함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 665,
+    "question": "다음 중 SHA-256 해시 함수의 출력 길이는?",
+    "options": [
+      "128비트",
+      "160비트",
+      "256비트",
+      "512비트"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 256비트 SHA-256은 256비트 길이의 해시값을 출력합니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 666,
+    "question": "다음 중 'Xmas Scan'은 TCP 헤더의 어떤 플래그들을 설정하여 보내는가?",
+    "options": [
+      "RST, SYN, FIN",
+      "URG, PSH, RST",
+      "FIN, URG, PSH",
+      "SYN, ACK, FIN"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ FIN, URG, PSH 플래그가 마치 크리스마스 트리 장식처럼 켜져 있다고 해서 붙여진 이름.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 667,
+    "question": "다음 중 'IDN Homograph Attack' (국제 도메인 이름 동형이의어 공격)의 원리는?",
+    "options": [
+      "DNS 서버를 해킹함",
+      "비슷하게 생긴 유니코드 문자(키릴 문자 등)를 사용하여 사용자가 정상 도메인으로 착각하게 만듦",
+      "호스트 파일을 수정함",
+      "IP 주소를 변조함"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 비슷하게 생긴 유니코드 문자(키릴 문자 등)를 사용하여 사용자가 정상 도메인으로 착각하게 만듦 'a'와 비슷해 보이는 다른 언어의 문자를 써서 피싱 사이트로 유도함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 668,
+    "question": "다음 중 'LFI (Local File Inclusion)' 취약점을 이용해 공격자가 볼 수 있는 파일은?",
+    "options": [
+      "클라이언트 PC 파일",
+      "DB 데이터",
+      "/etc/passwd 등 서버 내부 파일",
+      "외부 웹 사이트 소스"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ /etc/passwd 등 서버 내부 파일 서버 로컬에 존재하는 파일 경로를 입력하여 내용을 열람함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 669,
+    "question": "윈도우 보안 식별자(SID) 구조에서 맨 마지막 부분으로, 사용자나 그룹을 고유하게 식별하는 번호를 무엇이라 하는가?",
+    "options": [
+      "GUID",
+      "RID (Relative Identifier)",
+      "CLSID",
+      "UUID"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② RID (Relative Identifier) SID의 마지막 부분(예: -500, -1000)이 RID이며, Administrator는 보통 500번임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 670,
+    "question": "네트워크 상에서 브로드캐스트 트래픽이 과도하게 발생하여 전체 네트워크 성능이 저하되는 현상은?",
+    "options": [
+      "Traffic Shaping",
+      "Load Balancing",
+      "Deadlock",
+      "Broadcast Storm"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Broadcast Storm 브로드캐스트 패킷이 루핑 등으로 인해 폭증하여 네트워크가 마비되는 현상.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 671,
+    "question": "다음 중 정적 분석(Static Analysis) 도구의 장점은?",
+    "options": [
+      "실제 실행 환경의 문제를 완벽히 찾음",
+      "시간이 전혀 안 걸림",
+      "프로그램을 실행하지 않고 전체 소스 코드를 분석하여 모든 경로의 잠재적 결함을 찾을 수 있음",
+      "오탐(False Positive)이 전혀 없음"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 프로그램을 실행하지 않고 전체 소스 코드를 분석하여 모든 경로의 잠재적 결함을 찾을 수 있음 개발 초기 단계부터 적용 가능하며 코드 커버리지가 높음. (단, 오탐 존재 가능)",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 672,
+    "question": "윈도우의 EFS(Encrypting File System)에서 파일을 복호화할 수 있는 마스터 키를 잃어버렸을 때를 대비한 계정은?",
+    "options": [
+      "Administrator",
+      "System",
+      "Backup Operator",
+      "DRA (Data Recovery Agent)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DRA (Data Recovery Agent) 데이터 복구 에이전트(DRA)는 암호화된 파일의 키를 분실했을 때 복구를 담당함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 673,
+    "question": "접근 통제 행렬(Access Control Matrix)의 열(Column, 객체) 관점에서 본 목록을 무엇이라 하는가?",
+    "options": [
+      "Capability List",
+      "Ticket",
+      "Role",
+      "ACL (Access Control List)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ACL (Access Control List) 파일(객체)에 붙어있는 '누가 접근 가능한가'의 목록. (행 관점은 Capability List)",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 674,
+    "question": "다음 중 보안 침해 사고의 원인이 아닌 것은?",
+    "options": [
+      "취약점 존재",
+      "인적 오류",
+      "강력한 접근 통제",
+      "악성코드 감염"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 강력한 접근 통제 강력한 접근 통제는 사고 예방책입니다.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 675,
+    "question": "SSL/TLS 프로토콜에서 'Heartbleed' 취약점이 발견된 라이브러리는?",
+    "options": [
+      "OpenSSL",
+      "LibreSSL",
+      "GnuTLS",
+      "BoringSSL"
+    ],
+    "answer": 0,
+    "explanation": "OpenSSL 라이브러리의 하트비트 확장 기능 구현 오류로 메모리 유출이 발생함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 676,
+    "question": "시스템 보안 강화를 위해 불필요한 서비스를 제거하려 한다. 리눅스에서 현재 실행 중인 서비스(데몬) 목록을 확인하는 명령어가 아닌 것은?",
+    "options": [
+      "systemctl list-units --type=service",
+      "ls -l",
+      "service --status-all",
+      "chkconfig --list"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② ls -l ls -l은 파일 목록 조회 명령어임. 나머지 셋은 서비스 상태 확인 명령어.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 677,
+    "question": "다음 중 'Deserialization(역직렬화)' 취약점의 위험성은?",
+    "options": [
+      "조작된 직렬화 데이터를 역직렬화하는 과정에서 원격 코드 실행(RCE) 등이 발생할 수 있음",
+      "파일 용량 증가",
+      "DB가 느려짐",
+      "네트워크 끊김"
+    ],
+    "answer": 0,
+    "explanation": "자바, 파이썬 등에서 객체 복원 시 발생하는 대표적인 취약점.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 678,
+    "question": "무선 네트워크 보안에서 'WPA'가 'WEP'의 취약점을 보완하기 위해 채택한 키 교환 방식은?",
+    "options": [
+      "TKIP (Temporal Key Integrity Protocol)",
+      "AES",
+      "DES",
+      "RSA"
+    ],
+    "answer": 0,
+    "explanation": "일정 시간마다 키를 변경하는 TKIP를 도입하여 WEP의 고정 키 문제를 해결함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 679,
+    "question": "다음 중 'Feistel' 구조와 'SPN' 구조의 차이점 설명으로 틀린 것은?",
+    "options": [
+      "SPN은 암/복호화 과정이 역함수 관계다.",
+      "Feistel은 암/복호화 과정이 서로 다르다.",
+      "AES는 SPN 구조다.",
+      "Feistel은 라운드 함수의 역함수가 필요 없다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Feistel은 암/복호화 과정이 서로 다르다. Feistel 구조는 암호화와 복호화 구조가 동일하여 구현이 용이함. (키 순서만 반대)",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 680,
+    "question": "다음 중 NIST 사이버보안 프레임워크의 핵심 기능에 해당하지 않는 것은?",
+    "options": [
+      "식별",
+      "보호",
+      "감시",
+      "복구"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 감시 NIST 프레임워크의 핵심 기능은 식별, 보호, 탐지, 대응, 복구입니다.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 681,
+    "question": "TCP 3-Way Handshake 과정에서 'SYN Flooding' 공격을 차단하기 위한 보안 장비의 대응 기술로 적절한 것은?",
+    "options": [
+      "Deep Packet Inspection",
+      "SYN Cookie",
+      "Packet Sniffing",
+      "Session Hijacking"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② SYN Cookie SYN Cookie는 서버가 SYN 요청에 대한 상태 정보를 메모리에 저장하지 않고, 쿠키 값을 생성해 응답함으로써 자원 고갈을 방지함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 682,
+    "question": "다음 중 'Port Scanning' 기법 중, 3-Way Handshake를 완료하지 않고 SYN 패킷만 보낸 뒤 SYN/ACK가 오면 RST를 보내 연결을 끊어 로그를 남기지 않으려는 기법은?",
+    "options": [
+      "Ping Scan",
+      "TCP Connect Scan",
+      "UDP Scan",
+      "Stealth Scan (TCP Half Open Scan)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Stealth Scan (TCP Half Open Scan) 완전한 연결을 맺지 않아 애플리케이션 로그에 남지 않게 하는 스텔스 스캔.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 683,
+    "question": "OAuth 2.0 프로토콜에서 클라이언트에게 권한을 부여(Authorization)한 후 발급받는, 만료 시간이 짧은 토큰은?",
+    "options": [
+      "Refresh Token",
+      "Session ID",
+      "Access Token",
+      "ID Token"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Access Token 실제 자원 접근에 사용되는 토큰은 Access Token임. (Refresh Token은 갱신용)",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 684,
+    "question": "다음 중 'VLAN Hopping' 공격 기법에 해당하는 것은?",
+    "options": [
+      "ARP Spoofing",
+      "DNS Spoofing",
+      "IP Spoofing",
+      "Switch Spoofing / Double Tagging"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ Switch Spoofing / Double Tagging VLAN 태그를 이중으로 붙이거나 스위치 흉내를 내어 다른 VLAN에 접근함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 685,
+    "question": "TCP 패킷 헤더의 플래그 중, 송신 측이 전송할 데이터가 없음을 알리고 연결을 종료하고자 할 때 사용하는 플래그는?",
+    "options": [
+      "RST",
+      "FIN",
+      "URG",
+      "SYN"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② FIN FIN(Finish)은 정상적인 연결 종료 요청을 의미함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 686,
+    "question": "다음 중 공개키 기반 구조(PKI)의 구성 요소가 아닌 것은?",
+    "options": [
+      "CA (Certificate Authority)",
+      "Repository (저장소)",
+      "KDC (Key Distribution Center)",
+      "RA (Registration Authority)"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ KDC (Key Distribution Center) KDC는 대칭키 기반인 커베로스(Kerberos)의 핵심 요소임. PKI는 CA 중심.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 687,
+    "question": "IDS(침입탐지시스템)의 탐지 오류 중, 실제 공격이 아닌데 공격이라고 잘못 알람을 울리는 경우는?",
+    "options": [
+      "False Positive (오탐)",
+      "False Negative (미탐)",
+      "True Negative",
+      "True Positive"
+    ],
+    "answer": 0,
+    "explanation": "Positive(공격이다)라고 판단했으나 False(틀림/사실 정상)인 경우.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 688,
+    "question": "다음 중 HTTP/2의 주요 특징으로, 하나의 연결로 여러 요청을 동시에 처리하는 기능은?",
+    "options": [
+      "Header Compression",
+      "Multiplexing (멀티플렉싱)",
+      "TLS 1.2",
+      "Server Push"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② Multiplexing (멀티플렉싱) HOL(Head of Line) Blocking 문제를 해결하기 위해 다중화 전송을 지원함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 689,
+    "question": "다음 중 '지식 기반 인증(Type 1)'의 단점은?",
+    "options": [
+      "비용이 비싸다.",
+      "망각하거나 추측, 도청 등에 의해 유출될 가능성이 높다.",
+      "분실 시 재발급이 어렵다.",
+      "변경이 불가능하다."
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 망각하거나 추측, 도청 등에 의해 유출될 가능성이 높다. 패스워드는 기억에 의존하므로 보안성이 상대적으로 낮음.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 690,
+    "question": "AES(Advanced Encryption Standard) 알고리즘의 블록 크기는?",
+    "options": [
+      "56비트",
+      "128비트",
+      "64비트",
+      "256비트"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 128비트 AES는 키 길이는 128/192/256비트로 가변적이나, 블록 크기는 128비트로 고정임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 691,
+    "question": "다음 중 'RST' 패킷을 이용하여 강제로 TCP 세션을 끊어버리는 공격은?",
+    "options": [
+      "Spoofing",
+      "Session Fixation",
+      "TCP Reset Attack",
+      "Sniffing"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ TCP Reset Attack 통신 중인 양쪽 호스트에 RST 플래그를 보냄으로써 연결을 강제 종료시킴.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 692,
+    "question": "웹 애플리케이션에서 파일 업로드 시, 서버 측 스크립트(JSP, PHP 등)가 실행되지 않도록 하는 설정으로 옳은 것은?",
+    "options": [
+      "이미지 파일만 허용",
+      "파일 크기 제한",
+      "업로드 디렉터리의 실행 권한 제거",
+      "파일명 변경"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 업로드 디렉터리의 실행 권한 제거 가장 근본적인 대책은 업로드 폴더에서 스크립트 엔진이 동작하지 않도록 실행 권한을 없애는 것임.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 693,
+    "question": "다음 중 '정보보호 공시 제도'의 의무 대상자가 아닌 기업은? (일반적인 기준)",
+    "options": [
+      "회선설비 보유 기간통신사업자",
+      "매출액 3천억 이상 상장법인 등",
+      "IDC 사업자",
+      "소상공인 및 소기업"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 소상공인 및 소기업 일정 규모 이상의 기업이 대상이며, 소기업은 제외됨.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 694,
+    "question": "다음 중 'SSL/TLS' 프로토콜이 제공하지 않는 기능은?",
+    "options": [
+      "기밀성 (암호화)",
+      "부인 방지 (기본적으로는 제공 안 함, 전자서명 별도 필요)",
+      "서버 인증",
+      "무결성 (MAC)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 부인 방지 (기본적으로는 제공 안 함, 전자서명 별도 필요) SSL은 통신 채널 보안이 주 목적이며, 거래 자체의 부인 방지는 응용 계층의 전자서명이 필요함. (단, 클라이언트 인증서 사용 시 일부 가능)",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 695,
+    "question": "이메일 보안 기술 중 'SPF (Sender Policy Framework)'의 동작 원리는?",
+    "options": [
+      "첨부파일 검사",
+      "메일 헤더에 전자서명",
+      "메일 내용 암호화",
+      "발신자 도메인의 DNS에 메일 발송을 허용하는 IP 목록을 등록하고, 수신 측이 이를 확인"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 발신자 도메인의 DNS에 메일 발송을 허용하는 IP 목록을 등록하고, 수신 측이 이를 확인 DNS TXT 레코드를 통해 '내 도메인 메일은 이 IP에서만 나간다'고 공표하여 위조를 막음.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 696,
+    "question": "네트워크 패킷 스니핑 도구인 'Wireshark'에서 특정 IP(192.168.0.1)와 통신하는 패킷만 보려는 필터링 구문은?",
+    "options": [
+      "tcp.port == 192.168.0.1",
+      "ip.src == 192.168.0.1",
+      "ip.dst == 192.168.0.1",
+      "ip.addr == 192.168.0.1"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ip.addr == 192.168.0.1 ip.addr은 출발지와 목적지 모두 포함하여 검색함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 697,
+    "question": "다음 중 '참조 모니터(Reference Monitor)'의 3가지 필수 요건이 아닌 것은?",
+    "options": [
+      "검증 가능성 (Verifiability)",
+      "복잡성 (Complexity)",
+      "격리성 (Isolation, 부정 조작 방지)",
+      "완전성 (Completeness, 항상 호출됨)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 복잡성 (Complexity) 참조 모니터는 작고 단순해야 검증 가능함(Simple/Small).",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 698,
+    "question": "전자서명의 3가지 조건에 해당하지 않는 것은?",
+    "options": [
+      "서명자 인증 (User Authentication)",
+      "기밀성 (Confidentiality)",
+      "위조 불가 (Unforgeable)",
+      "부인 방지 (Non-repudiation)"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 기밀성 (Confidentiality) 전자서명 자체는 내용을 숨기는(기밀성) 기술이 아니라 인증, 무결성, 부인 방지를 위함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 699,
+    "question": "리눅스에서 사용자가 로그인할 때마다 실행되는 전역 설정 스크립트 파일은?",
+    "options": [
+      "~/.profile",
+      "~/.bashrc",
+      "/etc/skel",
+      "/etc/profile"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ /etc/profile /etc/profile은 시스템 전체 사용자에게 적용되는 환경 설정 파일임.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 700,
+    "question": "다음 중 'Ransomware' 유포의 흔한 경로인 'Drive-by Download'란?",
+    "options": [
+      "P2P 다운로드",
+      "이메일 첨부파일 실행",
+      "보안이 취약한 웹사이트를 방문하기만 해도 악성코드가 다운로드됨",
+      "USB 연결"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 보안이 취약한 웹사이트를 방문하기만 해도 악성코드가 다운로드됨 브라우저 취약점 등을 이용해 사용자 모르게 감염시킴.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 701,
+    "question": "디지털 포렌식의 5대 원칙 중, 동일한 조건에서 다시 분석해도 같은 결과가 나와야 한다는 원칙은?",
+    "options": [
+      "정당성의 원칙",
+      "재현성의 원칙",
+      "무결성의 원칙",
+      "신속성의 원칙"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 재현성의 원칙 과학적 증명력을 갖추기 위해 누가 언제 분석해도 결과가 같아야 함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 702,
+    "question": "웹 애플리케이션 로직을 악용하여, 대량의 DB 조회나 복잡한 연산을 유발하는 요청을 보내 서버 부하를 일으키는 공격은?",
+    "options": [
+      "L7 (Application Layer) DoS",
+      "L3 DoS",
+      "L4 DoS",
+      "Network DoS"
+    ],
+    "answer": 0,
+    "explanation": "네트워크 대역폭이 아닌 서버의 애플리케이션 자원을 고갈시킴.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 703,
+    "question": "다음 중 해시 함수의 특성이 아닌 것은?",
+    "options": [
+      "일방향성",
+      "충돌 회피성",
+      "역계산 가능성",
+      "눈사태 효과"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 역계산 가능성 해시 함수는 일방향성을 가지므로 역계산이 불가능해야 합니다. 역계산 가능성은 해시 함수의 특성이 아닙니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 704,
+    "question": "디피-헬만(Diffie-Hellman) 키 교환 알고리즘의 취약점인 '중간자 공격(MITM)'을 해결하기 위한 방법은?",
+    "options": [
+      "대칭키 암호화 사용",
+      "해시 함수 적용",
+      "전자서명을 통한 인증 단계 추가 (Station-to-Station Protocol)",
+      "키 길이를 2048비트로 증가"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 전자서명을 통한 인증 단계 추가 (Station-to-Station Protocol) 상호 인증 기능이 없으므로 전자서명 등을 추가하여 상대방을 검증해야 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 705,
+    "question": "IPSec VPN에서 두 단말(Host-to-Host) 간에 패킷의 데이터(Payload) 부분만 암호화하는 모드는?",
+    "options": [
+      "Tunnel Mode (터널 모드)",
+      "Mixed Mode",
+      "Transport Mode (전송 모드)",
+      "Bridge Mode"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Transport Mode (전송 모드) 원래의 IP 헤더는 그대로 두고 데이터만 보호함. (터널 모드는 전체 캡슐화)",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 706,
+    "question": "윈도우의 공유 자원 중, 관리 목적으로 기본 생성되며 숨겨져 있는 공유(예: C$, ADMIN$)를 무엇이라 하는가?",
+    "options": [
+      "DFS Share",
+      "Public Share",
+      "Administrative Share (관리 공유)",
+      "Hidden Folder"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Administrative Share (관리 공유) 시스템 관리자가 원격 관리를 위해 사용하는 기본 공유로 $가 붙어 숨겨져 있음.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 707,
+    "question": "다음 중 '정보보호 최고책임자(CISO)'의 겸직 금지 대상 기업(일반적인 기준)은?",
+    "options": [
+      "매출 10억 미만 기업",
+      "모든 스타트업",
+      "자산총액 5조원 이상 등 일정 규모 이상의 기업",
+      "모든 중소기업"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 자산총액 5조원 이상 등 일정 규모 이상의 기업 대규모 기업의 CISO는 정보보호 업무에 전념하기 위해 다른 직무(CIO 등) 겸직이 제한됨.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 708,
+    "question": "다음 중 ISMS-P 인증 심사 절차에 포함되지 않는 것은?",
+    "options": [
+      "현장 심사",
+      "서면 심사",
+      "백도어 설치",
+      "취약점 점검"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 백도어 설치 백도어 설치는 심사에 포함되지 않는 불법 행위입니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 709,
+    "question": "암호화 키 관리 원칙 중, 키의 생성부터 폐기까지 전 과정을 관리하는 시스템은?",
+    "options": [
+      "IAM",
+      "CKMS (Cryptographic Key Management System)",
+      "DRM",
+      "SIEM"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② CKMS (Cryptographic Key Management System) 키의 라이프사이클을 안전하게 관리하는 시스템.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 710,
+    "question": "다음 중 'Side Channel Attack(부채널 공격)'이 분석하는 정보가 아닌 것은?",
+    "options": [
+      "전자기파 방출",
+      "전력 소비량",
+      "연산 소요 시간",
+      "네트워크 패킷의 내용 (직접적인 데이터)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 네트워크 패킷의 내용 (직접적인 데이터) 부채널 공격은 물리적 특성(시간, 전력 등)을 간접 분석함. 패킷 내용은 주채널임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 711,
+    "question": "블록 암호 공격 기법 중, '차분 공격(Differential Cryptanalysis)'은 무엇을 분석하는가?",
+    "options": [
+      "수행 시간",
+      "선형 근사식",
+      "전력 소모량",
+      "입력값(평문)의 차이가 출력값(암호문)의 차이에 미치는 영향"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 입력값(평문)의 차이가 출력값(암호문)의 차이에 미치는 영향 두 평문의 차이(XOR)와 암호문의 차이 간의 확률적 관계를 이용함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 712,
+    "question": "다음 중 해시 알고리즘 'SHA-256'의 출력값(해시값) 길이는?",
+    "options": [
+      "160비트",
+      "128비트",
+      "512비트",
+      "256비트"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 256비트 SHA-256은 256비트의 고정 길이 출력을 가짐.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 713,
+    "question": "다음 중 악성코드가 자신의 존재를 숨기기 위해 커널 레벨에서 동작하며 프로세스 목록이나 파일 목록을 조작하는 것은?",
+    "options": [
+      "Ransomware",
+      "Trojan",
+      "Rootkit",
+      "Worm"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Rootkit 루트킷(Rootkit)은 시스템 깊숙한 곳에 숨어 탐지를 회피하고 백도어를 유지함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 714,
+    "question": "다음 중 'Smurfing' 공격은 어떤 프로토콜의 취약점을 이용하는가?",
+    "options": [
+      "UDP",
+      "ARP",
+      "TCP (SYN)",
+      "ICMP (Echo Request)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ ICMP (Echo Request) 브로드캐스트 주소로 ICMP Echo Request를 보내 대량의 응답(Echo Reply)을 유발함.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 715,
+    "question": "데이터베이스에서 'Aggregation(집합)' 공격이란?",
+    "options": [
+      "암호를 깨는 것",
+      "DB를 삭제하는 것",
+      "권한을 탈취하는 것",
+      "낮은 보안 등급의 정보 여러 개를 수집하여 높은 보안 등급의 정보를 알아내는 것"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 낮은 보안 등급의 정보 여러 개를 수집하여 높은 보안 등급의 정보를 알아내는 것 추론(Inference)과 유사한 개념으로, 조각 정보의 합이 민감 정보가 되는 경우임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 716,
+    "question": "다음 중 '레이스 컨디션(Race Condition)' 공격이 발생하기 쉬운 환경은?",
+    "options": [
+      "정적 라이브러리를 사용하는 프로그램",
+      "임시 파일을 생성하고 사용하는 프로그램 (SetUID 설정)",
+      "단일 스레드 프로그램",
+      "읽기 전용 파일 시스템"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 임시 파일을 생성하고 사용하는 프로그램 (SetUID 설정) SetUID 프로그램이 임시 파일을 체크하고 사용하는 사이의 시차를 공격함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 717,
+    "question": "윈도우 레지스트리 하이브 파일 중 계정 정보와 패스워드 해시가 저장되는 곳은?",
+    "options": [
+      "HKEY_CLASSES_ROOT",
+      "HKEY_LOCAL_MACHINE\\SAM",
+      "HKEY_LOCAL_MACHINE\\SYSTEM",
+      "HKEY_CURRENT_USER\\Software"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② HKEY_LOCAL_MACHINE\\SAM SAM(Security Account Manager) 파일에 사용자 계정 및 패스워드 해시 정보가 저장됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 718,
+    "question": "정보통신망법상 '임시조치'란 무엇인가?",
+    "options": [
+      "권리 침해 정보에 대해 접근을 임시로 차단하는 조치",
+      "영구 삭제",
+      "서버 압수",
+      "사이트 폐쇄"
+    ],
+    "answer": 0,
+    "explanation": "명예훼손 등 분쟁 발생 시 확정 전까지 게시글을 안 보이게 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 719,
+    "question": "개인정보보호법 시행령 상의 보관 기간 중 최대 기간은?",
+    "options": [
+      "1년",
+      "3년",
+      "5년",
+      "10년"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 5년 시행령상 보관 기간은 최대 5년까지 규정될 수 있습니다.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 720,
+    "question": "다음 중 웹 방화벽(WAF)이 방어할 수 있는 공격이 아닌 것은?",
+    "options": [
+      "ARP Spoofing",
+      "SQL Injection",
+      "Directory Traversal",
+      "XSS"
+    ],
+    "answer": 0,
+    "explanation": "ARP Spoofing은 2계층(L2) 공격이므로 L7 장비인 WAF가 직접 막기 어려움.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 721,
+    "question": "다음 중 'TOCTOU (Time Of Check to Time Of Use)' 취약점에 대한 설명으로 옳은 것은?",
+    "options": [
+      "시스템 시간을 조작하는 공격",
+      "검사 시점과 사용 시점의 차이를 이용한 경쟁 조건 공격",
+      "입력 값의 길이를 체크하지 않아 발생하는 버퍼 오버플로우",
+      "세션 만료 시간을 이용한 공격"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 검사 시점과 사용 시점의 차이를 이용한 경쟁 조건 공격 자원 사용 권한을 검사한 후 실제 사용할 때까지의 틈을 노려 자원을 바꿔치기하는 공격.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 722,
+    "question": "다음 중 일회용 패드(One-Time Pad) 암호의 특징은?",
+    "options": [
+      "실용성이 매우 높음",
+      "이론적으로 완벽한 안전성(Unconditional Security)을 가지지만 키 관리가 매우 어려움",
+      "재사용 가능함",
+      "키 길이가 짧음"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 이론적으로 완벽한 안전성(Unconditional Security)을 가지지만 키 관리가 매우 어려움 평문 길이만큼의 무작위 키를 사용하고 버려야 하므로 현실적 사용이 어려움.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 723,
+    "question": "다음 중 악성코드가 시스템 분석 도구(Debugger)가 실행 중인지 탐지하기 위해 사용하는 API 함수는?",
+    "options": [
+      "CreateProcess()",
+      "VirtualAlloc()",
+      "Sleep()",
+      "IsDebuggerPresent()"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ IsDebuggerPresent() 윈도우 API인 IsDebuggerPresent()는 현재 프로세스가 디버깅 당하고 있는지 확인함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 724,
+    "question": "다음 중 정보통신기반보호법상 '주요정보통신기반시설' 지정 권한을 가진 자는?",
+    "options": [
+      "국정원장",
+      "시설 운영자",
+      "중앙행정기관의 장 (장관 등)",
+      "KISA 원장"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 중앙행정기관의 장 (장관 등) 소관 분야의 시설을 중앙행정기관의 장이 지정함 (보호위원회 심의 거쳐).",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 725,
+    "question": "암호화 모드 중 'GCM (Galois/Counter Mode)'의 특징은?",
+    "options": [
+      "가장 속도가 느리다",
+      "병렬 처리가 불가능하다",
+      "데이터 암호화와 동시에 메시지 인증(무결성)을 제공한다 (AEAD)",
+      "패딩이 필수적이다"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 데이터 암호화와 동시에 메시지 인증(무결성)을 제공한다 (AEAD) 기밀성과 무결성을 동시에 효율적으로 제공하여 TLS 등에서 널리 쓰임.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 726,
+    "question": "다음 중 'SOAP' 프로토콜과 달리, HTTP 메소드(GET, POST 등)를 그대로 사용하여 가볍고 빠른 웹 서비스 아키텍처는?",
+    "options": [
+      "XML-RPC",
+      "UDDI",
+      "CORBA",
+      "REST (Representational State Transfer)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ REST (Representational State Transfer) RESTful API는 HTTP 표준을 준수하며 자원(Resource) 중심의 구조를 가짐.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 727,
+    "question": "다음 중 'Kerberos' 인증 프로토콜의 시간 동기화가 중요한 이유는?",
+    "options": [
+      "서버 부하를 줄이기 위해",
+      "재전송 공격(Replay Attack)을 방지하기 위해 타임스탬프를 사용하므로",
+      "암호화 속도를 높이기 위해",
+      "IP 주소를 확인하기 위해"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 재전송 공격(Replay Attack)을 방지하기 위해 타임스탬프를 사용하므로 티켓의 유효 시간 검증을 위해 클라이언트와 서버 간 시각이 일치해야 함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 728,
+    "question": "다음 중 Zero Trust 보안 모델의 핵심 원칙은?",
+    "options": [
+      "내부 네트워크는 신뢰한다",
+      "모든 접근을 검증한다",
+      "경계 보안에 집중한다",
+      "VPN만 사용한다"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 모든 접근을 검증한다 Zero Trust 모델은 \"절대 신뢰하지 말고 항상 검증하라\"는 원칙으로 모든 접근을 검증합니다.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 729,
+    "question": "윈도우 시스템에서 'Pass-the-Hash' 공격은 무엇을 탈취하여 사용하는가?",
+    "options": [
+      "패스워드 평문",
+      "공인인증서",
+      "OTP",
+      "패스워드 해시값 (NTLM Hash 등)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 패스워드 해시값 (NTLM Hash 등) 패스워드를 몰라도 해시값만 있으면 인증을 통과할 수 있는 취약점을 이용함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 730,
+    "question": "IPS(침입방지시스템)가 정상 트래픽을 공격으로 오판하여 차단하는 현상을 무엇이라 하는가?",
+    "options": [
+      "True Positive",
+      "True Negative",
+      "False Negative (미탐)",
+      "False Positive (오탐)"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ False Positive (오탐) 정상(Positive)인 것을 공격(거짓, False)으로 판단했다는 의미.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 731,
+    "question": "무선 랜 표준인 IEEE 802.11i에서 정의한 보안 표준으로, WPA2의 기반이 되는 것은?",
+    "options": [
+      "WAPI",
+      "RSN (Robust Security Network)",
+      "Bluetooth",
+      "WEP"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② RSN (Robust Security Network) 802.11i는 RSN이라고도 불리며 AES-CCMP 기반의 강력한 보안을 정의함.",
+    "subject": "3과목: 애플리케이션 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 732,
+    "question": "이해 상충(Conflict of Interest)을 방지하기 위해, 사용자가 경쟁 관계에 있는 기업의 데이터에 동시에 접근하지 못하도록 동적으로 차단벽을 치는 모델은?",
+    "options": [
+      "Chinese Wall (Brewer-Nash) 모델",
+      "Matrix 모델",
+      "Biba 모델",
+      "Bell-LaPadula 모델"
+    ],
+    "answer": 0,
+    "explanation": "컨설팅 회사나 로펌 등에서 사용됨.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 733,
+    "question": "다음 중 자바의 'catch' 블록에서 'Exception'과 같이 너무 포괄적인 예외를 잡는 것이 좋지 않은 이유는?",
+    "options": [
+      "코드가 길어져서",
+      "예상치 못한 오류까지 뭉뚱그려 처리되어 문제 원인을 파악하기 어렵고 보안 정책 위반을 놓칠 수 있음",
+      "속도가 빨라져서",
+      "컴파일이 안 되어서"
+    ],
+    "answer": 1,
+    "explanation": "정답: ② 예상치 못한 오류까지 뭉뚱그려 처리되어 문제 원인을 파악하기 어렵고 보안 정책 위반을 놓칠 수 있음 구체적인 예외(Specific Exception)를 잡아 적절히 처리해야 함.",
+    "subject": "5과목: 정보보안 관리 및 법규",
+    "source": "기본문제"
+  },
+  {
+    "id": 734,
+    "question": "다음 중 데이터베이스 접근 통제 방식이 아닌 것은?",
+    "options": [
+      "DAC",
+      "MAC",
+      "RBAC",
+      "DDoS"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ DDoS DDoS(서비스 거부 공격)는 접근 통제 방식이 아닙니다.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 735,
+    "question": "다음 중 'Hardcoded Credentials' 취약점이란?",
+    "options": [
+      "소스 코드 내에 ID, 패스워드, 암호키 등이 평문으로 직접 작성된 경우",
+      "DB 접근 제어가 없는 경우",
+      "패스워드가 너무 짧은 경우",
+      "로그인 시 캡차를 쓰지 않는 경우"
+    ],
+    "answer": 0,
+    "explanation": "코드를 볼 수 있는 개발자나 해커에게 중요 정보가 그대로 노출됨.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 736,
+    "question": "IP 헤더 필드 중 패킷이 무한 루프를 도는 것을 방지하기 위해 라우터를 거칠 때마다 1씩 감소하는 필드는?",
+    "options": [
+      "Identification",
+      "Checksum",
+      "TTL (Time To Live)",
+      "TOS"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ TTL (Time To Live) TTL 값이 0이 되면 라우터는 패킷을 폐기하고 ICMP Time Exceeded를 보냄.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 737,
+    "question": "방화벽의 패킷 필터링 기준(Rule)에 포함되지 않는 것은?",
+    "options": [
+      "패킷의 내용(Payload) 데이터",
+      "출발지 IP",
+      "프로토콜(TCP/UDP)",
+      "목적지 IP"
+    ],
+    "answer": 0,
+    "explanation": "일반적인 패킷 필터링(L3/L4) 방화벽은 헤더 정보만 보고 차단하며 내용은 보지 않음 (DPI/App Firewall 제외).",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 738,
+    "question": "리눅스에서 현재 로그인한 사용자의 ID, 그룹 ID, 소속 그룹 정보를 확인하는 명령어는?",
+    "options": [
+      "id",
+      "whoami",
+      "w",
+      "finger"
+    ],
+    "answer": 0,
+    "explanation": "id 명령어는 uid, gid, groups 정보를 모두 출력함.",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 739,
+    "question": "리눅스에서 'SELinux'는 어떤 접근 통제 모델을 구현한 것인가?",
+    "options": [
+      "DAC",
+      "RBAC",
+      "MAC (강제적 접근통제)",
+      "IBAC"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ MAC (강제적 접근통제) SELinux는 리눅스 커널에 MAC 기능을 추가하여 프로세스와 파일에 대한 강제 권한 제어를 수행함.",
+    "subject": "4과목: 정보보안 일반",
+    "source": "기본문제"
+  },
+  {
+    "id": 740,
+    "question": "다음 중 소프트웨어 공급망 공격(Supply Chain Attack)의 예시로 가장 적절한 것은?",
+    "options": [
+      "무선 공유기 해킹",
+      "특정 웹사이트에 DDoS 공격 수행",
+      "개발 도구, 라이브러리, 업데이트 서버를 해킹하여 악성코드를 배포",
+      "직원에게 피싱 메일 발송"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ 개발 도구, 라이브러리, 업데이트 서버를 해킹하여 악성코드를 배포 SolarWinds 사태처럼 신뢰받는 SW 배포 경로를 오염시키는 공격.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 741,
+    "question": "다음 중 ARP 프로토콜의 요청(Request)과 응답(Reply) 패킷의 전송 방식 연결이 바른 것은?",
+    "options": [
+      "Request: Unicast, Reply: Unicast",
+      "Request: Broadcast, Reply: Broadcast",
+      "Request: Broadcast, Reply: Unicast",
+      "Request: Unicast, Reply: Broadcast"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ Request: Broadcast, Reply: Unicast 누구인지 찾을 땐 방송(Broadcast), 대답은 요청자에게만(Unicast).",
+    "subject": "2과목: 네트워크 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 742,
+    "question": "리눅스에서 패스워드 파일(/etc/passwd)의 변조를 막기 위해 파일 속성을 '추가만 가능(append only)'하게 설정하는 명령어는?",
+    "options": [
+      "chattr +i /etc/passwd",
+      "chown root /etc/passwd",
+      "chattr +a /etc/passwd",
+      "chmod 700 /etc/passwd"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ chattr +a /etc/passwd +a 옵션은 내용 추가만 가능하고 기존 내용 삭제/수정을 막음. (+i는 변경 불가)",
+    "subject": "1과목: 시스템 보안",
+    "source": "기본문제"
+  },
+  {
+    "id": 743,
+    "question": "다음 중 '정보보호 제품 성능평가' 제도의 목적은?",
+    "options": [
+      "제품 가격 결정",
+      "해외 수출 금지",
+      "개발자 처벌",
+      "정보보호 제품의 보안 성능 및 기능을 평가하여 품질 향상 유도"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ 정보보호 제품의 보안 성능 및 기능을 평가하여 품질 향상 유도 KISA 등이 수행하며 제품의 실효성을 검증함.",
+    "subject": "기타",
+    "source": "기본문제"
+  },
+  {
+    "id": 744,
+    "question": "다음 중 FTP에 대한 설명으로 올바른 것은?",
+    "options": [
+      "FTP는 파일을 업로드 및 다운로드할 수 있는 응용계층의 프로토콜이다.",
+      "FTP는 전송구간을 암호화하지 않으며 암호화가 필요한 경우에는 sFTP를 사용해야 한다.",
+      "tFTP는 UDP를 사용해서 빠르게 데이터를 송수신할 수 있다.",
+      "FTP Bounce Attack은 익명의 FTP 서버를 통해서 자기 자신을 포트 스캐닝하는 공격이다."
+    ],
+    "answer": 0,
+    "explanation": "정답: ① FTP는 OSI 7계층 중 응용계층(Application Layer) 프로토콜. ②③도 맞지만, ④는 오류 - FTP Bounce Attack은 자기 자신이 아닌 제3의 시스템을 스캔하는 공격임.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "오답노트"
+  },
+  {
+    "id": 745,
+    "question": "NMAP을 사용한 포트 스캐닝 방법 중에서 로그를 기록하지 않는 것은?",
+    "options": [
+      "nmap -sT",
+      "nmap -sP",
+      "nmap -f -mtu 16 <IP주소>",
+      "nmap -sX"
+    ],
+    "answer": 3,
+    "explanation": "정답: ④ -sX(Xmas Scan)는 FIN+PSH+URG 플래그 전송. 3-way handshake 완료 안 해서 로그 안 남음. Stealth Scan: -sS(SYN), -sX(Xmas), -sN(NULL), -sF(FIN). -sT는 전체 연결이라 로그 남음.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "오답노트"
+  },
+  {
+    "id": 746,
+    "question": "다음의 포트 스캐닝 공격 기법 중에 포트가 닫혀 있을 때 결과값이 다른 하나는?",
+    "options": [
+      "FIN Scan",
+      "NULL Scan",
+      "UDP Scan",
+      "X-MAS Scan"
+    ],
+    "answer": 2,
+    "explanation": "정답: ③ UDP Scan. TCP 스텔스 스캔(FIN, NULL, Xmas)은 닫힌 포트에서 RST 반환. UDP Scan은 닫힌 포트에서 ICMP Port Unreachable 반환.",
+    "subject": "2과목: 네트워크 보안",
+    "source": "오답노트"
+  }
+];
+
+// 단톡방 자료 기출문제 병합
+export const allQuestions: Question[] = [...questionBank, ...additionalQuestions];
+
+export const subjectDistribution = {
+  "1과목: 시스템 보안": 111,
+  "3과목: 애플리케이션 보안": 84,
+  "5과목: 정보보안 관리 및 법규": 141,
+  "기타": 149,
+  "2과목: 네트워크 보안": 110,
+  "4과목: 정보보안 일반": 148
+};
+
+export const subjects = [
+  '1과목: 시스템 보안',
+  '2과목: 네트워크 보안',
+  '3과목: 애플리케이션 보안',
+  '4과목: 정보보안 일반',
+  '5과목: 정보보안 관리 및 법규'
+];
+
+export const getQuestionsBySubject = (subject: string) =>
+  allQuestions.filter(q => q.subject === subject);
+
+export const getRandomQuestions = (count: number, subject?: string) => {
+  const pool = subject ? getQuestionsBySubject(subject) : allQuestions;
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+};
+
+export const getExamSet = () => {
+  const exam: Question[] = [];
+  for (const subject of subjects) {
+    const subjectQuestions = getQuestionsBySubject(subject);
+    const shuffled = [...subjectQuestions].sort(() => Math.random() - 0.5);
+    exam.push(...shuffled.slice(0, 20));
+  }
+  return exam;
+};
+
+export default questionBank;
