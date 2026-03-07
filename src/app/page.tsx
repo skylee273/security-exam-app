@@ -48,7 +48,7 @@ const Icons = {
   ),
 };
 
-type ViewMode = 'study' | 'bank' | 'weakness' | 'crypto' | 'practical';
+type ViewMode = 'study' | 'bank' | 'crypto' | 'practical';
 
 // 학습 진행률 타입
 interface LearningProgress {
@@ -110,6 +110,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [completedItems, setCompletedItems] = useState<Set<string>>(new Set());
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [showWeaknessOnly, setShowWeaknessOnly] = useState(false);
 
   // Quiz state (문제은행에서 5개 랜덤)
   const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
@@ -215,9 +216,23 @@ export default function Home() {
     const matchesSearch = !searchQuery ||
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.content.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesWeakness = viewMode !== 'weakness' || item.isWeakness;
+    const matchesWeakness = !showWeaknessOnly || item.isWeakness;
     return matchesCategory && matchesSearch && matchesWeakness;
   });
+
+  // 카드 확장 시 상단으로 스크롤
+  const handleCardExpand = (id: string) => {
+    const newExpanded = expandedCard === id ? null : id;
+    setExpandedCard(newExpanded);
+    if (newExpanded) {
+      setTimeout(() => {
+        const element = document.getElementById(`card-${id}`);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  };
 
   const studyProgress = Math.round((completedItems.size / studyItems.length) * 100);
 
@@ -366,7 +381,6 @@ export default function Home() {
             {[
               { id: 'study', label: '학습', icon: '📚' },
               { id: 'bank', label: '문제은행', icon: '🏦' },
-              { id: 'weakness', label: '약점', icon: '🎯' },
               { id: 'crypto', label: '암호학', icon: '🔐' },
               { id: 'practical', label: '실기대비', icon: '✍️' },
             ].map(tab => (
@@ -386,7 +400,7 @@ export default function Home() {
           </div>
 
           {/* Search */}
-          {(viewMode === 'study' || viewMode === 'weakness') && (
+          {viewMode === 'study' && (
             <div className="relative mt-4">
               <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                 <Icons.Search />
@@ -404,52 +418,77 @@ export default function Home() {
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-6">
-        {/* Category Filter */}
-        {(viewMode === 'study' || viewMode === 'weakness') && (
-          <div className="flex flex-wrap gap-2 mb-6">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                !selectedCategory
-                  ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
-                  : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
-              }`}
-            >
-              전체
-            </button>
-            {categories.map(cat => (
+        {/* Category Filter & Weakness Toggle */}
+        {viewMode === 'study' && (
+          <div className="mb-6">
+            {/* Weakness Toggle */}
+            <div className="flex items-center justify-between mb-4">
               <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
+                onClick={() => setShowWeaknessOnly(!showWeaknessOnly)}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+                  showWeaknessOnly
+                    ? 'bg-red-500 text-white'
+                    : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                }`}
+              >
+                <span>🎯</span>
+                <span>약점만 보기</span>
+                {showWeaknessOnly && <span className="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded">ON</span>}
+              </button>
+              {showWeaknessOnly && (
+                <span className="text-sm text-gray-500 dark:text-gray-400">
+                  {filteredItems.length}개 약점
+                </span>
+              )}
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setSelectedCategory(null)}
                 className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                  selectedCategory === cat.id
+                  !selectedCategory
                     ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
                 }`}
               >
-                {cat.icon} {cat.name}
+                전체
               </button>
-            ))}
+              {categories.map(cat => (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === cat.id
+                      ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
+                  }`}
+                >
+                  {cat.icon} {cat.name}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
         {/* Study View */}
-        {(viewMode === 'study' || viewMode === 'weakness') && (
+        {viewMode === 'study' && (
           <div className="grid gap-4">
             {filteredItems.map(item => (
-              <StudyCard
-                key={item.id}
-                item={item}
-                isCompleted={completedItems.has(item.id)}
-                isExpanded={expandedCard === item.id}
-                onToggleComplete={() => toggleComplete(item.id)}
-                onToggleExpand={() => setExpandedCard(expandedCard === item.id ? null : item.id)}
-                DiagramComponent={diagramMap[item.id]}
-              />
+              <div key={item.id} id={`card-${item.id}`}>
+                <StudyCard
+                  item={item}
+                  isCompleted={completedItems.has(item.id)}
+                  isExpanded={expandedCard === item.id}
+                  onToggleComplete={() => toggleComplete(item.id)}
+                  onToggleExpand={() => handleCardExpand(item.id)}
+                  DiagramComponent={diagramMap[item.id]}
+                />
+              </div>
             ))}
             {filteredItems.length === 0 && (
               <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-                {viewMode === 'weakness' ? '약점 항목이 없습니다.' : '검색 결과가 없습니다.'}
+                {showWeaknessOnly ? '약점 항목이 없습니다.' : '검색 결과가 없습니다.'}
               </div>
             )}
           </div>
