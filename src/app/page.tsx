@@ -48,7 +48,7 @@ const Icons = {
   ),
 };
 
-type ViewMode = 'study' | 'bank' | 'weakness' | 'crypto';
+type ViewMode = 'study' | 'bank' | 'weakness' | 'crypto' | 'practical';
 
 // 학습 진행률 타입
 interface LearningProgress {
@@ -359,23 +359,6 @@ export default function Home() {
             <h1 className="text-xl font-bold text-gray-900 dark:text-white">
               정보보안기사 학습앱
             </h1>
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600"
-            >
-              {darkMode ? <Icons.Sun /> : <Icons.Moon />}
-            </button>
-          </div>
-
-          {/* Progress Bar */}
-          <div className="mt-4">
-            <div className="flex items-center justify-between text-sm mb-1">
-              <span className="text-gray-600 dark:text-gray-400">학습 진도</span>
-              <span className="font-medium text-primary-500">{studyProgress}%</span>
-            </div>
-            <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-              <div className="h-full bg-primary-500 progress-bar rounded-full" style={{ width: `${studyProgress}%` }} />
-            </div>
           </div>
 
           {/* View Mode Tabs */}
@@ -385,6 +368,7 @@ export default function Home() {
               { id: 'bank', label: '문제은행', icon: '🏦' },
               { id: 'weakness', label: '약점', icon: '🎯' },
               { id: 'crypto', label: '암호학', icon: '🔐' },
+              { id: 'practical', label: '실기대비', icon: '✍️' },
             ].map(tab => (
               <button
                 key={tab.id}
@@ -1013,6 +997,183 @@ export default function Home() {
                 </div>
               </div>
 
+            </div>
+          </div>
+        )}
+
+        {/* Practical Exam View - 실기 유형 대비 */}
+        {viewMode === 'practical' && (
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-card p-6">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                ✍️ 실기시험 유형 대비
+              </h2>
+
+              <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg mb-6">
+                <p className="text-sm text-blue-800 dark:text-blue-300">
+                  <strong>정보보안기사 실기시험:</strong> 총 16문제 (단답형 10문제 + 서술형 6문제) / 100점 만점 / 60점 이상 합격
+                </p>
+              </div>
+
+              {/* 단답형 유형 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-primary-500 mb-3 flex items-center gap-2">
+                  📝 단답형 (10문제, 각 3점 = 30점)
+                </h3>
+                <div className="space-y-4">
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">1. 빈칸 채우기</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      문장에서 핵심 용어나 개념을 빈칸으로 제시
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> ( ① )은(는) 공격자가 희생자의 MAC 주소를 자신의 것으로 위조하여 네트워크 트래픽을 가로채는 공격이다.
+                      </p>
+                      <p className="text-xs text-green-600 dark:text-green-400 mt-2">정답: ARP Spoofing</p>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">2. 명령어/설정값</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      리눅스/윈도우 명령어, 설정 파일 내용
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> 리눅스에서 파일 권한을 rwxr-x--- 로 설정하는 chmod 명령어를 8진수로 작성하시오.
+                      </p>
+                      <p className="text-xs text-green-600 dark:text-green-400 mt-2">정답: chmod 750 파일명</p>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">3. 약어/용어 풀이</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      보안 약어의 풀네임이나 정의
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> SIEM의 풀네임을 영문으로 작성하시오.
+                      </p>
+                      <p className="text-xs text-green-600 dark:text-green-400 mt-2">정답: Security Information and Event Management</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 서술형 유형 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-primary-500 mb-3 flex items-center gap-2">
+                  📄 서술형 (6문제, 각 10~14점 = 70점)
+                </h3>
+                <div className="space-y-4">
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">1. 개념 설명형</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      특정 보안 개념/기술의 정의, 특징, 절차 설명
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> 전자서명의 5가지 특징을 설명하시오.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">2. 로그/패킷 분석형</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      주어진 로그나 패킷을 보고 공격 유형 판단, 대응방안 제시
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> 아래 Snort 로그를 분석하여 공격 유형과 대응방안을 서술하시오.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">3. 설정/구성형</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      방화벽 정책, iptables 규칙, 보안 설정 작성
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> 외부에서 웹서버(192.168.1.10)의 80포트 접근만 허용하는 iptables 명령어를 작성하시오.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">4. 법규/관리형</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      개인정보보호법, ISMS-P 관련 절차/조치사항
+                    </p>
+                    <div className="p-3 bg-white dark:bg-gray-800 rounded border border-gray-200 dark:border-gray-600">
+                      <p className="text-sm text-gray-700 dark:text-gray-300">
+                        <strong>예시:</strong> 개인정보 유출 시 정보주체에게 통지해야 하는 5가지 항목을 쓰시오.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 자주 출제되는 주제 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-primary-500 mb-3 flex items-center gap-2">
+                  🔥 자주 출제되는 주제
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                    <h4 className="font-semibold text-red-700 dark:text-red-300 mb-2">시스템 보안</h4>
+                    <ul className="text-sm text-red-600 dark:text-red-400 space-y-1">
+                      <li>• 리눅스 파일 권한 (chmod, umask)</li>
+                      <li>• SetUID/SetGID/Sticky Bit</li>
+                      <li>• /etc/passwd, /etc/shadow 구조</li>
+                      <li>• 버퍼 오버플로우 대응</li>
+                    </ul>
+                  </div>
+                  <div className="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+                    <h4 className="font-semibold text-orange-700 dark:text-orange-300 mb-2">네트워크 보안</h4>
+                    <ul className="text-sm text-orange-600 dark:text-orange-400 space-y-1">
+                      <li>• iptables 명령어 작성</li>
+                      <li>• Snort 룰 작성/분석</li>
+                      <li>• ARP/DNS Spoofing</li>
+                      <li>• VPN, SSL/TLS</li>
+                    </ul>
+                  </div>
+                  <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                    <h4 className="font-semibold text-green-700 dark:text-green-300 mb-2">애플리케이션 보안</h4>
+                    <ul className="text-sm text-green-600 dark:text-green-400 space-y-1">
+                      <li>• SQL Injection 방어</li>
+                      <li>• XSS 취약점 대응</li>
+                      <li>• 시큐어코딩</li>
+                      <li>• 웹 취약점 분석</li>
+                    </ul>
+                  </div>
+                  <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                    <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">암호학/법규</h4>
+                    <ul className="text-sm text-blue-600 dark:text-blue-400 space-y-1">
+                      <li>• 암호 알고리즘 비교</li>
+                      <li>• 전자서명/PKI</li>
+                      <li>• 개인정보보호법</li>
+                      <li>• ISMS-P 인증 기준</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* 실기 팁 */}
+              <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+                <h4 className="font-semibold text-yellow-700 dark:text-yellow-300 mb-2">💡 실기 합격 팁</h4>
+                <ul className="text-sm text-yellow-600 dark:text-yellow-400 space-y-1">
+                  <li>• <strong>부분 점수</strong>를 노려라! 모르는 문제도 아는 만큼 적기</li>
+                  <li>• 단답형은 <strong>정확한 용어</strong> 사용 (오타 주의)</li>
+                  <li>• 서술형은 <strong>번호를 붙여서</strong> 체계적으로 작성</li>
+                  <li>• <strong>시간 배분:</strong> 단답형 30분, 서술형 90분</li>
+                  <li>• 최근 기출 트렌드 확인 필수 (KISA 보안 동향)</li>
+                </ul>
+              </div>
             </div>
           </div>
         )}
