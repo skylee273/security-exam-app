@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+extracted-questions-*.json
+question-bank-2026-*.json
+단톡방자료
+정보보안기사 단톡방.zip
+*.zip
