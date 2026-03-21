@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { studyItems, categories, StudyItem } from '@/data/studyData';
 import { questionBank, subjects, getQuestionsBySubject, getRandomQuestions, Question } from '@/data/questionBank';
+import { practicalWeakness, categoryNames, WeaknessCard } from '@/data/practicalWeakness';
 import {
   WindowsAuthDiagram,
   NetworkAttackDiagram,
@@ -128,6 +129,11 @@ export default function Home() {
   const [bankScore, setBankScore] = useState({ correct: 0, total: 0 });
   const [bankMode, setBankMode] = useState<'practice' | 'exam'>('practice');
 
+  // Practical exam subtab state
+  const [practicalSubTab, setPracticalSubTab] = useState<'guide' | 'weakness'>('guide');
+  const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
+  const [masteredCards, setMasteredCards] = useState<Set<string>>(new Set());
+
   // 학습 진행률 state
   const [progress, setProgress] = useState<LearningProgress>(defaultProgress);
   const [sessionStartTime] = useState<Date>(new Date());
@@ -139,6 +145,10 @@ export default function Home() {
 
     const darkSaved = localStorage.getItem('darkMode');
     if (darkSaved) setDarkMode(JSON.parse(darkSaved));
+
+    // 약점 암기 완료 카드 로드
+    const masteredSaved = localStorage.getItem('masteredWeaknessCards');
+    if (masteredSaved) setMasteredCards(new Set(JSON.parse(masteredSaved)));
 
     // 학습 진행률 로드
     const progressSaved = localStorage.getItem('learningProgress');
@@ -174,6 +184,11 @@ export default function Home() {
   useEffect(() => {
     localStorage.setItem('learningProgress', JSON.stringify(progress));
   }, [progress]);
+
+  // 약점 암기 완료 카드 저장
+  useEffect(() => {
+    localStorage.setItem('masteredWeaknessCards', JSON.stringify([...masteredCards]));
+  }, [masteredCards]);
 
   // 세션 종료 시 학습 시간 업데이트
   useEffect(() => {
@@ -1043,6 +1058,37 @@ export default function Home() {
         {/* Practical Exam View - 실기 유형 대비 */}
         {viewMode === 'practical' && (
           <div className="max-w-4xl mx-auto space-y-6">
+            {/* 서브탭 버튼 */}
+            <div className="flex gap-2 bg-white dark:bg-gray-800 rounded-xl shadow-card p-2">
+              <button
+                onClick={() => setPracticalSubTab('guide')}
+                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all ${
+                  practicalSubTab === 'guide'
+                    ? 'bg-primary-500 text-white shadow-md'
+                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
+                }`}
+              >
+                📋 시험안내
+              </button>
+              <button
+                onClick={() => setPracticalSubTab('weakness')}
+                className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+                  practicalSubTab === 'weakness'
+                    ? 'bg-red-500 text-white shadow-md'
+                    : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
+                }`}
+              >
+                🔴 약점암기
+                <span className={`text-xs px-2 py-0.5 rounded-full ${
+                  practicalSubTab === 'weakness' ? 'bg-red-400' : 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400'
+                }`}>
+                  {practicalWeakness.length - masteredCards.size}
+                </span>
+              </button>
+            </div>
+
+            {/* 시험안내 탭 */}
+            {practicalSubTab === 'guide' && (
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-card p-6">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                 ✍️ 실기시험 유형 대비
@@ -1214,6 +1260,154 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+            )}
+
+            {/* 약점암기 탭 - 플래시카드 */}
+            {practicalSubTab === 'weakness' && (
+            <div className="space-y-6">
+              {/* 진행 상황 */}
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-card p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                    🔴 약점 플래시카드
+                  </h2>
+                  <div className="flex items-center gap-4">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                      암기 완료: <span className="font-bold text-green-600">{masteredCards.size}</span> / {practicalWeakness.length}
+                    </span>
+                    {masteredCards.size > 0 && (
+                      <button
+                        onClick={() => setMasteredCards(new Set())}
+                        className="text-xs text-red-500 hover:text-red-600 underline"
+                      >
+                        초기화
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+                  <div
+                    className="bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full transition-all duration-500"
+                    style={{ width: `${(masteredCards.size / practicalWeakness.length) * 100}%` }}
+                  />
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
+                  카드를 클릭하면 정답이 보입니다. 암기한 카드는 체크 표시하세요.
+                </p>
+              </div>
+
+              {/* 카테고리별 카드 */}
+              {(['system', 'network', 'application', 'crypto', 'law'] as const).map(category => {
+                const cards = practicalWeakness.filter(w => w.category === category);
+                const unmasteredCards = cards.filter(c => !masteredCards.has(c.id));
+                if (unmasteredCards.length === 0 && masteredCards.size > 0) return null;
+
+                return (
+                  <div key={category} className="bg-white dark:bg-gray-800 rounded-2xl shadow-card p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                      <span className={`w-3 h-3 rounded-full ${
+                        category === 'system' ? 'bg-red-500' :
+                        category === 'network' ? 'bg-orange-500' :
+                        category === 'application' ? 'bg-green-500' :
+                        category === 'crypto' ? 'bg-blue-500' : 'bg-purple-500'
+                      }`} />
+                      {categoryNames[category]}
+                      <span className="text-sm font-normal text-gray-500">
+                        ({cards.filter(c => masteredCards.has(c.id)).length}/{cards.length} 완료)
+                      </span>
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {cards.map(card => (
+                        <div
+                          key={card.id}
+                          className={`relative group cursor-pointer transition-all duration-300 ${
+                            masteredCards.has(card.id) ? 'opacity-50' : ''
+                          }`}
+                        >
+                          <div
+                            onClick={() => {
+                              setFlippedCards(prev => {
+                                const next = new Set(prev);
+                                if (next.has(card.id)) {
+                                  next.delete(card.id);
+                                } else {
+                                  next.add(card.id);
+                                }
+                                return next;
+                              });
+                            }}
+                            className={`min-h-[160px] p-4 rounded-xl border-2 transition-all duration-300 ${
+                              flippedCards.has(card.id)
+                                ? 'bg-green-50 dark:bg-green-900/20 border-green-300 dark:border-green-700'
+                                : 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600'
+                            } ${masteredCards.has(card.id) ? 'border-green-400 dark:border-green-600' : ''}`}
+                          >
+                            {!flippedCards.has(card.id) ? (
+                              // 앞면 - 질문
+                              <div className="h-full flex flex-col">
+                                <div className="flex-1">
+                                  <div className="text-xs text-primary-500 font-semibold mb-2">{card.keyword}</div>
+                                  <p className="text-sm text-gray-700 dark:text-gray-300">{card.question}</p>
+                                </div>
+                                {card.hint && (
+                                  <div className="mt-3 pt-2 border-t border-gray-200 dark:border-gray-600">
+                                    <p className="text-xs text-gray-500 dark:text-gray-400">💡 힌트: {card.hint}</p>
+                                  </div>
+                                )}
+                                <div className="absolute bottom-2 right-2 text-xs text-gray-400">클릭하여 정답 보기</div>
+                              </div>
+                            ) : (
+                              // 뒷면 - 정답
+                              <div className="h-full flex flex-col">
+                                <div className="flex-1">
+                                  <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">정답</div>
+                                  <pre className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-sans">{card.answer}</pre>
+                                </div>
+                                <div className="absolute bottom-2 right-2 text-xs text-gray-400">클릭하여 질문 보기</div>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* 암기 완료 체크 버튼 */}
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setMasteredCards(prev => {
+                                const next = new Set(prev);
+                                if (next.has(card.id)) {
+                                  next.delete(card.id);
+                                } else {
+                                  next.add(card.id);
+                                }
+                                return next;
+                              });
+                            }}
+                            className={`absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                              masteredCards.has(card.id)
+                                ? 'bg-green-500 text-white'
+                                : 'bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100'
+                            }`}
+                            title={masteredCards.has(card.id) ? '암기 취소' : '암기 완료'}
+                          >
+                            <Icons.Check />
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* 모두 완료 메시지 */}
+              {masteredCards.size === practicalWeakness.length && (
+                <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl shadow-card p-8 text-center text-white">
+                  <div className="text-4xl mb-4">🎉</div>
+                  <h3 className="text-2xl font-bold mb-2">모든 약점 암기 완료!</h3>
+                  <p className="text-green-100">실기 시험 준비 완벽! 화이팅!</p>
+                </div>
+              )}
+            </div>
+            )}
           </div>
         )}
 
