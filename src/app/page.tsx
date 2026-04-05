@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import { studyItems, categories, StudyItem } from '@/data/studyData';
+import { studyItems, categories, StudyItem, EasyExplanation } from '@/data/studyData';
 import { questionBank, subjects, getQuestionsBySubject, getRandomQuestions, Question } from '@/data/questionBank';
 import { practicalWeakness, categoryNames, WeaknessCard } from '@/data/practicalWeakness';
 import {
@@ -134,9 +134,21 @@ export default function Home() {
   const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
   const [masteredCards, setMasteredCards] = useState<Set<string>>(new Set());
 
+  // Detail Modal state
+  const [modalItem, setModalItem] = useState<StudyItem | null>(null);
+
   // 학습 진행률 state
   const [progress, setProgress] = useState<LearningProgress>(defaultProgress);
   const [sessionStartTime] = useState<Date>(new Date());
+
+  // ESC key to close modal
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setModalItem(null);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   // Load saved state
   useEffect(() => {
@@ -497,6 +509,7 @@ export default function Home() {
                   isExpanded={expandedCard === item.id}
                   onToggleComplete={() => toggleComplete(item.id)}
                   onToggleExpand={() => handleCardExpand(item.id)}
+                  onOpenModal={() => setModalItem(item)}
                   DiagramComponent={diagramMap[item.id]}
                 />
               </div>
@@ -1413,6 +1426,15 @@ export default function Home() {
 
       </main>
 
+      {/* Detail Modal */}
+      {modalItem && (
+        <DetailModal
+          item={modalItem}
+          onClose={() => setModalItem(null)}
+          DiagramComponent={diagramMap[modalItem.id]}
+        />
+      )}
+
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-gray-700 py-6 mt-12">
         <div className="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
@@ -1547,12 +1569,171 @@ function parseMarkdown(content: string): string {
 }
 
 // Study Card Component
+// Detail Modal Component - 전체 화면 모달
+function DetailModal({
+  item,
+  onClose,
+  DiagramComponent,
+}: {
+  item: StudyItem;
+  onClose: () => void;
+  DiagramComponent?: React.ComponentType;
+}) {
+  const category = categories.find(c => c.id === item.category);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start justify-center overflow-y-auto"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-4xl bg-white dark:bg-gray-900 min-h-screen md:min-h-0 md:my-8 md:rounded-2xl shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-300"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="sticky top-0 z-10 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4 flex items-center justify-between">
+          <button
+            onClick={onClose}
+            className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span>뒤로</span>
+          </button>
+          <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-400">
+            {category?.icon} {category?.name}
+          </span>
+        </div>
+
+        {/* Content */}
+        <div className="px-6 py-8">
+          {/* Title */}
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+            📚 {item.title}
+          </h1>
+          <p className="text-gray-500 dark:text-gray-400 mb-6">{item.subcategory}</p>
+
+          {/* Easy Explanation Section */}
+          {item.easyExplanation && (
+            <div className="mb-8 space-y-6">
+              {/* One Liner */}
+              <div className="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 border border-green-200 dark:border-green-800">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xl">🎯</span>
+                  <span className="font-semibold text-green-800 dark:text-green-300">한 줄 요약</span>
+                </div>
+                <p className="text-lg font-medium text-green-900 dark:text-green-100">
+                  "{item.easyExplanation.oneLiner}"
+                </p>
+              </div>
+
+              {/* Easy Analogy */}
+              <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xl">📖</span>
+                  <span className="font-semibold text-blue-800 dark:text-blue-300">쉬운 설명 (초등학생도 이해할 수 있어요!)</span>
+                </div>
+                <div className="text-blue-900 dark:text-blue-100 whitespace-pre-line leading-relaxed">
+                  {item.easyExplanation.analogy}
+                </div>
+              </div>
+
+              {/* Visual Aid */}
+              <div className="p-4 rounded-xl bg-purple-50 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-800">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-xl">🖼️</span>
+                  <span className="font-semibold text-purple-800 dark:text-purple-300">그림으로 보기</span>
+                </div>
+                <pre className="text-xs md:text-sm text-purple-900 dark:text-purple-100 overflow-x-auto font-mono whitespace-pre leading-relaxed">
+                  {item.easyExplanation.visualAid}
+                </pre>
+              </div>
+
+              {/* Common Mistakes */}
+              {item.easyExplanation.commonMistakes && (
+                <div className="p-4 rounded-xl bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xl">⚠️</span>
+                    <span className="font-semibold text-red-800 dark:text-red-300">헷갈리는 포인트</span>
+                  </div>
+                  <div className="text-red-900 dark:text-red-100 whitespace-pre-line leading-relaxed">
+                    {item.easyExplanation.commonMistakes}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Diagram */}
+          {DiagramComponent && (
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">📊</span>
+                <span className="font-semibold text-gray-900 dark:text-white">시각화</span>
+              </div>
+              <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                <DiagramComponent />
+              </div>
+            </div>
+          )}
+
+          {/* Detailed Content */}
+          <div className="mb-8">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl">🔍</span>
+              <span className="font-semibold text-gray-900 dark:text-white">자세히 보기</span>
+            </div>
+            <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <div
+                className="text-sm leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: parseMarkdown(item.content)
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Key Points */}
+          {item.keyPoints && item.keyPoints.length > 0 && (
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">✅</span>
+                <span className="font-semibold text-gray-900 dark:text-white">핵심 키워드</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {item.keyPoints.map((point, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-2 rounded-full bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 text-sm font-medium"
+                  >
+                    {point}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Close Button */}
+          <button
+            onClick={onClose}
+            className="w-full py-4 rounded-xl bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-medium hover:opacity-90 transition-opacity"
+          >
+            닫기
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function StudyCard({
   item,
   isCompleted,
   isExpanded,
   onToggleComplete,
   onToggleExpand,
+  onOpenModal,
   DiagramComponent,
 }: {
   item: StudyItem;
@@ -1560,6 +1741,7 @@ function StudyCard({
   isExpanded: boolean;
   onToggleComplete: () => void;
   onToggleExpand: () => void;
+  onOpenModal: () => void;
   DiagramComponent?: React.ComponentType;
 }) {
   const category = categories.find(c => c.id === item.category);
@@ -1589,6 +1771,11 @@ function StudyCard({
               {DiagramComponent && (
                 <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
                   📊 시각화
+                </span>
+              )}
+              {item.easyExplanation && (
+                <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300">
+                  📖 쉬운설명
                 </span>
               )}
             </div>
@@ -1634,6 +1821,16 @@ function StudyCard({
               </ul>
             </div>
           )}
+
+          {/* Detail Modal Button */}
+          <button
+            onClick={(e) => { e.stopPropagation(); onOpenModal(); }}
+            className="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-primary-500 to-blue-500 text-white font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+          >
+            <span>📖</span>
+            <span>전체 화면으로 보기</span>
+            {item.easyExplanation && <span className="text-xs bg-white/20 px-2 py-0.5 rounded">쉬운설명 포함</span>}
+          </button>
         </div>
       )}
     </div>
